@@ -9,7 +9,7 @@ Created and maintained by **Joysan14**.
 Visit the catalogue website:
 
 **https://joysan14.github.io/ao3-work-skins/**
-And
+or
 **https://ao3-work-skins.netlify.app/**
 
 You can also browse the source files directly in this repository.
