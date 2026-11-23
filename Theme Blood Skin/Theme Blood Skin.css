@@ -2641,3 +2641,398 @@ body {
 #workskin .hgm-tx--dark .hgm-tx__who--3 {
   color: #C7D0D8;
 }
+
+
+
+/* =========================================================
+   BOUND IN BLOOD — COMPACT READING LAYOUT
+   AO3-safe sizing and spacing overrides.
+   ========================================================= */
+
+/* The preview page uses this background. On AO3, #workskin supplies
+   the visible story panel while the site's own page background remains. */
+#workskin {
+  box-sizing: border-box;
+  display: block;
+  width: 94%;
+  max-width: 760px;
+  margin: 1.5em auto;
+  padding: 1em;
+  color: #F0E5DC;
+  background-color: #241016;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(125,24,48,.28), transparent 62%),
+    linear-gradient(145deg, rgba(255,255,255,.025), transparent 45%, rgba(0,0,0,.2));
+  border: 1px solid #80666A;
+  border-top: 3px solid #A52D49;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: .94em;
+  line-height: 1.62;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#workskin .userstuff,
+#workskin .userstuff.module,
+#workskin .preface,
+#workskin #chapters,
+#workskin .chapter,
+#workskin .afterword {
+  box-sizing: border-box;
+  max-width: 100%;
+  color: #F0E5DC;
+  background: transparent;
+  font-size: 1em;
+  line-height: 1.62;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#workskin .userstuff p {
+  color: inherit;
+  line-height: inherit;
+}
+
+#workskin .hgm-open {
+  max-width: 100%;
+  margin: 1.2em auto;
+  padding: 2em 1.2em;
+}
+
+#workskin .hgm-open__kicker {
+  margin-bottom: 1.2em;
+  letter-spacing: .22em;
+}
+
+#workskin .hgm-open__title {
+  font-size: 1.85em;
+  letter-spacing: .035em;
+}
+
+#workskin .hgm-open__rule {
+  margin: 1.35em auto;
+}
+
+#workskin .hgm-open__meta {
+  margin-top: 1.4em;
+}
+
+#workskin .hgm-chap {
+  max-width: 100%;
+  margin: 1.8em auto 1.3em;
+  padding-bottom: 1em;
+}
+
+#workskin .hgm-chap__title {
+  font-size: 1.5em;
+}
+
+#workskin .hgm-chap--cinematic {
+  padding: 1.6em 1.1em;
+}
+
+#workskin .hgm-chap--cinematic .hgm-chap__title {
+  font-size: 1.35em;
+}
+
+#workskin .hgm-n-std {
+  margin: 1em 0;
+  font-size: 1em;
+  line-height: 1.7;
+  text-align: left;
+}
+
+#workskin .hgm-n-std p {
+  margin: 0 0 .85em;
+  text-indent: 1.25em;
+}
+
+#workskin .hgm-n-std p:first-child {
+  text-indent: 0;
+}
+
+#workskin .hgm-n-mono,
+#workskin .hgm-n-stream {
+  margin: 1.3em .2em;
+  font-size: 1em;
+  line-height: 1.7;
+}
+
+#workskin .hgm-n-flash,
+#workskin .hgm-n-dream,
+#workskin .hgm-n-quote {
+  max-width: 100%;
+  margin: 1.4em 0;
+  padding: 1em;
+}
+
+#workskin .hgm-letter,
+#workskin .hgm-diary,
+#workskin .hgm-mail,
+#workskin .hgm-sms,
+#workskin .hgm-doc,
+#workskin .hgm-news,
+#workskin .hgm-tx,
+#workskin .hgm-skel,
+#workskin .hgm-an {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 1.4em auto;
+  padding: 1.25em;
+  font-size: .94em;
+  line-height: 1.6;
+}
+
+#workskin .hgm-news__masthead {
+  font-size: 1.55em;
+}
+
+#workskin .hgm-news__hed {
+  font-size: 1.45em;
+}
+
+#workskin .hgm-doc__title {
+  font-size: 1.2em;
+}
+
+#workskin .hgm-doc__sig {
+  width: 46%;
+}
+
+#workskin .hgm-field__k {
+  float: none;
+  display: block;
+  width: auto;
+}
+
+#workskin .hgm-field__v {
+  margin-left: 0;
+}
+
+#workskin img,
+#workskin table {
+  max-width: 100%;
+}
+
+#workskin table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#workskin table th,
+#workskin table td {
+  padding: .4em .5em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#workskin a {
+  color: #E1B18E;
+}
+
+#workskin a:hover {
+  color: #FFF0E4;
+}
+
+@media (max-width: 700px) {
+  #workskin {
+    width: 96%;
+    margin: .7em auto;
+    padding: .7em;
+    font-size: .9em;
+  }
+
+  #workskin .hgm-open,
+  #workskin .hgm-letter,
+  #workskin .hgm-diary,
+  #workskin .hgm-mail,
+  #workskin .hgm-doc,
+  #workskin .hgm-news,
+  #workskin .hgm-tx,
+  #workskin .hgm-skel,
+  #workskin .hgm-an {
+    padding: 1em .85em;
+  }
+
+  #workskin .hgm-open__title {
+    font-size: 1.55em;
+  }
+
+  #workskin .hgm-chap__title {
+    font-size: 1.3em;
+  }
+
+  #workskin .hgm-doc__sig {
+    width: 100%;
+  }
+}
+
+
+
+/* FULL-PAGE BURGUNDY BACKDROP
+   AO3 Work Skins cannot directly style the site's body element.
+   This spread shadow extends the dark background beyond the story column. */
+#workskin {
+  position: relative;
+  z-index: 0;
+  background-color: #16090D;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(125,24,48,.42), transparent 58%),
+    repeating-linear-gradient(90deg, rgba(226,205,190,.025) 0, rgba(226,205,190,.025) 1px, transparent 1px, transparent 84px),
+    linear-gradient(135deg, #10080B, #291018 48%, #13090D);
+  box-shadow: 0 0 0 100vmax #16090D;
+}
+
+/* Keep the reading panel distinct from the expanded outer backdrop. */
+#workskin > .userstuff,
+#workskin > .userstuff.module,
+#workskin .preface,
+#workskin #chapters,
+#workskin .chapter,
+#workskin .afterword {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* =========================================================
+   LEGIBILITY SHADOWS — SEPARATE TYPE FROM THE BACKGROUND
+   ========================================================= */
+
+/* Soft shadow behind the reading surface gives the panel depth. */
+#workskin {
+  box-shadow:
+    0 0 0 100vmax #16090D,
+    0 18px 48px rgba(0, 0, 0, .58),
+    0 3px 12px rgba(0, 0, 0, .42),
+    inset 0 1px 0 rgba(255, 239, 225, .08);
+}
+
+/* Keep body copy crisp, with a restrained dark lift from the background. */
+#workskin,
+#workskin .userstuff,
+#workskin .userstuff p,
+#workskin .hgm-n-std,
+#workskin .hgm-n-std p,
+#workskin .hgm-n-mono,
+#workskin .hgm-n-stream {
+  text-shadow: 0 1px 2px rgba(12, 3, 7, .72);
+}
+
+/* Headings get a little more depth without blurring letterforms. */
+#workskin h1,
+#workskin h2,
+#workskin h3,
+#workskin .hgm-open__title,
+#workskin .hgm-chap__title,
+#workskin .hgm-news__hed,
+#workskin .hgm-doc__title {
+  text-shadow:
+    0 1px 1px rgba(0, 0, 0, .72),
+    0 0 12px rgba(210, 145, 125, .12);
+}
+
+/* Light document/card surfaces stand apart from the dark velvet field. */
+#workskin .hgm-letter,
+#workskin .hgm-diary,
+#workskin .hgm-mail,
+#workskin .hgm-sms,
+#workskin .hgm-doc,
+#workskin .hgm-news,
+#workskin .hgm-tx,
+#workskin .hgm-skel,
+#workskin .hgm-an {
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, .34),
+    0 2px 5px rgba(0, 0, 0, .22),
+    inset 0 1px 0 rgba(255, 242, 230, .12);
+}
+
+/* Quoted passages and special narrative blocks receive subtle separation. */
+#workskin .hgm-n-flash,
+#workskin .hgm-n-dream,
+#workskin .hgm-n-quote {
+  box-shadow:
+    0 5px 16px rgba(0, 0, 0, .28),
+    inset 0 1px 0 rgba(255, 242, 230, .1);
+}
+
+/* Small labels remain readable against their decorative strips. */
+#workskin .hgm-open__kicker,
+#workskin .hgm-chap__num,
+#workskin .hgm-mark__tag,
+#workskin .hgm-doc__stamp,
+#workskin .hgm-an__label {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .65);
+}
+
+
+
+/* =========================================================
+   ROYAL READING PANEL — DISTINCT FROM THE OUTER BACKGROUND
+   ========================================================= */
+
+/* The story text itself sits on a raised, framed panel.
+   This is the box shadow the reading area needs, not merely
+   a shadow on individual letters. */
+#workskin .userstuff {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  max-width: 820px;
+  margin: 2.4em auto;
+  padding: 2.2em 2.5em;
+  color: #E9DED2;
+  background-color: #2A171D;
+  background-image:
+    linear-gradient(145deg, rgba(255, 232, 215, .055), transparent 34%),
+    linear-gradient(315deg, rgba(8, 2, 5, .24), transparent 42%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0, rgba(255,255,255,.012) 1px, transparent 1px, transparent 4px);
+  border: 1px solid #987768;
+  outline: 1px solid rgba(214, 181, 151, .18);
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, .78),
+    0 10px 22px rgba(0, 0, 0, .52),
+    0 0 0 7px rgba(22, 8, 13, .72),
+    inset 0 1px 0 rgba(255, 238, 222, .12),
+    inset 0 -18px 30px rgba(0, 0, 0, .16);
+}
+
+/* Regal book typography: decorative serif for headings,
+   highly readable book serif for the body. */
+#workskin,
+#workskin .userstuff,
+#workskin .userstuff p,
+#workskin .userstuff li {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  color: #E9DED2;
+}
+
+#workskin h1,
+#workskin h2,
+#workskin h3,
+#workskin .hgm-open__title,
+#workskin .hgm-chap__title,
+#workskin .hgm-doc__title,
+#workskin .hgm-news__hed,
+#workskin .hgm-skel__title {
+  font-family: "Cinzel", "Trajan Pro", "Times New Roman", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: .035em;
+  color: #E8CBAE;
+}
+
+/* Keep the panel readable on narrow screens. */
+@media screen and (max-width: 700px) {
+  #workskin .userstuff {
+    max-width: 100%;
+    margin: 1.2em auto;
+    padding: 1.25em 1.1em;
+    box-shadow:
+      0 12px 28px rgba(0, 0, 0, .72),
+      0 0 0 4px rgba(22, 8, 13, .68),
+      inset 0 1px 0 rgba(255, 238, 222, .1);
+  }
+}
