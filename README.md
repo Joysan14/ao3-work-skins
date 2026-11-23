@@ -1,10 +1,12 @@
 # AO3 Work Skins
 
-A collection of custom Archive of Our Own (AO3) Work Skins, CSS themes, standalone HTML previews, and design references by **Joysan14**.
+These are my personal Archive of Our Own (AO3) Work Skins, the ones I use for my own fics. Each design comes with a CSS stylesheet, a standalone HTML preview, a preview image, and an installation guide. You are welcome to download them and use them for your own stories.
+
+Created and maintained by **Joysan14**.
 
 ## Browse the collection
 
-Once GitHub Pages is enabled, visit:
+Visit the catalogue website:
 
 **https://joysan14.github.io/ao3-work-skins/**
 
@@ -12,26 +14,22 @@ You can also browse the source files directly in this repository.
 
 ## What's included
 
-- **Theme collection:** individual colour and layout themes, each with its own CSS file, HTML preview, preview image, and README guide.
-- **Fanfiction-specific work skins:** dedicated layouts for selected fanfiction projects.
-- **Installation notes:** each theme's README explains how to use the stylesheet and any custom formatting classes.
+- **Work Skin collection:** individual colour and layout themes, each with its own CSS stylesheet, HTML preview, preview image, and installation guide.
+- **Story-specific Work Skins:** dedicated layouts made for particular fics.
 
 ## Using a theme on AO3
 
-1. Open the theme's `.css` file.
-2. Copy the complete stylesheet.
-3. On AO3, go to **My Dashboard → Skins → Create Site Skin**.
-4. Give the skin a name and paste the CSS into the CSS field.
-5. Save the skin and apply it as needed.
+1. Open the theme's `.css` file and copy the complete stylesheet.
+2. On AO3, go to **My Dashboard → Skins** and create a new skin.
+3. Give the skin a name and paste the CSS into the CSS field.
+4. Save the skin and apply it.
 
-The `.html` files are standalone browser previews. They demonstrate the theme and its custom formatting examples; they are not uploaded as AO3 Site Skins.
+The `.html` files are standalone browser previews. They show the theme and its custom formatting examples, and they are not uploaded to AO3. Check each theme's installation guide for custom formatting classes and any limitations.
 
-## Preview and download
+## A note on downloads
 
-Open the catalogue website to view each theme's preview image, open its standalone HTML demonstration, read its guide, or access its CSS stylesheet.
+A skin only styles a story on AO3 itself. According to AO3's own guidance, CSS formatting does not carry over into downloaded EPUB, MOBI, PDF or HTML files, so a downloaded copy of a story will appear without the skin.
 
 ## Credits and disclaimer
 
-Created and maintained by **Joysan14**.
-
-This is an unofficial, fan-created collection and is not affiliated with or endorsed by the Archive of Our Own (AO3) or the Organization for Transformative Works (OTW). Respect any third-party rights and attributions noted in individual theme documentation.
+This is an independent, fan-created collection. It is not affiliated with, endorsed by, or officially associated with Archive of Our Own or the Organization for Transformative Works. Respect any third-party rights and attributions noted in individual theme documentation.
