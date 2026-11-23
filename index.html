@@ -4,9 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#263F30">
-<meta name="description" content="Joysan14’s personal AO3 Work Skins, the ones Joysan14 uses for their own fics. Browse the themes, preview each design, and download the CSS stylesheet.">
-<title>AO3 Work Skins | Joysan14</title>
-<link rel="icon" type="image/jpeg" href="/assets/joysan-icon.jpg">
+<meta name="description" content="Explore Joy San’s personal collection of AO3 Work Skins. Preview custom themes, access CSS stylesheets, learn how to install Work Skins, and discover how to adapt them for Kindle EPUB reading.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Joy San | AO3 Work Skin Collection">
+<meta property="og:description" content="Personal AO3 Work Skins with previews, CSS stylesheets, installation guides, and a Kindle EPUB guide.">
+<meta property="og:url" content="https://ao3-work-skins.netlify.app/">
+<meta property="og:image" content="https://ao3-work-skins.netlify.app/assets/joysan-icon.jpg">
+<meta name="twitter:card" content="summary">
+<title>Joy San | AO3 Work Skin Collection</title>
+<link rel="icon" type="image/jpeg" href="assets/joysan-icon.jpg">
 <style>
 :root{--bg:#263F30;--card:#304B39;--soft:#3B5944;--sage:#8DA58A;--gold:#FFD34E;--cream:#FFF5D9;--coral:#E9875C;--mute:#C0CFBD;--line:#58735D;
 --serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
@@ -37,8 +43,8 @@ h1{font-size:clamp(2.5rem,6.5vw,4.6rem);margin-bottom:20px}
 .btn{display:inline-block;padding:11px 20px;border-radius:8px;border:1.5px solid var(--gold);font:700 14px var(--sans);text-decoration:none;color:var(--gold);transition:background .2s,color .2s}
 .btn.main{background:var(--gold);color:var(--bg)}
 .btn:hover{background:var(--cream);border-color:var(--cream);color:var(--bg)}
-.mascot{justify-self:center;position:relative;width:min(100%,280px)}
-.mascot img{width:100%;aspect-ratio:1;border-radius:50%;display:block;border:3px solid var(--line)}
+.mascot{justify-self:center;position:relative;width:min(100%,320px)}
+.mascot img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;object-position:center;border-radius:50%;display:block;border:3px solid var(--line)}
 .mascot:after{content:"";position:absolute;right:6%;bottom:8%;width:18px;height:18px;border-radius:50%;background:var(--coral);border:3px solid var(--bg)}
 /* collection */
 .intro{border-top:1px solid var(--line);padding:52px 0 8px}
@@ -84,19 +90,43 @@ footer .wrap{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
 footer img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold)}
 footer p{margin:0 0 6px;max-width:44em}
 footer strong{color:var(--cream)}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding:44px 0 40px;text-align:center}.lede{margin-inline:auto}.btns{justify-content:center}.mascot{order:-1;width:150px}.top .wrap{justify-content:center}.search{max-width:none}.grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.card:hover{transform:none}}
+.opts{display:grid;gap:14px}
+details.opt{background:var(--card);border:1px solid var(--line);border-radius:12px}
+details.opt summary{cursor:pointer;list-style:none;padding:18px 56px 18px 20px;position:relative;display:flex;flex-direction:column;gap:2px}
+details.opt summary::-webkit-details-marker{display:none}
+details.opt summary:after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:1.6rem}
+details.opt[open] summary:after{content:"\2013"}
+summary strong{font:400 1.3rem var(--serif)}
+summary span{color:var(--mute);font-size:.95rem}
+.in{padding:0 20px 22px;color:var(--mute)}
+.in h4{margin:22px 0 6px;color:var(--cream);font:700 15px var(--sans)}
+.in p{margin:8px 0}.in ol,.in ul{padding-left:1.3em;margin:6px 0}.in li{margin:5px 0}
+.in code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:.88em;color:var(--cream)}
+.in pre{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto;color:var(--cream);font-size:.88em}
+.adv{border-color:var(--gold);border-left-width:5px}
+.adv .badge{color:var(--gold);font:700 11px var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.note.warn{border-left-color:var(--gold)}
+.pf{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.pf a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;color:var(--cream);text-decoration:none;font:400 1.2rem var(--serif);transition:border-color .2s,transform .2s}
+.pf a:hover{border-color:var(--gold);transform:translateY(-2px)}
+.pf a span{color:var(--gold);font:700 16px var(--sans)}
+.elsewhere{margin:20px 0 0;color:var(--mute)}
+@media(max-width:1000px){.mascot{width:260px}}
+@media(max-width:760px){html{scroll-padding-top:130px}.hero{grid-template-columns:1fr;padding:44px 0 40px;text-align:center}.lede{margin-inline:auto}.btns{justify-content:center}.mascot{order:-1;width:150px}.top .wrap{justify-content:center}.search{max-width:none}.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.card:hover,.pf a:hover{transform:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#collection">Skip to the collection</a>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><img src="/assets/joysan-icon.jpg" alt="Joysan14’s icon: a round yellow 3D duck on a green background" width="40" height="40">JOYSAN14 · AO3 WORK SKINS</a>
+    <a class="brand" href="#top"><img src="assets/joysan-icon.jpg" alt="Joy San’s icon: a round yellow 3D duck on a green background" width="40" height="40">JOY SAN · AO3 WORK SKINS</a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#collection">Collection</a></li>
         <li><a href="#stories">Story-Specific</a></li>
+        <li><a href="#kindle">Kindle Guide</a></li>
+        <li><a href="#ao3">Find Me on AO3</a></li>
         <li><a href="#start">Getting Started</a></li>
         <li><a href="https://github.com/Joysan14/ao3-work-skins">GitHub</a></li>
       </ul>
@@ -107,15 +137,15 @@ footer strong{color:var(--cream)}
 <main id="top">
   <div class="wrap hero">
     <div>
-      <p class="eyebrow">Joysan14 · AO3 Work Skins</p>
+      <p class="eyebrow">Joy San · AO3 Work Skins</p>
       <h1>My AO3 Work Skins</h1>
-      <p class="lede">These are the personal AO3 Work Skins I use for my own fics. Explore the themes, preview each design, and download the CSS stylesheet if you would like to use one for your own stories.</p>
+      <p class="lede">Welcome to my collection of personal AO3 Work Skins. These are the designs I use for my own stories. Browse the themes, preview their layouts, and find the CSS stylesheets if you’d like to use them in your own works.</p>
       <div class="btns">
         <a class="btn main" href="#collection">Explore the Collection</a>
         <a class="btn" href="https://github.com/Joysan14/ao3-work-skins">View on GitHub</a>
       </div>
     </div>
-    <div class="mascot"><img src="/assets/joysan-icon.jpg" alt="A round, cute yellow 3D duck on a deep green background" width="432" height="432"></div>
+    <div class="mascot"><img src="assets/joysan-icon.jpg" alt="A round, cute yellow 3D duck on a deep green background" width="432" height="432"></div>
   </div>
 
   <div class="wrap intro" id="collection">
@@ -131,7 +161,7 @@ footer strong{color:var(--cream)}
   <section class="wrap sec" aria-labelledby="h-themes">
     <div class="sec-head">
       <h2 id="h-themes">Work Skin Collection</h2>
-      <p>Explore the full collection of visual themes, from atmospheric colour palettes to distinctive layouts and creative interfaces.</p>
+      <p>Explore the visual themes I use across my stories. Each design has its own atmosphere, layout, and personality.</p>
     </div>
     <ul class="grid" id="themes"></ul>
     <p class="empty" id="e-themes">No matching themes found. Try another search.</p>
@@ -141,34 +171,149 @@ footer strong{color:var(--cream)}
     <section class="wrap sec" aria-labelledby="h-story">
       <div class="sec-head">
         <h2 id="h-story">Story-Specific Work Skins</h2>
-        <p>These Work Skins are designed around particular fictional worlds and storytelling projects. Each one offers a more tailored visual experience.</p>
+        <p>Some stories call for a visual identity of their own. These designs were created for particular fictional worlds and storytelling projects.</p>
       </div>
       <ul class="grid" id="fanfic"></ul>
       <p class="empty" id="e-fanfic">No matching themes found. Try another search.</p>
     </section>
   </div>
 
+  <section class="wrap sec" id="kindle" aria-labelledby="h-kindle">
+    <div class="sec-head">
+      <h2 id="h-kindle">Reading AO3 Work Skins on Kindle</h2>
+      <p>A Work Skin styles a story on the AO3 website. A Kindle reads ebook files, so there are three ways to read your stories there, and each one treats the skin differently. A Work Skin cannot be installed into the Kindle reading interface.</p>
+    </div>
+    <div class="opts">
+      <details class="opt"><summary><strong>Read AO3 Online</strong><span>Use AO3 itself in a Kindle browser. Nothing is installed on the Kindle.</span></summary>
+        <div class="in">
+          <ol>
+            <li>Open the browser, if your Kindle has one. Some models include an experimental web browser, and availability varies by device.</li>
+            <li>Visit <a href="https://archiveofourown.org/">archiveofourown.org</a>.</li>
+            <li>Sign in to AO3 if you need to.</li>
+            <li>Open the story you want to read.</li>
+            <li>Read it on the AO3 page.</li>
+          </ol>
+          <p>If a skin is applied and the browser supports the CSS it uses, some of the styling may appear. Support is limited and varies, so fonts, layouts, backgrounds, and custom components may not display correctly. This is not a reliable way to reproduce a complete Work Skin.</p>
+        </div>
+      </details>
+      <details class="opt"><summary><strong>Download the Regular EPUB</strong><span>Read offline with AO3’s standard ebook formatting. The Work Skin is not included.</span></summary>
+        <div class="in">
+          <ol>
+            <li>Open the story on AO3.</li>
+            <li>Select <strong>Download</strong>.</li>
+            <li>Choose <strong>EPUB</strong> where it is available, and save the file.</li>
+            <li>Send it to your Kindle with <a href="https://www.amazon.com/sendtokindle">Send to Kindle</a> or another supported method.</li>
+            <li>Open it from your Kindle library.</li>
+          </ol>
+          <p>The story can be read offline, but the original Work Skin is not preserved. Copying a CSS file to your Kindle will not change this, because the Kindle cannot apply a separate stylesheet to a book.</p>
+        </div>
+      </details>
+      <details class="opt adv"><summary><span class="badge">Advanced</span><strong>Customize Your Kindle Edition</strong><span>Adapt a Work Skin’s CSS and build it into a downloaded EPUB.</span></summary>
+        <div class="in">
+          <p>This is a manual process. You edit the ebook’s internal HTML and CSS, and nothing is converted automatically. Simple typography, colours, borders, and paragraph styles are the easiest to adapt. Complex interface layouts are harder, and not every feature can be reproduced.</p>
+          <h4>What you need</h4>
+          <ul>
+            <li>An AO3 story downloaded as an EPUB.</li>
+            <li>The CSS stylesheet of the Work Skin you want.</li>
+            <li><a href="https://calibre-ebook.com/">Calibre</a>, installed on a computer.</li>
+            <li>A compatible Kindle device or reading app.</li>
+            <li>Basic familiarity with HTML and CSS, especially for more complex themes.</li>
+          </ul>
+          <h4>Step 1. Download the AO3 story</h4>
+          <p>Open the story, select <strong>Download</strong>, choose <strong>EPUB</strong>, and save the file to your computer.</p>
+          <h4>Step 2. Download the Work Skin</h4>
+          <p>Choose a theme from the <a href="#collection">collection</a>, open its CSS stylesheet, and save a copy. At this point the EPUB and the CSS file are completely separate.</p>
+          <h4>Step 3. Open the EPUB in Calibre</h4>
+          <ol>
+            <li>Open Calibre and add the EPUB to your library.</li>
+            <li>Select the book and open <strong>Edit book</strong>.</li>
+          </ol>
+          <p>The editor lets you inspect and change the chapter HTML files, stylesheets, images, and other resources, and it has a preview so you can check your changes. See Calibre’s <a href="https://manual.calibre-ebook.com/en/edit.html">Edit Book documentation</a>.</p>
+          <h4>Step 4. Add the CSS</h4>
+          <ol>
+            <li>Look at the existing Styles folder.</li>
+            <li>Create a new stylesheet or edit an existing one.</li>
+            <li>Copy the relevant rules from the Work Skin.</li>
+            <li>Save the stylesheet inside the EPUB.</li>
+          </ol>
+          <p>Work Skins are written for AO3’s website, not for the HTML inside an EPUB, so do not paste the whole stylesheet without checking what it depends on:</p>
+          <ul>
+            <li>AO3-specific containers may not exist in the EPUB.</li>
+            <li><code>#workskin</code> may need to be replaced with selectors that match the ebook.</li>
+            <li>Custom classes only work if they exist in the downloaded HTML.</li>
+            <li>Some AO3-specific layout rules will not apply.</li>
+            <li>Fonts and decorative images must be added as ebook resources.</li>
+          </ul>
+          <h4>Step 5. Link the stylesheet to the chapters</h4>
+          <p>Each chapter’s HTML file must reference the stylesheet. This path is only an example. The real path depends on the EPUB’s folder structure.</p>
+<pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet"
+          type="text/css"
+          href="../Styles/custom-skin.css" /&gt;
+&lt;/head&gt;</code></pre>
+          <h4>Step 6. Adapt the CSS to the ebook</h4>
+          <p>This step decides how closely your Kindle edition resembles the original. You may need to:</p>
+          <ul>
+            <li>Rewrite AO3-specific selectors.</li>
+            <li>Adapt container widths, margins, and padding.</li>
+            <li>Simplify complex layouts.</li>
+            <li>Replace unsupported fonts.</li>
+            <li>Include background or decorative images.</li>
+            <li>Recreate custom chat, notification, or interface components with matching HTML markup.</li>
+            <li>Adjust styles for comfortable ebook reading.</li>
+          </ul>
+          <h4>Step 7. Preview and test</h4>
+          <p>In Calibre’s preview, check chapter headings, paragraphs, dialogue, spacing, custom formatting, images, page breaks, and font sizes. Make sure the book stays readable when the reader changes the font size or reading settings. Calibre, Kindle Previewer, Kindle e-readers, and Kindle apps can render CSS differently, so test on a real Kindle or Kindle app where you can.</p>
+          <h4>Step 8. Send it to Kindle</h4>
+          <ol>
+            <li>Save the edited EPUB.</li>
+            <li>Visit <a href="https://www.amazon.com/sendtokindle">amazon.com/sendtokindle</a>.</li>
+            <li>Upload the EPUB.</li>
+            <li>Choose your Kindle library or device where the option is offered.</li>
+            <li>Send the document, then open the book on your Kindle and check how it looks.</li>
+          </ol>
+          <p>Amazon supports EPUB through Send to Kindle, but the result may differ from the Calibre preview.</p>
+          <p class="note warn"><strong>Compatibility warning:</strong> customizing an EPUB with an AO3 Work Skin is a manual process. The original stylesheet may need to be rewritten to match the downloaded ebook’s HTML. Some decorative elements and advanced layouts may not work on every Kindle device. Always preview and test your edited EPUB before sending it to Kindle.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="ao3" aria-labelledby="h-ao3">
+    <div class="sec-head">
+      <h2 id="h-ao3">Find Me on AO3</h2>
+      <p>I write under several pseudonyms on AO3. Explore my profiles and find the stories published under each name.</p>
+    </div>
+    <ul class="pf">
+      <li><a href="https://archiveofourown.org/users/Joysan/pseuds/JuneIsHere">JuneIsHere <span aria-hidden="true">↗</span><span class="vh">(opens AO3 in a new tab)</span></a></li>
+      <li><a href="https://archiveofourown.org/users/Joysan/pseuds/Blueberry_muffin">Blueberry_muffin <span aria-hidden="true">↗</span><span class="vh">(opens AO3 in a new tab)</span></a></li>
+      <li><a href="https://archiveofourown.org/users/Joysan/pseuds/DuckyDream">DuckyDream <span aria-hidden="true">↗</span><span class="vh">(opens AO3 in a new tab)</span></a></li>
+      <li><a href="https://archiveofourown.org/users/Joysan/pseuds/Joysan">Joysan <span aria-hidden="true">↗</span><span class="vh">(opens AO3 in a new tab)</span></a></li>
+    </ul>
+    <p class="elsewhere">You can also find me on <a href="https://x.com/discursi_">X (Twitter)</a>.</p>
+  </section>
+
   <section class="wrap sec" id="start" aria-labelledby="h-start">
-    <div class="sec-head"><h2 id="h-start">Getting Started</h2></div>
+    <div class="sec-head"><h2 id="h-start">Getting Started</h2><p>Found a design you like? Follow these steps to apply an AO3 Work Skin to your own stories.</p></div>
     <ol class="steps">
       <li><h3>Choose a design</h3><p>Browse the collection and select the theme you want to use.</p></li>
       <li><h3>Preview the layout</h3><p>Open the HTML preview to see how the design looks in a browser.</p></li>
       <li><h3>Get the stylesheet</h3><p>Open the CSS file and copy its contents.</p></li>
       <li><h3>Create your AO3 Site Skin</h3><p>In AO3, go to your Dashboard, select Skins, and open the Site Skins section. Create a new Site Skin and paste the CSS into its CSS field.</p></li>
-      <li><h3>Apply the skin</h3><p>Save the Site Skin and select it as your active skin. Follow the individual installation guide for any theme-specific formatting classes or limitations.</p></li>
+      <li><h3>Apply the Work Skin</h3><p>Save the Site Skin and select it as your active skin. Follow the individual installation guide for any theme-specific formatting classes or limitations.</p></li>
     </ol>
-    <p class="note"><strong>Good to know:</strong> the HTML files are standalone browser previews. They are not uploaded to AO3. Only the CSS stylesheet is used in your Site Skin.</p>
-    <p class="note"><strong>About downloads:</strong> a skin only styles a story on AO3 itself. According to AO3’s own guidance, CSS formatting does not carry over into downloaded EPUB, MOBI, PDF or HTML files, so a downloaded copy will appear without the skin.</p>
+    <p class="note"><strong>Good to know:</strong> the HTML files are standalone browser previews. They are not uploaded to AO3. The CSS stylesheet is the part used to create the Site Skin.</p>
+    <p class="note"><strong>About downloads:</strong> a skin only styles a story on AO3 itself. According to AO3’s own guidance, CSS formatting does not carry over into downloaded EPUB, MOBI, PDF or HTML files, so a downloaded copy will appear without the skin. See the <a href="#kindle">Kindle guide</a> for ways around this.</p>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <img src="/assets/joysan-icon.jpg" alt="" width="44" height="44">
+    <img src="assets/joysan-icon.jpg" alt="" width="44" height="44">
     <div>
-      <p><strong>Created and maintained by Joysan14.</strong></p>
+      <p><strong>Created and maintained by Joy San.</strong></p>
       <p>This is an independent, fan-created collection. It is not affiliated with, endorsed by, or officially associated with Archive of Our Own or the Organization for Transformative Works.</p>
-      <p><a href="https://github.com/Joysan14/ao3-work-skins">View on GitHub</a></p>
+      <p><a href="https://github.com/Joysan14/ao3-work-skins">View on GitHub</a> · <a href="#ao3">Find me on AO3</a> · <a href="https://x.com/discursi_">X (Twitter)</a></p>
     </div>
   </div>
 </footer>
