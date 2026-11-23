@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tide Remembers</title>
+<style>
+/* ==========================================================
+   WORK SKIN — Fic page, inserts, internal monologue
+   Palette
+   ink        #26383A   deep ink   #172B32
+   muted      #526D73   mist       #A7B3AF
+   paper      #F7F5EF   sand       #EAE5D9   line  #C1B8A5
+   terracotta #A47D68   backdrop   #ddd9cf
+   Modes: default (light) · .mode-dark · .mode-parchment
+   Put the mode class on .fic-page.
+   ========================================================== */
+
+/* ---------- Base ---------- */
+
+#workskin * {
+  box-sizing: border-box;
+}
+
+#workskin {
+  max-width: 52em;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #ddd9cf;
+  color: #26383A;
+}
+
+#workskin .fic-page {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 1.5em 1.1em 1.25em;
+  background: #F7F5EF;
+  color: #26383A;
+  font-family: "Source Serif 4", "Source Serif Pro", Lora, Georgia, "Times New Roman", serif;
+  font-size: 1.05em;
+  line-height: 1.8;
+  text-align: left;
+}
+
+#workskin .fic-page p {
+  margin: 0 0 1.15em;
+}
+
+/* ---------- Header and labels ---------- */
+
+#workskin .fic-header {
+  text-align: center;
+  padding: 1em 0 .5em;
+}
+
+#workskin .fic-kicker,
+#workskin .chapter-number,
+#workskin .note-label,
+#workskin .fic-label,
+#workskin .end-notes-label,
+#workskin .insert-label {
+  font-family: Inter, Arial, sans-serif;
+  font-size: .72em;
+  font-weight: normal;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #526D73;
+}
+
+#workskin .fic-kicker {
+  margin: 0 0 1.4em;
+}
+
+#workskin .fic-title,
+#workskin .chapter-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
+  font-weight: normal;
+  text-align: center;
+  color: #172B32;
+}
+
+#workskin .fic-title {
+  font-size: 2.2em;
+  line-height: 1.1;
+  letter-spacing: .03em;
+}
+
+#workskin .chapter-title {
+  font-size: 1.8em;
+  line-height: 1.2;
+}
+
+#workskin .fic-subtitle,
+#workskin .chapter-subtitle {
+  max-width: 26em;
+  margin: 1em auto 0;
+  font-style: italic;
+  color: #526D73;
+  text-align: center;
+}
+
+/* ---------- Metadata and tags ---------- */
+
+#workskin .fic-metadata {
+  margin: 2em 0;
+  padding: 1em 1em .6em;
+  background: #EAE5D9;
+  border-top: 1px solid #A7B3AF;
+  border-bottom: 1px solid #A7B3AF;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .9em;
+  line-height: 1.5;
+}
+
+#workskin .fic-section {
+  margin: 0 0 1em;
+}
+
+#workskin .fic-label {
+  margin: 0 0 .5em;
+  color: #172B32;
+}
+
+#workskin ul.fic-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#workskin li.fic-tag {
+  display: inline-block;
+  margin: 0 .4em .5em 0;
+  padding: .15em .7em;
+  list-style: none;
+  background: #F7F5EF;
+  border: 1px solid #A7B3AF;
+  color: #26383A;
+}
+
+/* ---------- Author note and end notes ---------- */
+
+#workskin .author-note {
+  margin: 2em 0;
+  padding: 1.6em 0;
+  border-top: 1px solid #C1B8A5;
+  border-bottom: 1px solid #C1B8A5;
+}
+
+#workskin .note-label {
+  margin: 0 0 .8em;
+  text-align: center;
+}
+
+#workskin .author-note h3 {
+  margin: 0 0 1em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  color: #172B32;
+}
+
+#workskin .note-ending {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+  color: #172B32;
+}
+
+#workskin .end-notes {
+  margin: 2em 0 0;
+  padding: 1.4em 0 0;
+  border-top: 1px solid #C1B8A5;
+}
+
+#workskin .end-notes-label {
+  margin: 0 0 .8em;
+  text-align: center;
+}
+
+/* ---------- Chapter ---------- */
+
+#workskin .chapter-header {
+  text-align: center;
+  padding: 1.5em 0 0;
+}
+
+#workskin .chapter-number {
+  margin: 0 0 .8em;
+}
+
+#workskin .chapter-content {
+  margin: 0 auto;
+}
+
+#workskin .chapter-content p.dropcap::first-letter {
+  float: left;
+  padding: .05em .1em 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.6em;
+  line-height: .8;
+  color: #172B32;
+}
+
+/* ---------- Quotation (spoken / quoted text, terracotta bar) ---------- */
+
+#workskin blockquote.fic-quote {
+  margin: 1.8em 0 1.8em .4em;
+  padding: .6em 1em;
+  border: 0;
+  border-left: 3px solid #A47D68;
+  background: #EAE5D9;
+  color: #26383A;
+  font-style: italic;
+}
+
+#workskin blockquote.fic-quote p {
+  margin: 0 0 .8em;
+}
+
+#workskin blockquote.fic-quote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Internal monologue (teal, no box, dotted rule) ----------
+   .thought        inline: a thought inside a paragraph
+   .thought-block  block: a longer private passage
+   .thought-who    optional small label above a block
+   .thought-stream centred, fragmented or intrusive thought
+   ---------------------------------------------------------------- */
+
+#workskin .thought {
+  font-style: italic;
+  color: #3A5A61;
+}
+
+#workskin .thought-block {
+  margin: 1.6em 0 1.6em 1.2em;
+  padding: 0 0 0 1em;
+  border-left: 1px dotted #526D73;
+  font-style: italic;
+  color: #3A5A61;
+}
+
+#workskin .thought-block p {
+  margin: 0 0 .9em;
+}
+
+#workskin .thought-block p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .thought-who {
+  display: block;
+  margin: 0 0 .4em;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .66em;
+  font-style: normal;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #526D73;
+}
+
+#workskin .thought-stream {
+  max-width: 26em;
+  margin: 1.8em auto;
+  padding: .8em 0;
+  border-top: 1px dotted #A7B3AF;
+  border-bottom: 1px dotted #A7B3AF;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: .02em;
+  color: #3A5A61;
+}
+
+#workskin .thought-stream p {
+  margin: 0 0 .6em;
+}
+
+#workskin .thought-stream p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Scene breaks ---------- */
+
+#workskin hr.fic-divider,
+#workskin hr.scene-break,
+#workskin hr.scene-break-ocean,
+#workskin hr.scene-break-symbol {
+  height: auto;
+  margin: 2.4em 0;
+  border: 0;
+  overflow: visible;
+  text-align: center;
+  line-height: 1;
+  color: #A47D68;
+}
+
+#workskin hr.fic-divider::after {
+  content: "\2248   \2248   \2248";
+  letter-spacing: .3em;
+}
+
+#workskin hr.scene-break::after {
+  content: "*   *   *";
+  letter-spacing: .35em;
+}
+
+#workskin hr.scene-break-ocean::after {
+  content: "~  \2248  ~";
+  letter-spacing: .3em;
+}
+
+#workskin hr.scene-break-symbol::after {
+  content: "\25C7";
+  font-size: 1.2em;
+}
+
+#workskin hr.scene-break-line {
+  width: 18%;
+  height: 0;
+  margin: 2.4em auto;
+  border: 0;
+  border-top: 1px solid #C1B8A5;
+}
+
+/* ==========================================================
+   INSERTS — shared frame
+   ========================================================== */
+
+#workskin .insert {
+  margin: 1.8em auto;
+  max-width: 34em;
+  border: 1px solid #C1B8A5;
+  background: #F1EEE6;
+  color: #26383A;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .86em;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+#workskin .insert-head {
+  padding: .8em 1em;
+  background: #EAE5D9;
+  border-bottom: 1px solid #C1B8A5;
+}
+
+#workskin .insert-head strong {
+  color: #172B32;
+  font-weight: 600;
+}
+
+#workskin .insert-label {
+  display: block;
+  margin: 0 0 .35em;
+  font-size: .68em;
+}
+
+#workskin .insert-body {
+  padding: 1em;
+}
+
+#workskin .insert p {
+  margin: 0 0 .7em;
+}
+
+#workskin .insert p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .insert-meta {
+  color: #526D73;
+  font-size: .88em;
+}
+
+#workskin .insert-rule {
+  border: 0;
+  border-top: 1px solid #C1B8A5;
+  margin: .8em 0;
+}
+
+/* Widths: set as width + max-width so they still hold if max-width is ignored */
+#workskin .do-email,
+#workskin .do-doc,
+#workskin .do-transcript {
+  width: 30em;
+  max-width: 100%;
+}
+
+/* ---------- Text messages (compact) ---------- */
+
+#workskin .do-chat {
+  width: 18em;
+  max-width: 100%;
+  border-radius: .9em;
+  overflow: hidden;
+  background: #F1EEE6;
+  border: 1px solid #A7B3AF;
+  font-size: .72em;
+  line-height: 1.4;
+}
+
+#workskin .do-chat-head {
+  padding: .55em .8em;
+  text-align: center;
+  background: #EAE5D9;
+  border-bottom: 1px solid #C1B8A5;
+}
+
+#workskin .do-chat-head p {
+  margin: 0;
+  font-weight: 600;
+  color: #172B32;
+}
+
+#workskin .do-chat-head small {
+  display: block;
+  color: #526D73;
+  font-size: .85em;
+  font-weight: normal;
+}
+
+#workskin .do-chat-body {
+  overflow: hidden;
+  padding: .7em;
+}
+
+#workskin .do-day {
+  text-align: center;
+  margin: 0 0 .7em;
+  color: #526D73;
+  font-size: .8em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#workskin .do-day p {
+  margin: 0;
+}
+
+#workskin .do-msg {
+  float: left;
+  clear: both;
+  max-width: 80%;
+  margin: 0 0 .5em;
+  padding: .45em .7em;
+  border-radius: .9em .9em .9em .2em;
+  background: #EAE5D9;
+  color: #26383A;
+}
+
+#workskin .do-msg p {
+  margin: 0;
+}
+
+#workskin .do-out {
+  float: right;
+  clear: both;
+  max-width: 80%;
+  margin: 0 0 .5em;
+  padding: .45em .7em;
+  border-radius: .9em .9em .2em .9em;
+  background: #DCE5E1;
+  color: #26383A;
+}
+
+#workskin .do-out p {
+  margin: 0;
+}
+
+#workskin .do-sender {
+  display: block;
+  margin: 0 0 .1em;
+  color: #526D73;
+  font-size: .8em;
+  font-weight: 700;
+}
+
+#workskin .do-typing {
+  clear: both;
+  margin: 0 0 .4em;
+  color: #526D73;
+  font-size: .85em;
+  font-style: italic;
+}
+
+#workskin .do-chat-foot {
+  padding: 0 .8em .6em;
+  text-align: right;
+  color: #526D73;
+  font-size: .8em;
+}
+
+/* ---------- Email ---------- */
+
+#workskin .do-email {
+  border-top: 3px solid #526D73;
+}
+
+#workskin .do-email .insert-head {
+  background: #EAE5D9;
+}
+
+#workskin .do-email .email-row {
+  margin: 0 0 .35em;
+}
+
+#workskin .do-email .email-key {
+  display: inline-block;
+  min-width: 4.5em;
+  color: #526D73;
+}
+
+#workskin .do-email .email-subject {
+  color: #172B32;
+  font-weight: 600;
+}
+
+#workskin .do-email .email-sig {
+  margin-top: 1em;
+  color: #526D73;
+}
+
+#workskin .do-email .email-attach {
+  margin-top: .9em;
+  padding-top: .7em;
+  border-top: 1px solid #C1B8A5;
+  color: #526D73;
+  font-size: .86em;
+}
+
+/* ---------- Social post ---------- */
+
+#workskin .do-post {
+  width: 26em;
+  max-width: 100%;
+  border-radius: .55em;
+}
+
+#workskin .do-post .post-user {
+  font-weight: 700;
+  color: #172B32;
+}
+
+#workskin .do-post .post-handle {
+  color: #526D73;
+}
+
+#workskin .do-post .post-actions {
+  margin-top: .9em;
+  padding-top: .7em;
+  border-top: 1px solid #C1B8A5;
+  color: #526D73;
+  font-size: .82em;
+}
+
+/* ---------- Notification ---------- */
+
+#workskin .do-notify {
+  width: 24em;
+  max-width: 100%;
+  border-radius: .65em;
+  box-shadow: 0 2px 8px rgba(23, 43, 50, .08);
+}
+
+#workskin .do-notify .insert-head {
+  border-bottom: 0;
+}
+
+/* ---------- System message ---------- */
+
+#workskin .do-system {
+  width: 26em;
+  max-width: 100%;
+  border-style: dashed;
+  background: #EAE5D9;
+  text-align: center;
+}
+
+#workskin .do-system .insert-body {
+  padding: .75em 1em;
+}
+
+/* ---------- Letter ---------- */
+
+#workskin .do-letter {
+  width: 28em;
+  max-width: 100%;
+  padding: 1.6em 1.8em;
+  background: #F7F5EF;
+  border: 1px solid #C1B8A5;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: .98em;
+}
+
+#workskin .do-letter .letter-date {
+  text-align: right;
+  color: #526D73;
+  font-style: italic;
+}
+
+#workskin .do-letter .letter-signoff {
+  margin-top: 1.2em;
+  font-style: italic;
+}
+
+/* ---------- Diary ---------- */
+
+#workskin .do-diary {
+  width: 28em;
+  max-width: 100%;
+  padding: 1.2em 1.5em;
+  background: #EAE5D9;
+  border: 0;
+  border-left: 3px solid #A47D68;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+#workskin .do-diary .diary-date {
+  color: #526D73;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .78em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* ---------- Document / form (float layout, no grid) ---------- */
+
+#workskin .do-doc {
+  border: 1px solid #A7B3AF;
+  background: #F7F5EF;
+}
+
+#workskin .do-doc .insert-head {
+  text-align: center;
+  background: #EAE5D9;
+}
+
+#workskin .do-doc .doc-title {
+  display: block;
+  margin: .2em 0;
+  font-family: Georgia, serif;
+  font-size: 1.25em;
+  letter-spacing: .04em;
+  color: #172B32;
+}
+
+#workskin .do-doc .doc-ref {
+  color: #526D73;
+  font-size: .78em;
+}
+
+#workskin .do-doc .doc-row {
+  overflow: hidden;
+  margin: 0 0 .45em;
+}
+
+#workskin .do-doc .doc-key {
+  float: left;
+  width: 8em;
+  color: #526D73;
+  font-weight: 600;
+}
+
+#workskin .do-doc .doc-val {
+  display: block;
+  margin-left: 8.5em;
+}
+
+/* ---------- Phone call (compact phone-screen panel) ----------
+   Parts: .do-status  .call-top  .call-lines  .call-options
+          .call-buttons  .call-foot
+   ------------------------------------------------------------- */
+
+#workskin .do-call {
+  width: 15em;
+  max-width: 100%;
+  border: 3px solid #0E1B20;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #172B32;
+  background-image: linear-gradient(180deg, #24505B, #172B32);
+  color: #EAE5D9;
+  font-size: .72em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#workskin .do-call .call-top {
+  padding: 1em 1em .6em;
+}
+
+#workskin .do-call .call-name {
+  margin: 0;
+  font-size: 1.35em;
+  line-height: 1.2;
+  color: #F7F5EF;
+}
+
+#workskin .do-call .call-number {
+  margin: .15em 0 0;
+  font-size: .95em;
+  color: #A7B3AF;
+}
+
+#workskin .do-call .call-avatar {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 2.4em;
+  height: 2.4em;
+  margin: .8em auto .7em;
+  border-radius: 50%;
+  background: #C9D3D2;
+  color: #26383A;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5em;
+  line-height: 2.4em;
+  text-align: center;
+}
+
+#workskin .do-call .call-avatar-unknown::before {
+  content: "";
+  position: absolute;
+  top: .45em;
+  left: 50%;
+  width: .9em;
+  height: .9em;
+  margin-left: -.45em;
+  border-radius: 50%;
+  background: #526D73;
+}
+
+#workskin .do-call .call-avatar-unknown::after {
+  content: "";
+  position: absolute;
+  top: 1.35em;
+  left: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  margin-left: -.8em;
+  border-radius: 50%;
+  background: #526D73;
+}
+
+#workskin .do-call .call-state {
+  margin: 0;
+  font-size: .85em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #A7B3AF;
+}
+
+#workskin .do-call .call-lines {
+  margin: .3em 1em 0;
+  padding: .8em 0 .3em;
+  border-top: 1px solid #3B5A61;
+  text-align: left;
+}
+
+#workskin .do-call .call-line {
+  margin: 0 0 .65em;
+  color: #EAE5D9;
+}
+
+#workskin .do-call .call-line-out {
+  text-align: right;
+}
+
+#workskin .do-call .call-who {
+  display: block;
+  margin: 0 0 .1em;
+  font-size: .75em;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #A7B3AF;
+}
+
+#workskin .do-call .call-line-out .call-who {
+  color: #C49A83;
+}
+
+#workskin .do-call .call-options {
+  overflow: hidden;
+  padding: .6em 1.6em 0;
+  font-size: .85em;
+  color: #EAE5D9;
+}
+
+#workskin .do-call .call-opt {
+  float: left;
+}
+
+#workskin .do-call .call-opt-r {
+  float: right;
+}
+
+#workskin .do-call .call-buttons {
+  overflow: hidden;
+  padding: .7em 1.4em 1.2em;
+}
+
+#workskin .do-call .call-btn {
+  display: block;
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  line-height: 2.6em;
+  text-align: center;
+}
+
+#workskin .do-call .call-accept {
+  float: left;
+  background: #5FAF6B;
+}
+
+#workskin .do-call .call-decline {
+  float: right;
+  background: #D2453D;
+}
+
+/* single end-call button (connected call) */
+#workskin .do-call .call-buttons-single .call-btn {
+  float: none;
+  margin: 0 auto;
+}
+
+/* ended call pill */
+#workskin .do-call .call-foot {
+  padding: .5em 1em 1.1em;
+  text-align: center;
+}
+
+#workskin .do-call .call-end {
+  display: inline-block;
+  padding: .3em 1em;
+  border-radius: 1em;
+  background: #A47D68;
+  color: #F7F5EF;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* ---------- Transcript ---------- */
+
+#workskin .do-transcript {
+  border-left: 2px solid #A7B3AF;
+}
+
+#workskin .do-transcript .speaker {
+  color: #526D73;
+  font-weight: 700;
+}
+
+#workskin .do-transcript p {
+  margin-bottom: .55em;
+}
+
+/* ==========================================================
+   PHONE UI — status bar, battery, lock screen, notifications
+   ========================================================== */
+
+/* ---------- Status bar (time · network · signal · battery) ---------- */
+
+#workskin .do-status {
+  overflow: hidden;
+  padding: .65em 1em 0;
+  font-size: .8em;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #EAE5D9;
+}
+
+#workskin .do-status .st-time {
+  float: left;
+}
+
+#workskin .do-status .st-right {
+  float: right;
+}
+
+#workskin .st-net {
+  margin-right: .35em;
+  font-size: .8em;
+}
+
+#workskin .sig {
+  display: inline-block;
+  height: .75em;
+  margin-right: .4em;
+  vertical-align: baseline;
+}
+
+#workskin .sig-bar {
+  display: inline-block;
+  width: .2em;
+  margin-right: .07em;
+  background: currentColor;
+  vertical-align: bottom;
+}
+
+#workskin .sig-bar.s1 { height: .25em; }
+#workskin .sig-bar.s2 { height: .4em; }
+#workskin .sig-bar.s3 { height: .55em; }
+#workskin .sig-bar.s4 { height: .75em; }
+
+#workskin .sig-bar.sig-off {
+  opacity: .3;
+}
+
+#workskin .st-pct {
+  margin-right: .3em;
+}
+
+/* Battery icon. Level classes: batt-100 / 90 / 80 / ... / 10 / 5
+   Add batt-charge for the green charging colour.
+   20% and below turns red. */
+
+#workskin .batt {
+  display: inline-block;
+  position: relative;
+  width: 1.7em;
+  height: .8em;
+  padding: 1px;
+  border: 1px solid currentColor;
+  border-radius: .25em;
+  vertical-align: middle;
+}
+
+#workskin .batt::after {
+  content: "";
+  position: absolute;
+  top: .17em;
+  right: -.3em;
+  width: .15em;
+  height: .3em;
+  border-radius: 0 .1em .1em 0;
+  background: currentColor;
+}
+
+#workskin .batt-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: .12em;
+  background: currentColor;
+}
+
+#workskin .batt-100 .batt-fill {
+  width: 100%;
+}
+
+#workskin .batt-90 .batt-fill {
+  width: 90%;
+}
+
+#workskin .batt-80 .batt-fill {
+  width: 80%;
+}
+
+#workskin .batt-70 .batt-fill {
+  width: 70%;
+}
+
+#workskin .batt-60 .batt-fill {
+  width: 60%;
+}
+
+#workskin .batt-50 .batt-fill {
+  width: 50%;
+}
+
+#workskin .batt-40 .batt-fill {
+  width: 40%;
+}
+
+#workskin .batt-30 .batt-fill {
+  width: 30%;
+}
+
+#workskin .batt-20 .batt-fill {
+  width: 20%;
+}
+
+#workskin .batt-10 .batt-fill {
+  width: 10%;
+}
+
+#workskin .batt-5 .batt-fill {
+  width: 5%;
+}
+
+#workskin .batt-20 .batt-fill,
+#workskin .batt-10 .batt-fill,
+#workskin .batt-5 .batt-fill {
+  background: #D2453D;
+}
+
+#workskin .batt-charge .batt-fill {
+  background: #5FAF6B;
+}
+
+/* ---------- Lock screen (unread notifications) ---------- */
+
+#workskin .do-lock {
+  width: 15em;
+  max-width: 100%;
+  margin: 1.8em auto;
+  border: 3px solid #0E1B20;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #172B32;
+  background-image: linear-gradient(180deg, #2A5560, #142329);
+  color: #EAE5D9;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .72em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#workskin .do-lock .lock-clock {
+  margin: .9em 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.2em;
+  line-height: 1;
+  color: #F7F5EF;
+}
+
+#workskin .do-lock .lock-date {
+  margin: .25em 0 .9em;
+  font-size: .85em;
+  color: #A7B3AF;
+}
+
+#workskin .do-lock .lock-notifs {
+  padding: 0 .6em .4em;
+  text-align: left;
+}
+
+#workskin .do-lock .lock-more {
+  margin: .5em 0 0;
+  font-size: .85em;
+  color: #A7B3AF;
+  text-align: center;
+}
+
+#workskin .do-lock .lock-bar {
+  width: 30%;
+  height: .3em;
+  margin: .7em auto .6em;
+  border-radius: .2em;
+  background: #EAE5D9;
+}
+
+/* ---------- Notification cards ----------
+   Use inside .do-lock .lock-notifs, or inside .notif-list on its own.
+   Icon variants: notif-icon-msg · -mail · -bank · -alert · -call · -cal
+   ----------------------------------------- */
+
+#workskin .notif-list {
+  width: 15em;
+  max-width: 100%;
+  margin: 1.8em auto;
+  font-size: .72em;
+  text-align: left;
+}
+
+#workskin .notif {
+  margin: 0 0 .4em;
+  padding: .45em .6em .55em;
+  border: 1px solid #C1B8A5;
+  border-radius: .8em;
+  background: #F7F5EF;
+  color: #26383A;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.35;
+}
+
+#workskin .do-lock .notif {
+  background: #E8EDEB;
+  border-color: transparent;
+}
+
+#workskin .notif-head {
+  overflow: hidden;
+  margin: 0 0 .3em;
+  font-size: .75em;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #526D73;
+}
+
+#workskin .notif-icon {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: .45em;
+  border-radius: .4em;
+  background: #526D73;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 1.6em;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+}
+
+#workskin .notif-icon-msg { background: #5FAF6B; }
+#workskin .notif-icon-mail { background: #5B84B1; }
+#workskin .notif-icon-bank { background: #2F7F7A; }
+#workskin .notif-icon-alert { background: #D2453D; }
+#workskin .notif-icon-call { background: #D2453D; }
+#workskin .notif-icon-cal { background: #A47D68; }
+
+#workskin .notif-app {
+  vertical-align: middle;
+}
+
+#workskin .notif-when {
+  float: right;
+  line-height: 2em;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+#workskin .notif-badge {
+  display: inline-block;
+  min-width: 1.6em;
+  margin-left: .45em;
+  padding: 0 .45em;
+  border-radius: 1em;
+  background: #D2453D;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.6em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#workskin .notif .notif-title {
+  margin: 0;
+  font-weight: 700;
+  color: #172B32;
+}
+
+#workskin .notif .notif-text {
+  margin: .1em 0 0;
+  color: #26383A;
+}
+
+#workskin .notif .notif-text-clip {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#workskin .notif .notif-bal {
+  margin: .25em 0 0;
+  font-size: .85em;
+  color: #526D73;
+}
+
+#workskin .notif-dot {
+  display: inline-block;
+  width: .6em;
+  height: .6em;
+  margin-right: .45em;
+  border-radius: 50%;
+  background: #5B84B1;
+  vertical-align: middle;
+}
+
+#workskin .notif-amount {
+  font-weight: 700;
+}
+
+#workskin .notif-debit {
+  color: #B2362F;
+}
+
+#workskin .notif-credit {
+  color: #2F7F4F;
+}
+
+/* ---------- System alert dialog (low battery etc.) ---------- */
+
+#workskin .do-alert {
+  width: 15em;
+  max-width: 100%;
+  margin: 1.8em auto;
+  border: 1px solid #C1B8A5;
+  border-radius: 1em;
+  overflow: hidden;
+  background: #F7F5EF;
+  color: #26383A;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .72em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#workskin .do-alert .alert-body {
+  padding: .9em .9em .7em;
+}
+
+#workskin .do-alert .alert-batt {
+  display: block;
+  margin: 0 0 .5em;
+  font-size: 1.4em;
+  line-height: 1;
+  color: #526D73;
+}
+
+#workskin .do-alert .alert-title {
+  margin: 0 0 .3em;
+  font-weight: 700;
+  color: #172B32;
+}
+
+#workskin .do-alert .alert-text {
+  margin: 0;
+  color: #526D73;
+}
+
+#workskin .do-alert .alert-btn {
+  display: block;
+  padding: .55em;
+  border-top: 1px solid #C1B8A5;
+  color: #3B6E8F;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   DARK MODE  (.fic-page.mode-dark)
+   page #121F24 · panel #172B32 · raised #1D343C · line #526D73
+   text #F7F5EF / #EAE5D9 · muted #A7B3AF · accent #C49A83
+   ========================================================== */
+
+#workskin .fic-page.mode-dark {
+  background: #121F24;
+  color: #EAE5D9;
+}
+
+/* headings and strong text */
+#workskin .mode-dark .fic-title,
+#workskin .mode-dark .chapter-title,
+#workskin .mode-dark .author-note h3,
+#workskin .mode-dark .note-ending,
+#workskin .mode-dark .fic-label,
+#workskin .mode-dark .insert-head strong,
+#workskin .mode-dark .do-chat-head p,
+#workskin .mode-dark .do-doc .doc-title,
+#workskin .mode-dark .do-post .post-user,
+#workskin .mode-dark .do-email .email-subject,
+#workskin .mode-dark .chapter-content p.dropcap::first-letter {
+  color: #F7F5EF;
+}
+
+/* muted text */
+#workskin .mode-dark .fic-kicker,
+#workskin .mode-dark .chapter-number,
+#workskin .mode-dark .note-label,
+#workskin .mode-dark .end-notes-label,
+#workskin .mode-dark .fic-subtitle,
+#workskin .mode-dark .chapter-subtitle,
+#workskin .mode-dark .insert-label,
+#workskin .mode-dark .insert-meta,
+#workskin .mode-dark .do-sender,
+#workskin .mode-dark .do-day,
+#workskin .mode-dark .do-typing,
+#workskin .mode-dark .do-chat-head small,
+#workskin .mode-dark .do-chat-foot,
+#workskin .mode-dark .do-email .email-key,
+#workskin .mode-dark .do-email .email-sig,
+#workskin .mode-dark .do-email .email-attach,
+#workskin .mode-dark .do-post .post-handle,
+#workskin .mode-dark .do-post .post-actions,
+#workskin .mode-dark .do-letter .letter-date,
+#workskin .mode-dark .do-diary .diary-date,
+#workskin .mode-dark .do-doc .doc-ref,
+#workskin .mode-dark .do-doc .doc-key,
+#workskin .mode-dark .do-transcript .speaker,
+#workskin .mode-dark .thought-who {
+  color: #A7B3AF;
+}
+
+/* metadata and tags */
+#workskin .mode-dark .fic-metadata {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark li.fic-tag {
+  background: #172B32;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+/* notes, rules, breaks */
+#workskin .mode-dark .author-note,
+#workskin .mode-dark .end-notes {
+  border-color: #526D73;
+}
+
+#workskin .mode-dark hr.fic-divider,
+#workskin .mode-dark hr.scene-break,
+#workskin .mode-dark hr.scene-break-ocean,
+#workskin .mode-dark hr.scene-break-symbol {
+  color: #C49A83;
+}
+
+#workskin .mode-dark hr.scene-break-line {
+  border-top-color: #526D73;
+}
+
+/* quotation */
+#workskin .mode-dark blockquote.fic-quote {
+  background: #172B32;
+  border-left-color: #C49A83;
+  color: #EAE5D9;
+}
+
+/* internal monologue */
+#workskin .mode-dark .thought,
+#workskin .mode-dark .thought-block,
+#workskin .mode-dark .thought-stream {
+  color: #A9C7CD;
+}
+
+#workskin .mode-dark .thought-block {
+  border-left-color: #6F8F96;
+}
+
+#workskin .mode-dark .thought-stream {
+  border-top-color: #526D73;
+  border-bottom-color: #526D73;
+}
+
+/* shared insert frame */
+#workskin .mode-dark .insert {
+  background: #172B32;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .insert-head {
+  background: #1D343C;
+  border-bottom-color: #526D73;
+}
+
+#workskin .mode-dark .insert-rule {
+  border-top-color: #526D73;
+}
+
+/* messages */
+#workskin .mode-dark .do-chat {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .do-chat-head {
+  background: #1D343C;
+  border-bottom-color: #526D73;
+}
+
+#workskin .mode-dark .do-msg {
+  background: #1D343C;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .do-out {
+  background: #29413F;
+  color: #F7F5EF;
+}
+
+/* email */
+#workskin .mode-dark .do-email {
+  border-top-color: #A9C7CD;
+}
+
+#workskin .mode-dark .do-email .email-attach {
+  border-top-color: #526D73;
+}
+
+/* post and notification */
+#workskin .mode-dark .do-post .post-actions {
+  border-top-color: #526D73;
+}
+
+#workskin .mode-dark .do-notify {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+}
+
+/* system */
+#workskin .mode-dark .do-system {
+  background: #1D343C;
+}
+
+/* letter and diary */
+#workskin .mode-dark .do-letter {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .do-diary {
+  background: #172B32;
+  border-left-color: #C49A83;
+}
+
+/* document */
+#workskin .mode-dark .do-doc {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .do-doc .insert-head {
+  background: #1D343C;
+}
+
+/* call */
+#workskin .mode-dark .do-call {
+  background-color: #1D343C;
+  background-image: linear-gradient(180deg, #25505B, #172B32);
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+/* transcript */
+#workskin .mode-dark .do-transcript {
+  border-left-color: #526D73;
+}
+
+/* phone UI */
+#workskin .mode-dark .do-lock {
+  background-color: #1D343C;
+  background-image: linear-gradient(180deg, #2A5560, #142329);
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .notif {
+  background: #1D343C;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .notif .notif-title {
+  color: #F7F5EF;
+}
+
+#workskin .mode-dark .notif .notif-text {
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .notif-head,
+#workskin .mode-dark .notif .notif-bal {
+  color: #A7B3AF;
+}
+
+#workskin .mode-dark .notif-debit {
+  color: #E8857D;
+}
+
+#workskin .mode-dark .notif-credit {
+  color: #7FCB8E;
+}
+
+/* cards on the lock screen stay light so they read as notifications */
+#workskin .mode-dark .do-lock .notif {
+  background: #E8EDEB;
+  border-color: transparent;
+  color: #26383A;
+}
+
+#workskin .mode-dark .do-lock .notif .notif-title {
+  color: #172B32;
+}
+
+#workskin .mode-dark .do-lock .notif .notif-text {
+  color: #26383A;
+}
+
+#workskin .mode-dark .do-lock .notif-head,
+#workskin .mode-dark .do-lock .notif .notif-bal {
+  color: #526D73;
+}
+
+#workskin .mode-dark .do-lock .notif-debit {
+  color: #B2362F;
+}
+
+#workskin .mode-dark .do-lock .notif-credit {
+  color: #2F7F4F;
+}
+
+#workskin .mode-dark .do-alert {
+  background: #1D343C;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .do-alert .alert-batt,
+#workskin .mode-dark .do-alert .alert-text {
+  color: #A7B3AF;
+}
+
+#workskin .mode-dark .do-alert .alert-title {
+  color: #F7F5EF;
+}
+
+#workskin .mode-dark .do-alert .alert-btn {
+  border-top-color: #526D73;
+  color: #8FC1DB;
+}
+
+/* ==========================================================
+   PARCHMENT MODE  (.fic-page.mode-parchment)
+   page #EAE5D9 · raised #F7F5EF · head #E0D9C9 · line #B5AC97
+   muted #4A646A (darker than light mode for contrast on sand)
+   ========================================================== */
+
+#workskin .fic-page.mode-parchment {
+  background: #EAE5D9;
+}
+
+/* muted text */
+#workskin .mode-parchment .fic-kicker,
+#workskin .mode-parchment .chapter-number,
+#workskin .mode-parchment .note-label,
+#workskin .mode-parchment .end-notes-label,
+#workskin .mode-parchment .fic-subtitle,
+#workskin .mode-parchment .chapter-subtitle,
+#workskin .mode-parchment .insert-label,
+#workskin .mode-parchment .insert-meta,
+#workskin .mode-parchment .do-sender,
+#workskin .mode-parchment .do-day,
+#workskin .mode-parchment .do-typing,
+#workskin .mode-parchment .do-chat-head small,
+#workskin .mode-parchment .do-chat-foot,
+#workskin .mode-parchment .do-email .email-key,
+#workskin .mode-parchment .do-email .email-sig,
+#workskin .mode-parchment .do-email .email-attach,
+#workskin .mode-parchment .do-post .post-handle,
+#workskin .mode-parchment .do-post .post-actions,
+#workskin .mode-parchment .do-letter .letter-date,
+#workskin .mode-parchment .do-diary .diary-date,
+#workskin .mode-parchment .do-doc .doc-ref,
+#workskin .mode-parchment .do-doc .doc-key,
+#workskin .mode-parchment .do-transcript .speaker,
+#workskin .mode-parchment .thought-who {
+  color: #4A646A;
+}
+
+/* metadata and tags */
+#workskin .mode-parchment .fic-metadata {
+  background: #F7F5EF;
+}
+
+#workskin .mode-parchment li.fic-tag {
+  background: #EAE5D9;
+  border-color: #526D73;
+}
+
+/* rules */
+#workskin .mode-parchment .author-note,
+#workskin .mode-parchment .end-notes {
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment hr.scene-break-line {
+  border-top-color: #B5AC97;
+}
+
+/* quotation */
+#workskin .mode-parchment blockquote.fic-quote {
+  background: #F7F5EF;
+}
+
+/* internal monologue */
+#workskin .mode-parchment .thought,
+#workskin .mode-parchment .thought-block,
+#workskin .mode-parchment .thought-stream {
+  color: #2F4F56;
+}
+
+#workskin .mode-parchment .thought-block {
+  border-left-color: #4A646A;
+}
+
+#workskin .mode-parchment .thought-stream {
+  border-top-color: #A7B3AF;
+  border-bottom-color: #A7B3AF;
+}
+
+/* shared insert frame */
+#workskin .mode-parchment .insert {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .insert-head {
+  background: #E0D9C9;
+  border-bottom-color: #B5AC97;
+}
+
+#workskin .mode-parchment .insert-rule {
+  border-top-color: #B5AC97;
+}
+
+/* messages */
+#workskin .mode-parchment .do-chat {
+  background: #F7F5EF;
+  border-color: #A7B3AF;
+}
+
+#workskin .mode-parchment .do-chat-head {
+  background: #E0D9C9;
+  border-bottom-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-msg {
+  background: #E0D9C9;
+}
+
+#workskin .mode-parchment .do-out {
+  background: #D3DED9;
+}
+
+/* email, post */
+#workskin .mode-parchment .do-email .email-attach,
+#workskin .mode-parchment .do-post .post-actions {
+  border-top-color: #B5AC97;
+}
+
+/* system */
+#workskin .mode-parchment .do-system {
+  background: #E0D9C9;
+}
+
+/* letter and diary */
+#workskin .mode-parchment .do-letter {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-diary {
+  background: #F1EEE6;
+}
+
+/* document */
+#workskin .mode-parchment .do-doc {
+  background: #F7F5EF;
+}
+
+#workskin .mode-parchment .do-doc .insert-head {
+  background: #E0D9C9;
+}
+
+/* call (keeps its dark screen so it never reads as a chat) */
+#workskin .mode-parchment .do-call {
+  background-color: #172B32;
+  background-image: linear-gradient(180deg, #24505B, #172B32);
+  border-color: #0E1B20;
+  color: #EAE5D9;
+}
+
+/* transcript */
+#workskin .mode-parchment .do-transcript {
+  border-left-color: #8FA09C;
+}
+
+/* phone UI */
+#workskin .mode-parchment .notif {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-lock .notif {
+  background: #E8EDEB;
+  border-color: transparent;
+}
+
+#workskin .mode-parchment .notif-head,
+#workskin .mode-parchment .notif .notif-bal {
+  color: #4A646A;
+}
+
+#workskin .mode-parchment .do-alert {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-alert .alert-btn {
+  border-top-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-alert .alert-batt,
+#workskin .mode-parchment .do-alert .alert-text {
+  color: #4A646A;
+}
+
+/* ==========================================================
+   MOBILE — everything below sits inside one @media block
+   ========================================================== */
+
+@media only screen and (max-width: 42em) {
+
+  #workskin {
+    padding: .5rem;
+  }
+
+  #workskin .fic-page {
+    padding: 1.25em .85em;
+    font-size: 1em;
+  }
+
+  #workskin .fic-title {
+    font-size: 2em;
+  }
+
+  #workskin .chapter-title {
+    font-size: 1.6em;
+  }
+
+  #workskin .thought-block {
+    margin-left: .6em;
+  }
+
+  #workskin .do-email,
+  #workskin .do-doc,
+  #workskin .do-transcript,
+  #workskin .do-post,
+  #workskin .do-notify,
+  #workskin .do-system {
+    width: auto;
+    max-width: 100%;
+  }
+
+  #workskin .do-msg,
+  #workskin .do-out {
+    max-width: 90%;
+  }
+
+  #workskin .do-letter,
+  #workskin .do-diary {
+    width: auto;
+    max-width: 100%;
+    padding: 1.1em;
+  }
+
+  #workskin .do-doc .doc-key {
+    float: none;
+    width: auto;
+    display: block;
+  }
+
+  #workskin .do-doc .doc-val {
+    margin-left: 0;
+  }
+}
+
+</style>
+<!-- Preview-only styles for the mode switcher. Not needed on AO3. -->
+<style>
+  body { margin: 0; background: #ddd9cf; }
+  .preview-bar { text-align: center; padding: 12px; font-family: Arial, sans-serif; background: #172B32; }
+  .preview-bar button { margin: 0 4px; padding: 6px 14px; border: 1px solid #A7B3AF; background: #F7F5EF; color: #172B32; cursor: pointer; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="preview-bar">
+  <button type="button" onclick="setMode('')">Light</button>
+  <button type="button" onclick="setMode('mode-dark')">Dark</button>
+  <button type="button" onclick="setMode('mode-parchment')">Parchment</button>
+</div>
+
+<!-- ============ PASTE-READY MARKUP STARTS HERE ============ -->
+<div id="workskin">
+<div class="fic-page" id="ficpage">
+
+  <div class="fic-header">
+    <p class="fic-kicker">A Serialized Story</p>
+    <h1 class="fic-title">The Tide Remembers</h1>
+    <p class="fic-subtitle">Some things come back with the water, whether or not you ask them to.</p>
+  </div>
+
+  <div class="fic-metadata">
+    <div class="fic-section">
+      <p class="fic-label">Tags</p>
+      <ul class="fic-tags">
+        <li class="fic-tag">Slow Burn</li>
+        <li class="fic-tag">Coastal Setting</li>
+        <li class="fic-tag">Epistolary Elements</li>
+        <li class="fic-tag">Internal Monologue</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="author-note">
+    <p class="note-label">Author's Note</p>
+    <h3>Before you begin</h3>
+    <p>This story uses text messages, emails, calls and a few other documents. Italic teal text with a dotted rule is a character's private thoughts. Italic text with a terracotta bar is something quoted or remembered aloud.</p>
+    <p class="note-ending">Thank you for reading.</p>
+  </div>
+
+  <div class="chapter-header">
+    <p class="chapter-number">Chapter One</p>
+    <h2 class="chapter-title">Low Water</h2>
+    <p class="chapter-subtitle">The harbour was empty by the time she arrived.</p>
+  </div>
+
+  <div class="chapter-content">
+
+    <p class="dropcap">Mara reached the end of the pier just as the last ferry pulled away, its wake folding itself into the dark. She stood there longer than she needed to, hands deep in her coat pockets, listening to the boards creak under her weight.</p>
+
+    <p>She had told herself the walk would be quick. <span class="thought">Ten minutes, in and out. Nobody has to know you came back.</span> It was easy to think that when the town was a hundred kilometres behind her.</p>
+
+    <p>Her phone buzzed against her hip. She took it out and let the screen light her face.</p>
+
+    <!-- Text messages -->
+    <div class="insert do-chat">
+      <div class="do-chat-head">
+        <p>Jun<small>Mobile</small></p>
+      </div>
+      <div class="do-chat-body">
+        <div class="do-day"><p>Today 18:42</p></div>
+        <div class="do-msg">
+          <span class="do-sender">Jun</span>
+          <p>Are you there yet?</p>
+        </div>
+        <div class="do-out">
+          <p>Just got to the pier. It's smaller than I remember.</p>
+        </div>
+        <div class="do-msg">
+          <span class="do-sender">Jun</span>
+          <p>Everything is. Don't go inside without me.</p>
+        </div>
+        <p class="do-typing">Jun is typing&hellip;</p>
+      </div>
+      <div class="do-chat-foot">Delivered</div>
+    </div>
+
+    <p>She did not reply. She was not sure which of them she was ignoring.</p>
+
+    <!-- Block internal monologue -->
+    <div class="thought-block">
+      <span class="thought-who">Mara</span>
+      <p>He always says it like it's a joke. Like I wouldn't go in. Like I haven't been going in for fifteen years, every night, in every dream, with the door already open.</p>
+      <p>Smaller. Everything is smaller. Why doesn't that help?</p>
+    </div>
+
+    <p>Her mother's voice arrived the way it always did, uninvited and perfectly clear.</p>
+
+    <!-- Quotation -->
+    <blockquote class="fic-quote">
+      <p>The sea gives back what it takes. It just never gives it back in the same shape.</p>
+    </blockquote>
+
+    <hr class="scene-break-ocean">
+
+    <p>The email came in before she reached the car.</p>
+
+    <!-- Email -->
+    <div class="insert do-email">
+      <div class="insert-head">
+        <span class="insert-label">Email</span>
+        <p class="email-row"><span class="email-key">From</span> <strong>H. Okafor</strong> &lt;records@harbourtrust.example&gt;</p>
+        <p class="email-row"><span class="email-key">To</span> Mara Linde</p>
+        <p class="email-row"><span class="email-key">Date</span> Wed 18 Nov, 17:58</p>
+        <p class="email-row"><span class="email-key">Subject</span> <span class="email-subject">Re: Access to the boathouse ledger</span></p>
+      </div>
+      <div class="insert-body">
+        <p>Dear Ms. Linde,</p>
+        <p>Thank you for your patience. The ledger you asked about has been located. It was not in the archive, as we first believed, but in the keeper's cottage.</p>
+        <p>We can arrange viewing on Friday. Please bring identification.</p>
+        <p class="email-sig">Kind regards,<br>H. Okafor<br>Harbour Trust Records Office</p>
+        <p class="email-attach">Attachment: ledger-index.pdf (212 KB)</p>
+      </div>
+    </div>
+
+    <p><span class="thought">Friday. Three days. I can do three days.</span></p>
+
+    <!-- Fragmented intrusive thought -->
+    <div class="thought-stream">
+      <p>the door was open</p>
+      <p>the door was open and the light was on</p>
+      <p>who left the light on</p>
+    </div>
+
+    <!-- Phone call: incoming -->
+    <div class="insert do-call">
+      <div class="do-status">
+        <span class="st-time">12:35 PM</span>
+        <span class="st-right"><span class="st-net">5G</span><span class="sig"><span class="sig-bar s1"></span><span class="sig-bar s2"></span><span class="sig-bar s3"></span><span class="sig-bar s4"></span></span><span class="st-pct">97%</span><span class="batt batt-100"><span class="batt-fill"></span></span></span>
+      </div>
+      <div class="call-top">
+        <p class="call-name">Unknown</p>
+        <p class="call-number">+62 1234 5678</p>
+        <span class="call-avatar call-avatar-unknown"></span>
+        <p class="call-state">Calling&hellip;</p>
+      </div>
+      <div class="call-options"><span class="call-opt">Remind me</span><span class="call-opt call-opt-r">Message</span></div>
+      <div class="call-buttons"><span class="call-btn call-accept">&#10003;</span><span class="call-btn call-decline">&#10005;</span></div>
+    </div>
+
+    <!-- Phone call: connected, with dialogue -->
+    <div class="insert do-call">
+      <div class="call-top">
+        <p class="call-name">Jun</p>
+        <p class="call-state">Connected &middot; 00:41</p>
+      </div>
+      <div class="call-lines">
+        <p class="call-line"><span class="call-who">Jun</span>You didn't answer.</p>
+        <p class="call-line call-line-out"><span class="call-who">Mara</span>I'm answering now.</p>
+        <p class="call-line"><span class="call-who">Jun</span>Good. Then listen. Don't go to the boathouse alone.</p>
+      </div>
+      <div class="call-foot"><span class="call-end">Call ended &middot; 01:17</span></div>
+    </div>
+
+    <!-- Lock screen: unread notifications, low battery -->
+    <div class="do-lock">
+      <div class="do-status">
+        <span class="st-time">19:48</span>
+        <span class="st-right"><span class="st-net">LTE</span><span class="sig"><span class="sig-bar s1"></span><span class="sig-bar s2"></span><span class="sig-bar s3 sig-off"></span><span class="sig-bar s4 sig-off"></span></span><span class="st-pct">18%</span><span class="batt batt-20"><span class="batt-fill"></span></span></span>
+      </div>
+      <div class="lock-clock">19:48</div>
+      <div class="lock-date">Wednesday, 18 November</div>
+      <div class="lock-notifs">
+        <div class="notif">
+          <div class="notif-head"><span class="notif-icon notif-icon-msg">M</span><span class="notif-app">Messages</span><span class="notif-badge">3</span><span class="notif-when">now</span></div>
+          <p class="notif-title"><span class="notif-dot"></span>Jun</p>
+          <p class="notif-text notif-text-clip">Don't go inside without me.</p>
+        </div>
+        <div class="notif">
+          <div class="notif-head"><span class="notif-icon notif-icon-bank">B</span><span class="notif-app">Harbour Bank</span><span class="notif-when">2m ago</span></div>
+          <p class="notif-title">Card purchase</p>
+          <p class="notif-text"><span class="notif-amount notif-debit">&minus;Rp 245.000</span> at Pier Cafe</p>
+          <p class="notif-bal">Available balance Rp 1.832.400</p>
+        </div>
+        <div class="notif">
+          <div class="notif-head"><span class="notif-icon notif-icon-mail">@</span><span class="notif-app">Mail</span><span class="notif-when">17:58</span></div>
+          <p class="notif-title">H. Okafor</p>
+          <p class="notif-text notif-text-clip">Re: Access to the boathouse ledger</p>
+        </div>
+        <p class="lock-more">+ 4 more notifications</p>
+      </div>
+      <div class="lock-bar"></div>
+    </div>
+
+    <!-- Notifications on their own: bank credit, missed call, low battery -->
+    <div class="notif-list">
+      <div class="notif">
+        <div class="notif-head"><span class="notif-icon notif-icon-bank">B</span><span class="notif-app">Harbour Bank</span><span class="notif-when">now</span></div>
+        <p class="notif-title">Transfer received</p>
+        <p class="notif-text"><span class="notif-amount notif-credit">+Rp 5.000.000</span> from J. Linde</p>
+        <p class="notif-bal">Available balance Rp 6.832.400</p>
+      </div>
+      <div class="notif">
+        <div class="notif-head"><span class="notif-icon notif-icon-call">C</span><span class="notif-app">Phone</span><span class="notif-when">19:41</span></div>
+        <p class="notif-title">Missed call</p>
+        <p class="notif-text">Unknown &middot; +62 1234 5678</p>
+      </div>
+      <div class="notif">
+        <div class="notif-head"><span class="notif-icon notif-icon-alert">!</span><span class="notif-app">Battery</span><span class="notif-when">now</span></div>
+        <p class="notif-title">Low battery</p>
+        <p class="notif-text">10% remaining. Connect to power.</p>
+      </div>
+    </div>
+
+    <!-- System alert -->
+    <div class="do-alert">
+      <div class="alert-body">
+        <span class="alert-batt"><span class="batt batt-10"><span class="batt-fill"></span></span></span>
+        <div class="alert-title">Low Battery</div>
+        <div class="alert-text">10% of battery remaining.</div>
+      </div>
+      <span class="alert-btn">Low Power Mode</span>
+      <span class="alert-btn">Close</span>
+    </div>
+
+    <hr class="scene-break">
+
+    <p>Back in the car, she opened the glovebox and found the letter exactly where she had left it.</p>
+
+    <!-- Letter -->
+    <div class="insert do-letter">
+      <p class="letter-date">14 March</p>
+      <p>Dear Mara,</p>
+      <p>If you are reading this, the tide has done what it does, and I am sorry I could not be the one to tell you.</p>
+      <p class="letter-signoff">Yours always,<br>Dad</p>
+    </div>
+
+    <!-- Diary -->
+    <div class="insert do-diary">
+      <p class="diary-date">Entry &middot; 3 June</p>
+      <p>The water was black again this morning. I counted the boats twice. One is missing and nobody has said so.</p>
+    </div>
+
+    <!-- Document -->
+    <div class="insert do-doc">
+      <div class="insert-head">
+        <span class="doc-title">Boathouse Access Record</span>
+        <span class="doc-ref">Ref. HT-2291-B</span>
+      </div>
+      <div class="insert-body">
+        <div class="doc-row"><span class="doc-key">Applicant</span><span class="doc-val">Mara Linde</span></div>
+        <div class="doc-row"><span class="doc-key">Purpose</span><span class="doc-val">Family records review</span></div>
+        <div class="doc-row"><span class="doc-key">Status</span><span class="doc-val">Approved, supervised visit only</span></div>
+        <div class="doc-row"><span class="doc-key">Date</span><span class="doc-val">Friday, 20 November</span></div>
+      </div>
+    </div>
+
+    <!-- Social post -->
+    <div class="insert do-post">
+      <div class="insert-body">
+        <p><span class="post-user">Harbour Watch</span> <span class="post-handle">@harbourwatch &middot; 2h</span></p>
+        <p>Reminder: the east pier closes at dusk this week for repairs. Please keep clear of the boathouse.</p>
+        <p class="post-actions">14 replies &nbsp;&middot;&nbsp; 63 shares &nbsp;&middot;&nbsp; 210 likes</p>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="insert do-notify">
+      <div class="insert-head">
+        <span class="insert-label">Reminder</span>
+        <strong>Boathouse viewing</strong>
+        <p class="insert-meta">Friday, 10:00. Harbour Trust Records Office</p>
+      </div>
+    </div>
+
+    <!-- System message -->
+    <div class="insert do-system">
+      <div class="insert-body">
+        <p><span class="insert-label">System</span></p>
+        <p>Battery low. 8% remaining.</p>
+      </div>
+    </div>
+
+    <!-- Transcript -->
+    <div class="insert do-transcript">
+      <div class="insert-body">
+        <span class="insert-label">Recorded interview &middot; Tape 2</span>
+        <p><span class="speaker">Interviewer:</span> When did you last see the boathouse light on?</p>
+        <p><span class="speaker">Keeper:</span> Not since the winter she left.</p>
+      </div>
+    </div>
+
+    <hr class="scene-break-symbol">
+
+    <p>Mara started the engine. In the mirror, the pier lamps went out one by one, as if something was walking the length of it, switching them off behind itself.</p>
+
+  </div>
+
+  <div class="end-notes">
+    <p class="end-notes-label">End Notes</p>
+    <p>Chapter two is on its way. Thanks for staying until the tide went out.</p>
+  </div>
+
+</div>
+</div>
+<!-- ============ PASTE-READY MARKUP ENDS HERE ============ -->
+
+<script>
+  /* Preview only: switches the mode class on .fic-page. Not used on AO3. */
+  function setMode(cls) {
+    var page = document.getElementById('ficpage');
+    page.className = 'fic-page' + (cls ? ' ' + cls : '');
+  }
+</script>
+</body>
+</html>

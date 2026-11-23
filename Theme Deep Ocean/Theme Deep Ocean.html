@@ -1,0 +1,3582 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Deep Ocean — Original Palette</title>
+<style>/* ==========================================================
+   WORK SKIN — Fic page, inserts, internal monologue
+   Palette
+   ink        #26383A   deep ink   #172B32
+   muted      #526D73   mist       #A7B3AF
+   paper      #F7F5EF   sand       #EAE5D9   line  #C1B8A5
+   terracotta #A47D68   backdrop   #ddd9cf
+   Modes: default (light) · .mode-dark · .mode-parchment
+   Put the mode class on .fic-page.
+   ========================================================== */
+
+/* ---------- Base ---------- */
+
+#workskin * {
+  box-sizing: border-box;
+}
+
+#workskin {
+  max-width: 52em;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #ddd9cf;
+  color: #26383A;
+}
+
+#workskin .fic-page {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 1.5em 1.1em 1.25em;
+  background: #F7F5EF;
+  color: #26383A;
+  font-family: "Source Serif 4", "Source Serif Pro", Lora, Georgia, "Times New Roman", serif;
+  font-size: 1.05em;
+  line-height: 1.8;
+  text-align: left;
+}
+
+#workskin .fic-page p {
+  margin: 0 0 1.15em;
+}
+
+/* ---------- Header and labels ---------- */
+
+#workskin .fic-header {
+  text-align: center;
+  padding: 1em 0 .5em;
+}
+
+#workskin .fic-kicker,
+#workskin .chapter-number,
+#workskin .note-label,
+#workskin .fic-label,
+#workskin .end-notes-label,
+#workskin .insert-label {
+  font-family: Inter, Arial, sans-serif;
+  font-size: .72em;
+  font-weight: normal;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #526D73;
+}
+
+#workskin .fic-kicker {
+  margin: 0 0 1.4em;
+}
+
+#workskin .fic-title,
+#workskin .chapter-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
+  font-weight: normal;
+  text-align: center;
+  color: #172B32;
+}
+
+#workskin .fic-title {
+  font-size: 2.2em;
+  line-height: 1.1;
+  letter-spacing: .03em;
+}
+
+#workskin .chapter-title {
+  font-size: 1.8em;
+  line-height: 1.2;
+}
+
+#workskin .fic-subtitle,
+#workskin .chapter-subtitle {
+  max-width: 26em;
+  margin: 1em auto 0;
+  font-style: italic;
+  color: #526D73;
+  text-align: center;
+}
+
+/* ---------- Metadata and tags ---------- */
+
+#workskin .fic-metadata {
+  margin: 2em 0;
+  padding: 1em 1em .6em;
+  background: #EAE5D9;
+  border-top: 1px solid #A7B3AF;
+  border-bottom: 1px solid #A7B3AF;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .9em;
+  line-height: 1.5;
+}
+
+#workskin .fic-section {
+  margin: 0 0 1em;
+}
+
+#workskin .fic-label {
+  margin: 0 0 .5em;
+  color: #172B32;
+}
+
+#workskin ul.fic-tags {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#workskin li.fic-tag {
+  display: inline-block;
+  margin: 0 .4em .5em 0;
+  padding: .15em .7em;
+  list-style: none;
+  background: #F7F5EF;
+  border: 1px solid #A7B3AF;
+  color: #26383A;
+}
+
+/* ---------- Author note and end notes ---------- */
+
+#workskin .author-note {
+  margin: 2em 0;
+  padding: 1.6em 0;
+  border-top: 1px solid #C1B8A5;
+  border-bottom: 1px solid #C1B8A5;
+}
+
+#workskin .note-label {
+  margin: 0 0 .8em;
+  text-align: center;
+}
+
+#workskin .author-note h3 {
+  margin: 0 0 1em;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  color: #172B32;
+}
+
+#workskin .note-ending {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+  color: #172B32;
+}
+
+#workskin .end-notes {
+  margin: 2em 0 0;
+  padding: 1.4em 0 0;
+  border-top: 1px solid #C1B8A5;
+}
+
+#workskin .end-notes-label {
+  margin: 0 0 .8em;
+  text-align: center;
+}
+
+/* ---------- Chapter ---------- */
+
+#workskin .chapter-header {
+  text-align: center;
+  padding: 1.5em 0 0;
+}
+
+#workskin .chapter-number {
+  margin: 0 0 .8em;
+}
+
+#workskin .chapter-content {
+  margin: 0 auto;
+}
+
+#workskin .chapter-content p.dropcap::first-letter {
+  float: left;
+  padding: .05em .1em 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 3.6em;
+  line-height: .8;
+  color: #172B32;
+}
+
+/* ---------- Quotation (spoken / quoted text, terracotta bar) ---------- */
+
+#workskin blockquote.fic-quote {
+  margin: 1.8em 0 1.8em .4em;
+  padding: .6em 1em;
+  border: 0;
+  border-left: 3px solid #A47D68;
+  background: #EAE5D9;
+  color: #26383A;
+  font-style: italic;
+}
+
+#workskin blockquote.fic-quote p {
+  margin: 0 0 .8em;
+}
+
+#workskin blockquote.fic-quote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Internal monologue (teal, no box, dotted rule) ----------
+   .thought        inline: a thought inside a paragraph
+   .thought-block  block: a longer private passage
+   .thought-who    optional small label above a block
+   .thought-stream centred, fragmented or intrusive thought
+   ---------------------------------------------------------------- */
+
+#workskin .thought {
+  font-style: italic;
+  color: #3A5A61;
+}
+
+#workskin .thought-block {
+  margin: 1.6em 0 1.6em 1.2em;
+  padding: 0 0 0 1em;
+  border-left: 1px dotted #526D73;
+  font-style: italic;
+  color: #3A5A61;
+}
+
+#workskin .thought-block p {
+  margin: 0 0 .9em;
+}
+
+#workskin .thought-block p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .thought-who {
+  display: block;
+  margin: 0 0 .4em;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .66em;
+  font-style: normal;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #526D73;
+}
+
+#workskin .thought-stream {
+  max-width: 26em;
+  margin: 1.8em auto;
+  padding: .8em 0;
+  border-top: 1px dotted #A7B3AF;
+  border-bottom: 1px dotted #A7B3AF;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: .02em;
+  color: #3A5A61;
+}
+
+#workskin .thought-stream p {
+  margin: 0 0 .6em;
+}
+
+#workskin .thought-stream p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Scene breaks ---------- */
+
+#workskin hr.fic-divider,
+#workskin hr.scene-break,
+#workskin hr.scene-break-ocean,
+#workskin hr.scene-break-symbol {
+  height: auto;
+  margin: 2.4em 0;
+  border: 0;
+  overflow: visible;
+  text-align: center;
+  line-height: 1;
+  color: #A47D68;
+}
+
+#workskin hr.fic-divider::after {
+  content: "\2248   \2248   \2248";
+  letter-spacing: .3em;
+}
+
+#workskin hr.scene-break::after {
+  content: "*   *   *";
+  letter-spacing: .35em;
+}
+
+#workskin hr.scene-break-ocean::after {
+  content: "~  \2248  ~";
+  letter-spacing: .3em;
+}
+
+#workskin hr.scene-break-symbol::after {
+  content: "\25C7";
+  font-size: 1.2em;
+}
+
+#workskin hr.scene-break-line {
+  width: 18%;
+  height: 0;
+  margin: 2.4em auto;
+  border: 0;
+  border-top: 1px solid #C1B8A5;
+}
+
+/* ==========================================================
+   INSERTS — shared frame
+   ========================================================== */
+
+#workskin .insert {
+  margin: 1.8em auto;
+  max-width: 34em;
+  border: 1px solid #C1B8A5;
+  background: #F1EEE6;
+  color: #26383A;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .86em;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+#workskin .insert-head {
+  padding: .8em 1em;
+  background: #EAE5D9;
+  border-bottom: 1px solid #C1B8A5;
+}
+
+#workskin .insert-head strong {
+  color: #172B32;
+  font-weight: 600;
+}
+
+#workskin .insert-label {
+  display: block;
+  margin: 0 0 .35em;
+  font-size: .68em;
+}
+
+#workskin .insert-body {
+  padding: 1em;
+}
+
+#workskin .insert p {
+  margin: 0 0 .7em;
+}
+
+#workskin .insert p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .insert-meta {
+  color: #526D73;
+  font-size: .88em;
+}
+
+#workskin .insert-rule {
+  border: 0;
+  border-top: 1px solid #C1B8A5;
+  margin: .8em 0;
+}
+
+/* Widths: set as width + max-width so they still hold if max-width is ignored */
+#workskin .do-email,
+#workskin .do-doc,
+#workskin .do-transcript {
+  width: 30em;
+  max-width: 100%;
+}
+
+/* ---------- Text messages (compact) ---------- */
+
+#workskin .do-chat {
+  width: 18em;
+  max-width: 100%;
+  border-radius: .9em;
+  overflow: hidden;
+  background: #F1EEE6;
+  border: 1px solid #A7B3AF;
+  font-size: .72em;
+  line-height: 1.4;
+}
+
+#workskin .do-chat-head {
+  padding: .55em .8em;
+  text-align: center;
+  background: #EAE5D9;
+  border-bottom: 1px solid #C1B8A5;
+}
+
+#workskin .do-chat-head p {
+  margin: 0;
+  font-weight: 600;
+  color: #172B32;
+}
+
+#workskin .do-chat-head small {
+  display: block;
+  color: #526D73;
+  font-size: .85em;
+  font-weight: normal;
+}
+
+#workskin .do-chat-body {
+  overflow: hidden;
+  padding: .7em;
+}
+
+#workskin .do-day {
+  text-align: center;
+  margin: 0 0 .7em;
+  color: #526D73;
+  font-size: .8em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#workskin .do-day p {
+  margin: 0;
+}
+
+#workskin .do-msg {
+  float: left;
+  clear: both;
+  max-width: 80%;
+  margin: 0 0 .5em;
+  padding: .45em .7em;
+  border-radius: .9em .9em .9em .2em;
+  background: #EAE5D9;
+  color: #26383A;
+}
+
+#workskin .do-msg p {
+  margin: 0;
+}
+
+#workskin .do-out {
+  float: right;
+  clear: both;
+  max-width: 80%;
+  margin: 0 0 .5em;
+  padding: .45em .7em;
+  border-radius: .9em .9em .2em .9em;
+  background: #DCE5E1;
+  color: #26383A;
+}
+
+#workskin .do-out p {
+  margin: 0;
+}
+
+#workskin .do-sender {
+  display: block;
+  margin: 0 0 .1em;
+  color: #526D73;
+  font-size: .8em;
+  font-weight: 700;
+}
+
+#workskin .do-typing {
+  clear: both;
+  margin: 0 0 .4em;
+  color: #526D73;
+  font-size: .85em;
+  font-style: italic;
+}
+
+#workskin .do-chat-foot {
+  padding: 0 .8em .6em;
+  text-align: right;
+  color: #526D73;
+  font-size: .8em;
+}
+
+/* ---------- Email ---------- */
+
+#workskin .do-email {
+  border-top: 3px solid #526D73;
+}
+
+#workskin .do-email .insert-head {
+  background: #EAE5D9;
+}
+
+#workskin .do-email .email-row {
+  margin: 0 0 .35em;
+}
+
+#workskin .do-email .email-key {
+  display: inline-block;
+  min-width: 4.5em;
+  color: #526D73;
+}
+
+#workskin .do-email .email-subject {
+  color: #172B32;
+  font-weight: 600;
+}
+
+#workskin .do-email .email-sig {
+  margin-top: 1em;
+  color: #526D73;
+}
+
+#workskin .do-email .email-attach {
+  margin-top: .9em;
+  padding-top: .7em;
+  border-top: 1px solid #C1B8A5;
+  color: #526D73;
+  font-size: .86em;
+}
+
+/* ---------- Social post ---------- */
+
+#workskin .do-post {
+  width: 26em;
+  max-width: 100%;
+  border-radius: .55em;
+}
+
+#workskin .do-post .post-user {
+  font-weight: 700;
+  color: #172B32;
+}
+
+#workskin .do-post .post-handle {
+  color: #526D73;
+}
+
+#workskin .do-post .post-actions {
+  margin-top: .9em;
+  padding-top: .7em;
+  border-top: 1px solid #C1B8A5;
+  color: #526D73;
+  font-size: .82em;
+}
+
+/* ---------- Notification ---------- */
+
+#workskin .do-notify {
+  width: 24em;
+  max-width: 100%;
+  border-radius: .65em;
+  box-shadow: 0 2px 8px rgba(23, 43, 50, .08);
+}
+
+#workskin .do-notify .insert-head {
+  border-bottom: 0;
+}
+
+/* ---------- System message ---------- */
+
+#workskin .do-system {
+  width: 26em;
+  max-width: 100%;
+  border-style: dashed;
+  background: #EAE5D9;
+  text-align: center;
+}
+
+#workskin .do-system .insert-body {
+  padding: .75em 1em;
+}
+
+/* ---------- Letter ---------- */
+
+#workskin .do-letter {
+  width: 28em;
+  max-width: 100%;
+  padding: 1.6em 1.8em;
+  background: #F7F5EF;
+  border: 1px solid #C1B8A5;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: .98em;
+}
+
+#workskin .do-letter .letter-date {
+  text-align: right;
+  color: #526D73;
+  font-style: italic;
+}
+
+#workskin .do-letter .letter-signoff {
+  margin-top: 1.2em;
+  font-style: italic;
+}
+
+/* ---------- Diary ---------- */
+
+#workskin .do-diary {
+  width: 28em;
+  max-width: 100%;
+  padding: 1.2em 1.5em;
+  background: #EAE5D9;
+  border: 0;
+  border-left: 3px solid #A47D68;
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+#workskin .do-diary .diary-date {
+  color: #526D73;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .78em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* ---------- Document / form (float layout, no grid) ---------- */
+
+#workskin .do-doc {
+  border: 1px solid #A7B3AF;
+  background: #F7F5EF;
+}
+
+#workskin .do-doc .insert-head {
+  text-align: center;
+  background: #EAE5D9;
+}
+
+#workskin .do-doc .doc-title {
+  display: block;
+  margin: .2em 0;
+  font-family: Georgia, serif;
+  font-size: 1.25em;
+  letter-spacing: .04em;
+  color: #172B32;
+}
+
+#workskin .do-doc .doc-ref {
+  color: #526D73;
+  font-size: .78em;
+}
+
+#workskin .do-doc .doc-row {
+  overflow: hidden;
+  margin: 0 0 .45em;
+}
+
+#workskin .do-doc .doc-key {
+  float: left;
+  width: 8em;
+  color: #526D73;
+  font-weight: 600;
+}
+
+#workskin .do-doc .doc-val {
+  display: block;
+  margin-left: 8.5em;
+}
+
+/* ---------- Phone call (compact phone-screen panel) ----------
+   Parts: .do-status  .call-top  .call-lines  .call-options
+          .call-buttons  .call-foot
+   ------------------------------------------------------------- */
+
+#workskin .do-call {
+  width: 15em;
+  max-width: 100%;
+  border: 3px solid #0E1B20;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #172B32;
+  background-image: linear-gradient(180deg, #24505B, #172B32);
+  color: #EAE5D9;
+  font-size: .72em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#workskin .do-call .call-top {
+  padding: 1em 1em .6em;
+}
+
+#workskin .do-call .call-name {
+  margin: 0;
+  font-size: 1.35em;
+  line-height: 1.2;
+  color: #F7F5EF;
+}
+
+#workskin .do-call .call-number {
+  margin: .15em 0 0;
+  font-size: .95em;
+  color: #A7B3AF;
+}
+
+#workskin .do-call .call-avatar {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 2.4em;
+  height: 2.4em;
+  margin: .8em auto .7em;
+  border-radius: 50%;
+  background: #C9D3D2;
+  color: #26383A;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5em;
+  line-height: 2.4em;
+  text-align: center;
+}
+
+#workskin .do-call .call-avatar-unknown::before {
+  content: "";
+  position: absolute;
+  top: .45em;
+  left: 50%;
+  width: .9em;
+  height: .9em;
+  margin-left: -.45em;
+  border-radius: 50%;
+  background: #526D73;
+}
+
+#workskin .do-call .call-avatar-unknown::after {
+  content: "";
+  position: absolute;
+  top: 1.35em;
+  left: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  margin-left: -.8em;
+  border-radius: 50%;
+  background: #526D73;
+}
+
+#workskin .do-call .call-state {
+  margin: 0;
+  font-size: .85em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #A7B3AF;
+}
+
+#workskin .do-call .call-lines {
+  margin: .3em 1em 0;
+  padding: .8em 0 .3em;
+  border-top: 1px solid #3B5A61;
+  text-align: left;
+}
+
+#workskin .do-call .call-line {
+  margin: 0 0 .65em;
+  color: #EAE5D9;
+}
+
+#workskin .do-call .call-line-out {
+  text-align: right;
+}
+
+#workskin .do-call .call-who {
+  display: block;
+  margin: 0 0 .1em;
+  font-size: .75em;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #A7B3AF;
+}
+
+#workskin .do-call .call-line-out .call-who {
+  color: #C49A83;
+}
+
+#workskin .do-call .call-options {
+  overflow: hidden;
+  padding: .6em 1.6em 0;
+  font-size: .85em;
+  color: #EAE5D9;
+}
+
+#workskin .do-call .call-opt {
+  float: left;
+}
+
+#workskin .do-call .call-opt-r {
+  float: right;
+}
+
+#workskin .do-call .call-buttons {
+  overflow: hidden;
+  padding: .7em 1.4em 1.2em;
+}
+
+#workskin .do-call .call-btn {
+  display: block;
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  line-height: 2.6em;
+  text-align: center;
+}
+
+#workskin .do-call .call-accept {
+  float: left;
+  background: #5FAF6B;
+}
+
+#workskin .do-call .call-decline {
+  float: right;
+  background: #D2453D;
+}
+
+/* single end-call button (connected call) */
+#workskin .do-call .call-buttons-single .call-btn {
+  float: none;
+  margin: 0 auto;
+}
+
+/* ended call pill */
+#workskin .do-call .call-foot {
+  padding: .5em 1em 1.1em;
+  text-align: center;
+}
+
+#workskin .do-call .call-end {
+  display: inline-block;
+  padding: .3em 1em;
+  border-radius: 1em;
+  background: #A47D68;
+  color: #F7F5EF;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+/* ---------- Transcript ---------- */
+
+#workskin .do-transcript {
+  border-left: 2px solid #A7B3AF;
+}
+
+#workskin .do-transcript .speaker {
+  color: #526D73;
+  font-weight: 700;
+}
+
+#workskin .do-transcript p {
+  margin-bottom: .55em;
+}
+
+/* ==========================================================
+   PHONE UI — status bar, battery, lock screen, notifications
+   ========================================================== */
+
+/* ---------- Status bar (time · network · signal · battery) ---------- */
+
+#workskin .do-status {
+  overflow: hidden;
+  padding: .65em 1em 0;
+  font-size: .8em;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #EAE5D9;
+}
+
+#workskin .do-status .st-time {
+  float: left;
+}
+
+#workskin .do-status .st-right {
+  float: right;
+}
+
+#workskin .st-net {
+  margin-right: .35em;
+  font-size: .8em;
+}
+
+#workskin .sig {
+  display: inline-block;
+  height: .75em;
+  margin-right: .4em;
+  vertical-align: baseline;
+}
+
+#workskin .sig-bar {
+  display: inline-block;
+  width: .2em;
+  margin-right: .07em;
+  background: currentColor;
+  vertical-align: bottom;
+}
+
+#workskin .sig-bar.s1 { height: .25em; }
+#workskin .sig-bar.s2 { height: .4em; }
+#workskin .sig-bar.s3 { height: .55em; }
+#workskin .sig-bar.s4 { height: .75em; }
+
+#workskin .sig-bar.sig-off {
+  opacity: .3;
+}
+
+#workskin .st-pct {
+  margin-right: .3em;
+}
+
+/* Battery icon. Level classes: batt-100 / 90 / 80 / ... / 10 / 5
+   Add batt-charge for the green charging colour.
+   20% and below turns red. */
+
+#workskin .batt {
+  display: inline-block;
+  position: relative;
+  width: 1.7em;
+  height: .8em;
+  padding: 1px;
+  border: 1px solid currentColor;
+  border-radius: .25em;
+  vertical-align: middle;
+}
+
+#workskin .batt::after {
+  content: "";
+  position: absolute;
+  top: .17em;
+  right: -.3em;
+  width: .15em;
+  height: .3em;
+  border-radius: 0 .1em .1em 0;
+  background: currentColor;
+}
+
+#workskin .batt-fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: .12em;
+  background: currentColor;
+}
+
+#workskin .batt-100 .batt-fill {
+  width: 100%;
+}
+
+#workskin .batt-90 .batt-fill {
+  width: 90%;
+}
+
+#workskin .batt-80 .batt-fill {
+  width: 80%;
+}
+
+#workskin .batt-70 .batt-fill {
+  width: 70%;
+}
+
+#workskin .batt-60 .batt-fill {
+  width: 60%;
+}
+
+#workskin .batt-50 .batt-fill {
+  width: 50%;
+}
+
+#workskin .batt-40 .batt-fill {
+  width: 40%;
+}
+
+#workskin .batt-30 .batt-fill {
+  width: 30%;
+}
+
+#workskin .batt-20 .batt-fill {
+  width: 20%;
+}
+
+#workskin .batt-10 .batt-fill {
+  width: 10%;
+}
+
+#workskin .batt-5 .batt-fill {
+  width: 5%;
+}
+
+#workskin .batt-20 .batt-fill,
+#workskin .batt-10 .batt-fill,
+#workskin .batt-5 .batt-fill {
+  background: #D2453D;
+}
+
+#workskin .batt-charge .batt-fill {
+  background: #5FAF6B;
+}
+
+/* ---------- Lock screen (unread notifications) ---------- */
+
+#workskin .do-lock {
+  width: 15em;
+  max-width: 100%;
+  margin: 1.8em auto;
+  border: 3px solid #0E1B20;
+  border-radius: 1.5em;
+  overflow: hidden;
+  background-color: #172B32;
+  background-image: linear-gradient(180deg, #2A5560, #142329);
+  color: #EAE5D9;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .72em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#workskin .do-lock .lock-clock {
+  margin: .9em 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.2em;
+  line-height: 1;
+  color: #F7F5EF;
+}
+
+#workskin .do-lock .lock-date {
+  margin: .25em 0 .9em;
+  font-size: .85em;
+  color: #A7B3AF;
+}
+
+#workskin .do-lock .lock-notifs {
+  padding: 0 .6em .4em;
+  text-align: left;
+}
+
+#workskin .do-lock .lock-more {
+  margin: .5em 0 0;
+  font-size: .85em;
+  color: #A7B3AF;
+  text-align: center;
+}
+
+#workskin .do-lock .lock-bar {
+  width: 30%;
+  height: .3em;
+  margin: .7em auto .6em;
+  border-radius: .2em;
+  background: #EAE5D9;
+}
+
+/* ---------- Notification cards ----------
+   Use inside .do-lock .lock-notifs, or inside .notif-list on its own.
+   Icon variants: notif-icon-msg · -mail · -bank · -alert · -call · -cal
+   ----------------------------------------- */
+
+#workskin .notif-list {
+  width: 15em;
+  max-width: 100%;
+  margin: 1.8em auto;
+  font-size: .72em;
+  text-align: left;
+}
+
+#workskin .notif {
+  margin: 0 0 .4em;
+  padding: .45em .6em .55em;
+  border: 1px solid #C1B8A5;
+  border-radius: .8em;
+  background: #F7F5EF;
+  color: #26383A;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.35;
+}
+
+#workskin .do-lock .notif {
+  background: #E8EDEB;
+  border-color: transparent;
+}
+
+#workskin .notif-head {
+  overflow: hidden;
+  margin: 0 0 .3em;
+  font-size: .75em;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: #526D73;
+}
+
+#workskin .notif-icon {
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: .45em;
+  border-radius: .4em;
+  background: #526D73;
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 1.6em;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+}
+
+#workskin .notif-icon-msg { background: #5FAF6B; }
+#workskin .notif-icon-mail { background: #5B84B1; }
+#workskin .notif-icon-bank { background: #2F7F7A; }
+#workskin .notif-icon-alert { background: #D2453D; }
+#workskin .notif-icon-call { background: #D2453D; }
+#workskin .notif-icon-cal { background: #A47D68; }
+
+#workskin .notif-app {
+  vertical-align: middle;
+}
+
+#workskin .notif-when {
+  float: right;
+  line-height: 2em;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+#workskin .notif-badge {
+  display: inline-block;
+  min-width: 1.6em;
+  margin-left: .45em;
+  padding: 0 .45em;
+  border-radius: 1em;
+  background: #D2453D;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.6em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#workskin .notif .notif-title {
+  margin: 0;
+  font-weight: 700;
+  color: #172B32;
+}
+
+#workskin .notif .notif-text {
+  margin: .1em 0 0;
+  color: #26383A;
+}
+
+#workskin .notif .notif-text-clip {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#workskin .notif .notif-bal {
+  margin: .25em 0 0;
+  font-size: .85em;
+  color: #526D73;
+}
+
+#workskin .notif-dot {
+  display: inline-block;
+  width: .6em;
+  height: .6em;
+  margin-right: .45em;
+  border-radius: 50%;
+  background: #5B84B1;
+  vertical-align: middle;
+}
+
+#workskin .notif-amount {
+  font-weight: 700;
+}
+
+#workskin .notif-debit {
+  color: #B2362F;
+}
+
+#workskin .notif-credit {
+  color: #2F7F4F;
+}
+
+/* ---------- System alert dialog (low battery etc.) ---------- */
+
+#workskin .do-alert {
+  width: 15em;
+  max-width: 100%;
+  margin: 1.8em auto;
+  border: 1px solid #C1B8A5;
+  border-radius: 1em;
+  overflow: hidden;
+  background: #F7F5EF;
+  color: #26383A;
+  font-family: Inter, Arial, sans-serif;
+  font-size: .72em;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#workskin .do-alert .alert-body {
+  padding: .9em .9em .7em;
+}
+
+#workskin .do-alert .alert-batt {
+  display: block;
+  margin: 0 0 .5em;
+  font-size: 1.4em;
+  line-height: 1;
+  color: #526D73;
+}
+
+#workskin .do-alert .alert-title {
+  margin: 0 0 .3em;
+  font-weight: 700;
+  color: #172B32;
+}
+
+#workskin .do-alert .alert-text {
+  margin: 0;
+  color: #526D73;
+}
+
+#workskin .do-alert .alert-btn {
+  display: block;
+  padding: .55em;
+  border-top: 1px solid #C1B8A5;
+  color: #3B6E8F;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   DARK MODE  (.fic-page.mode-dark)
+   page #121F24 · panel #172B32 · raised #1D343C · line #526D73
+   text #F7F5EF / #EAE5D9 · muted #A7B3AF · accent #C49A83
+   ========================================================== */
+
+#workskin .fic-page.mode-dark {
+  background: #121F24;
+  color: #EAE5D9;
+}
+
+/* headings and strong text */
+#workskin .mode-dark .fic-title,
+#workskin .mode-dark .chapter-title,
+#workskin .mode-dark .author-note h3,
+#workskin .mode-dark .note-ending,
+#workskin .mode-dark .fic-label,
+#workskin .mode-dark .insert-head strong,
+#workskin .mode-dark .do-chat-head p,
+#workskin .mode-dark .do-doc .doc-title,
+#workskin .mode-dark .do-post .post-user,
+#workskin .mode-dark .do-email .email-subject,
+#workskin .mode-dark .chapter-content p.dropcap::first-letter {
+  color: #F7F5EF;
+}
+
+/* muted text */
+#workskin .mode-dark .fic-kicker,
+#workskin .mode-dark .chapter-number,
+#workskin .mode-dark .note-label,
+#workskin .mode-dark .end-notes-label,
+#workskin .mode-dark .fic-subtitle,
+#workskin .mode-dark .chapter-subtitle,
+#workskin .mode-dark .insert-label,
+#workskin .mode-dark .insert-meta,
+#workskin .mode-dark .do-sender,
+#workskin .mode-dark .do-day,
+#workskin .mode-dark .do-typing,
+#workskin .mode-dark .do-chat-head small,
+#workskin .mode-dark .do-chat-foot,
+#workskin .mode-dark .do-email .email-key,
+#workskin .mode-dark .do-email .email-sig,
+#workskin .mode-dark .do-email .email-attach,
+#workskin .mode-dark .do-post .post-handle,
+#workskin .mode-dark .do-post .post-actions,
+#workskin .mode-dark .do-letter .letter-date,
+#workskin .mode-dark .do-diary .diary-date,
+#workskin .mode-dark .do-doc .doc-ref,
+#workskin .mode-dark .do-doc .doc-key,
+#workskin .mode-dark .do-transcript .speaker,
+#workskin .mode-dark .thought-who {
+  color: #A7B3AF;
+}
+
+/* metadata and tags */
+#workskin .mode-dark .fic-metadata {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark li.fic-tag {
+  background: #172B32;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+/* notes, rules, breaks */
+#workskin .mode-dark .author-note,
+#workskin .mode-dark .end-notes {
+  border-color: #526D73;
+}
+
+#workskin .mode-dark hr.fic-divider,
+#workskin .mode-dark hr.scene-break,
+#workskin .mode-dark hr.scene-break-ocean,
+#workskin .mode-dark hr.scene-break-symbol {
+  color: #C49A83;
+}
+
+#workskin .mode-dark hr.scene-break-line {
+  border-top-color: #526D73;
+}
+
+/* quotation */
+#workskin .mode-dark blockquote.fic-quote {
+  background: #172B32;
+  border-left-color: #C49A83;
+  color: #EAE5D9;
+}
+
+/* internal monologue */
+#workskin .mode-dark .thought,
+#workskin .mode-dark .thought-block,
+#workskin .mode-dark .thought-stream {
+  color: #A9C7CD;
+}
+
+#workskin .mode-dark .thought-block {
+  border-left-color: #6F8F96;
+}
+
+#workskin .mode-dark .thought-stream {
+  border-top-color: #526D73;
+  border-bottom-color: #526D73;
+}
+
+/* shared insert frame */
+#workskin .mode-dark .insert {
+  background: #172B32;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .insert-head {
+  background: #1D343C;
+  border-bottom-color: #526D73;
+}
+
+#workskin .mode-dark .insert-rule {
+  border-top-color: #526D73;
+}
+
+/* messages */
+#workskin .mode-dark .do-chat {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .do-chat-head {
+  background: #1D343C;
+  border-bottom-color: #526D73;
+}
+
+#workskin .mode-dark .do-msg {
+  background: #1D343C;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .do-out {
+  background: #29413F;
+  color: #F7F5EF;
+}
+
+/* email */
+#workskin .mode-dark .do-email {
+  border-top-color: #A9C7CD;
+}
+
+#workskin .mode-dark .do-email .email-attach {
+  border-top-color: #526D73;
+}
+
+/* post and notification */
+#workskin .mode-dark .do-post .post-actions {
+  border-top-color: #526D73;
+}
+
+#workskin .mode-dark .do-notify {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+}
+
+/* system */
+#workskin .mode-dark .do-system {
+  background: #1D343C;
+}
+
+/* letter and diary */
+#workskin .mode-dark .do-letter {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .do-diary {
+  background: #172B32;
+  border-left-color: #C49A83;
+}
+
+/* document */
+#workskin .mode-dark .do-doc {
+  background: #172B32;
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .do-doc .insert-head {
+  background: #1D343C;
+}
+
+/* call */
+#workskin .mode-dark .do-call {
+  background-color: #1D343C;
+  background-image: linear-gradient(180deg, #25505B, #172B32);
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+/* transcript */
+#workskin .mode-dark .do-transcript {
+  border-left-color: #526D73;
+}
+
+/* phone UI */
+#workskin .mode-dark .do-lock {
+  background-color: #1D343C;
+  background-image: linear-gradient(180deg, #2A5560, #142329);
+  border-color: #526D73;
+}
+
+#workskin .mode-dark .notif {
+  background: #1D343C;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .notif .notif-title {
+  color: #F7F5EF;
+}
+
+#workskin .mode-dark .notif .notif-text {
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .notif-head,
+#workskin .mode-dark .notif .notif-bal {
+  color: #A7B3AF;
+}
+
+#workskin .mode-dark .notif-debit {
+  color: #E8857D;
+}
+
+#workskin .mode-dark .notif-credit {
+  color: #7FCB8E;
+}
+
+/* cards on the lock screen stay light so they read as notifications */
+#workskin .mode-dark .do-lock .notif {
+  background: #E8EDEB;
+  border-color: transparent;
+  color: #26383A;
+}
+
+#workskin .mode-dark .do-lock .notif .notif-title {
+  color: #172B32;
+}
+
+#workskin .mode-dark .do-lock .notif .notif-text {
+  color: #26383A;
+}
+
+#workskin .mode-dark .do-lock .notif-head,
+#workskin .mode-dark .do-lock .notif .notif-bal {
+  color: #526D73;
+}
+
+#workskin .mode-dark .do-lock .notif-debit {
+  color: #B2362F;
+}
+
+#workskin .mode-dark .do-lock .notif-credit {
+  color: #2F7F4F;
+}
+
+#workskin .mode-dark .do-alert {
+  background: #1D343C;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+
+#workskin .mode-dark .do-alert .alert-batt,
+#workskin .mode-dark .do-alert .alert-text {
+  color: #A7B3AF;
+}
+
+#workskin .mode-dark .do-alert .alert-title {
+  color: #F7F5EF;
+}
+
+#workskin .mode-dark .do-alert .alert-btn {
+  border-top-color: #526D73;
+  color: #8FC1DB;
+}
+
+/* ==========================================================
+   PARCHMENT MODE  (.fic-page.mode-parchment)
+   page #EAE5D9 · raised #F7F5EF · head #E0D9C9 · line #B5AC97
+   muted #4A646A (darker than light mode for contrast on sand)
+   ========================================================== */
+
+#workskin .fic-page.mode-parchment {
+  background: #EAE5D9;
+}
+
+/* muted text */
+#workskin .mode-parchment .fic-kicker,
+#workskin .mode-parchment .chapter-number,
+#workskin .mode-parchment .note-label,
+#workskin .mode-parchment .end-notes-label,
+#workskin .mode-parchment .fic-subtitle,
+#workskin .mode-parchment .chapter-subtitle,
+#workskin .mode-parchment .insert-label,
+#workskin .mode-parchment .insert-meta,
+#workskin .mode-parchment .do-sender,
+#workskin .mode-parchment .do-day,
+#workskin .mode-parchment .do-typing,
+#workskin .mode-parchment .do-chat-head small,
+#workskin .mode-parchment .do-chat-foot,
+#workskin .mode-parchment .do-email .email-key,
+#workskin .mode-parchment .do-email .email-sig,
+#workskin .mode-parchment .do-email .email-attach,
+#workskin .mode-parchment .do-post .post-handle,
+#workskin .mode-parchment .do-post .post-actions,
+#workskin .mode-parchment .do-letter .letter-date,
+#workskin .mode-parchment .do-diary .diary-date,
+#workskin .mode-parchment .do-doc .doc-ref,
+#workskin .mode-parchment .do-doc .doc-key,
+#workskin .mode-parchment .do-transcript .speaker,
+#workskin .mode-parchment .thought-who {
+  color: #4A646A;
+}
+
+/* metadata and tags */
+#workskin .mode-parchment .fic-metadata {
+  background: #F7F5EF;
+}
+
+#workskin .mode-parchment li.fic-tag {
+  background: #EAE5D9;
+  border-color: #526D73;
+}
+
+/* rules */
+#workskin .mode-parchment .author-note,
+#workskin .mode-parchment .end-notes {
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment hr.scene-break-line {
+  border-top-color: #B5AC97;
+}
+
+/* quotation */
+#workskin .mode-parchment blockquote.fic-quote {
+  background: #F7F5EF;
+}
+
+/* internal monologue */
+#workskin .mode-parchment .thought,
+#workskin .mode-parchment .thought-block,
+#workskin .mode-parchment .thought-stream {
+  color: #2F4F56;
+}
+
+#workskin .mode-parchment .thought-block {
+  border-left-color: #4A646A;
+}
+
+#workskin .mode-parchment .thought-stream {
+  border-top-color: #A7B3AF;
+  border-bottom-color: #A7B3AF;
+}
+
+/* shared insert frame */
+#workskin .mode-parchment .insert {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .insert-head {
+  background: #E0D9C9;
+  border-bottom-color: #B5AC97;
+}
+
+#workskin .mode-parchment .insert-rule {
+  border-top-color: #B5AC97;
+}
+
+/* messages */
+#workskin .mode-parchment .do-chat {
+  background: #F7F5EF;
+  border-color: #A7B3AF;
+}
+
+#workskin .mode-parchment .do-chat-head {
+  background: #E0D9C9;
+  border-bottom-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-msg {
+  background: #E0D9C9;
+}
+
+#workskin .mode-parchment .do-out {
+  background: #D3DED9;
+}
+
+/* email, post */
+#workskin .mode-parchment .do-email .email-attach,
+#workskin .mode-parchment .do-post .post-actions {
+  border-top-color: #B5AC97;
+}
+
+/* system */
+#workskin .mode-parchment .do-system {
+  background: #E0D9C9;
+}
+
+/* letter and diary */
+#workskin .mode-parchment .do-letter {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-diary {
+  background: #F1EEE6;
+}
+
+/* document */
+#workskin .mode-parchment .do-doc {
+  background: #F7F5EF;
+}
+
+#workskin .mode-parchment .do-doc .insert-head {
+  background: #E0D9C9;
+}
+
+/* call (keeps its dark screen so it never reads as a chat) */
+#workskin .mode-parchment .do-call {
+  background-color: #172B32;
+  background-image: linear-gradient(180deg, #24505B, #172B32);
+  border-color: #0E1B20;
+  color: #EAE5D9;
+}
+
+/* transcript */
+#workskin .mode-parchment .do-transcript {
+  border-left-color: #8FA09C;
+}
+
+/* phone UI */
+#workskin .mode-parchment .notif {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-lock .notif {
+  background: #E8EDEB;
+  border-color: transparent;
+}
+
+#workskin .mode-parchment .notif-head,
+#workskin .mode-parchment .notif .notif-bal {
+  color: #4A646A;
+}
+
+#workskin .mode-parchment .do-alert {
+  background: #F7F5EF;
+  border-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-alert .alert-btn {
+  border-top-color: #B5AC97;
+}
+
+#workskin .mode-parchment .do-alert .alert-batt,
+#workskin .mode-parchment .do-alert .alert-text {
+  color: #4A646A;
+}
+
+/* ==========================================================
+   MOBILE — everything below sits inside one @media block
+   ========================================================== */
+
+@media only screen and (max-width: 42em) {
+
+  #workskin {
+    padding: .5rem;
+  }
+
+  #workskin .fic-page {
+    padding: 1.25em .85em;
+    font-size: 1em;
+  }
+
+  #workskin .fic-title {
+    font-size: 2em;
+  }
+
+  #workskin .chapter-title {
+    font-size: 1.6em;
+  }
+
+  #workskin .thought-block {
+    margin-left: .6em;
+  }
+
+  #workskin .do-email,
+  #workskin .do-doc,
+  #workskin .do-transcript,
+  #workskin .do-post,
+  #workskin .do-notify,
+  #workskin .do-system {
+    width: auto;
+    max-width: 100%;
+  }
+
+  #workskin .do-msg,
+  #workskin .do-out {
+    max-width: 90%;
+  }
+
+  #workskin .do-letter,
+  #workskin .do-diary {
+    width: auto;
+    max-width: 100%;
+    padding: 1.1em;
+  }
+
+  #workskin .do-doc .doc-key {
+    float: none;
+    width: auto;
+    display: block;
+  }
+
+  #workskin .do-doc .doc-val {
+    margin-left: 0;
+  }
+}
+
+/* ==========================================================
+   DEEP OCEAN — additional component library
+   Adapted from the Military Classified Files reference.
+   Original component class names are retained; palette is Deep Ocean.
+   ========================================================== */
+
+#workskin .do-book p+p {
+  text-indent: 1.5em;
+  margin-top: -.2em;
+}
+#workskin .do-justify p {
+  text-align: justify;
+}
+#workskin .do-title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2.9em;
+  font-weight: 600;
+  line-height: 1.08;
+  color: #26383A;
+  text-align: center;
+  margin: 0 0 .15em;
+}
+#workskin .do-subtitle {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.35em;
+  color: #26383A;
+  text-align: center;
+  margin: 0 0 1.2em;
+}
+#workskin .do-epigraph {
+  max-width: 26em;
+  margin: 1.6em auto;
+  text-align: center;
+  font-style: italic;
+  color: #26383A;
+}
+#workskin .do-epigraph cite {
+  display: block;
+  margin-top: .4em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: .72em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-meta {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  background: #EAE5D9;
+  border: 1px solid #C1B8A5;
+  border-top: 3px solid #26383A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  line-height: 1.6;
+  overflow: hidden;
+  text-align: left;
+}
+#workskin .do-meta dt {
+  float: left;
+  clear: left;
+  width: 8em;
+  font-weight: bold;
+  font-size: .84em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #26383A;
+  padding-top: .16em;
+}
+#workskin .do-meta dd {
+  margin: 0 0 .45em 8.5em;
+}
+#workskin .do-chip {
+  display: inline-block;
+  border: 1px solid #C1B8A5;
+  background: #F7F5EF;
+  padding: .04em .6em;
+  margin: .1em .25em .1em 0;
+  border-radius: 2px;
+}
+#workskin .do-chapter {
+  text-align: center;
+  margin: 2.2em 0;
+  padding: .9em 0 .8em;
+  border-top: 1px solid #526D73;
+  border-bottom: 1px solid #C1B8A5;
+}
+#workskin .do-chapter-num {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-chapter-title {
+  display: block;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: bold;
+  font-size: 1.75em;
+  line-height: 1.25;
+  color: #26383A;
+  margin: .3em 0 .15em;
+}
+#workskin .do-chapter-sub {
+  display: block;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #26383A;
+}
+#workskin .do-chapter-orn {
+  display: block;
+  margin-top: .7em;
+  color: #526D73;
+  letter-spacing: .7em;
+  padding-left: .7em;
+}
+#workskin .do-dialogue {
+  margin-bottom: .8em;
+}
+#workskin .do-thought {
+  font-style: italic;
+  color: #26383A;
+  padding: 0 1.5em;
+}
+#workskin .do-dropcap {
+  float: left;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 4.3em;
+  line-height: .78;
+  padding: .06em .1em 0 0;
+  color: #26383A;
+}
+#workskin .do-lead {
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+#workskin .do-pov {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #26383A;
+  margin: 1.6em 0 1.2em;
+}
+#workskin .do-pov:before,
+#workskin .do-pov:after {
+  content: "—";
+  color: #526D73;
+  padding: 0 .9em;
+}
+#workskin .do-tag {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #26383A;
+  margin-bottom: .5em;
+}
+#workskin .do-flashback {
+  margin: 1.8em 0;
+  padding: .6em 0 .4em 1.4em;
+  background: rgba(193,184,165,.16);
+  border-left: 3px solid #C1B8A5;
+}
+#workskin .do-memory {
+  margin: 1.8em 0;
+  padding: 1em 1.4em;
+  background: #EAE5D9;
+  border-left: 3px solid #A7B3AF;
+  font-style: italic;
+}
+#workskin .do-dream {
+  margin: 1.8em 0;
+  padding: 1.1em 1.5em;
+  background: #EAE5D9;
+  border: 1px dashed #26383A;
+  font-style: italic;
+  color: #26383A;
+}
+#workskin .do-pull {
+  margin: 2em 1.5em;
+  padding: 1em 0;
+  border-top: 3px double #A7B3AF;
+  border-bottom: 3px double #A7B3AF;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.6em;
+  line-height: 1.3;
+  text-align: center;
+  color: #172B32;
+}
+#workskin .do-pull cite {
+  display: block;
+  margin-top: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: .5em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin hr.do-break {
+  border: 0;
+  height: auto;
+  overflow: visible;
+  margin: 2.2em 0;
+  text-align: center;
+  background: none;
+  color: #526D73;
+  font-size: 1.1em;
+  line-height: 1;
+}
+#workskin hr.do-break:after {
+  content: "──  ■  ──";
+}
+#workskin hr.do-break-dots:after {
+  content: "·  ·  ·";
+}
+#workskin hr.do-break-tide:after {
+  content: "═══ ▪ ═══";
+}
+#workskin hr.do-break-line {
+  border-top: 1px solid #526D73;
+  width: 30%;
+  margin: 2.2em auto;
+}
+#workskin hr.do-break-line:after {
+  content: "";
+}
+#workskin .do-note,
+#workskin .do-endnotes {
+  margin: 2em 0;
+  padding: 1.2em 1.5em;
+  background: #EAE5D9;
+  border: 1px solid #C1B8A5;
+  border-top: 3px solid #526D73;
+  font-size: .92em;
+  line-height: 1.65;
+  text-align: left;
+}
+#workskin .do-note-title {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #26383A;
+  margin-bottom: .6em;
+}
+#workskin .do-endnotes ol {
+  margin: .4em 0 0;
+  padding-left: 1.4em;
+}
+#workskin .do-endnotes li {
+  margin-bottom: .45em;
+}
+#workskin .do-warn {
+  margin: 1.6em 0;
+  padding: 1em 1.3em;
+  background: #F7F5EF;
+  border: 1px solid #C1B8A5;
+  border-left: 6px solid #A47D68;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  line-height: 1.6;
+  text-align: left;
+}
+#workskin .do-warn-title {
+  display: block;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #A47D68;
+  margin-bottom: .3em;
+}
+#workskin .do-disclaimer {
+  margin: 1.6em 0;
+  padding-top: .9em;
+  border-top: 1px solid #C1B8A5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #26383A;
+  line-height: 1.7;
+}
+#workskin .do-sig {
+  text-align: right;
+  font-style: italic;
+}
+#workskin .do-date {
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-size: .7em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #26383A;
+  margin-bottom: .6em;
+}
+#workskin .do-poem {
+  max-width: 28em;
+  margin: 2em auto;
+  padding-left: 1.5em;
+  border-left: 1px solid #526D73;
+  font-style: italic;
+  line-height: 1.9;
+}
+#workskin .do-poem p {
+  margin: 0 0 1.2em;
+}
+#workskin .do-poem-title {
+  display: block;
+  font-style: normal;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: .9em;
+  margin-bottom: .6em;
+  color: #26383A;
+}
+#workskin .do-s2 {
+  color: #526D73;
+}
+#workskin .do-s3 {
+  color: #805D4D;
+}
+#workskin .do-time {
+  display: block;
+  margin-top: .15em;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .72em;
+  color: #26383A;
+}
+#workskin .do-out .do-time {
+  color: #C1B8A5;
+}
+#workskin .do-tick {
+  letter-spacing: .05em;
+}
+#workskin .do-wa {
+  background: #EAE5D9;
+}
+#workskin .do-wa .do-out {
+  background: #526D73;
+  border-color: #526D73;
+  color: #F7F5EF;
+}
+#workskin .do-wa .do-out .do-time,
+#workskin .do-wa .do-out .do-sender {
+  color: #EAE5D9;
+}
+#workskin .do-wa .do-chat-head {
+  background: #26383A;
+}
+#workskin .do-secure {
+  font-family: "Courier New", Courier, monospace;
+  background: #172B32;
+  border-color: #526D73;
+}
+#workskin .do-secure .do-chat-head {
+  background: #172B32;
+  border-bottom: 1px solid #526D73;
+  color: #EAE5D9;
+}
+#workskin .do-secure .do-chat-body {
+  background: #172B32;
+}
+#workskin .do-secure .do-msg {
+  background: #26383A;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+#workskin .do-secure .do-out {
+  background: #526D73;
+  border-color: #526D73;
+  color: #F7F5EF;
+}
+#workskin .do-secure .do-sender,
+#workskin .do-secure .do-time,
+#workskin .do-secure .do-typing {
+  color: #C1B8A5;
+}
+#workskin .do-secure .do-day {
+  background: #526D73;
+  color: #EAE5D9;
+}
+#workskin .do-avatar {
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  line-height: 2.4em;
+  margin-right: .6em;
+  border-radius: 50%;
+  background: #526D73;
+  color: #F7F5EF;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+}
+#workskin .do-name {
+  font-weight: bold;
+  color: #26383A;
+}
+#workskin .do-handle {
+  font-family: "Courier New", Courier, monospace;
+  color: #26383A;
+}
+#workskin .do-post-body {
+  margin: .7em 0 .2em;
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.08em;
+}
+#workskin .do-post-stats {
+  margin-top: .8em;
+  padding-top: .5em;
+  border-top: 1px solid #C1B8A5;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  letter-spacing: .04em;
+  color: #26383A;
+}
+#workskin .do-email-head {
+  padding: .8em 1.2em;
+  background: #26383A;
+  color: #F7F5EF;
+  border-bottom: 1px solid #C1B8A5;
+  border-top: 3px solid #172B32;
+  overflow: hidden;
+}
+#workskin .do-k {
+  float: left;
+  clear: left;
+  width: 5.2em;
+  font-weight: bold;
+  font-size: .82em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #C1B8A5;
+  padding-top: .15em;
+}
+#workskin .do-v {
+  display: block;
+  margin-left: 5.6em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .94em;
+}
+#workskin .do-email-subject {
+  display: block;
+  margin-left: 5.6em;
+  font-weight: bold;
+  color: #F7F5EF;
+}
+#workskin .do-email-body {
+  padding: 1em 1.2em;
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.04em;
+  color: #26383A;
+}
+#workskin .do-email-body p {
+  margin-bottom: .8em;
+}
+#workskin .do-missed {
+  color: #A47D68;
+  font-weight: bold;
+}
+#workskin .do-voice {
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .8em 1.1em;
+  background: #26383A;
+  border-radius: 24px;
+  color: #F7F5EF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  text-indent: 0;
+  text-align: left;
+}
+#workskin .do-wave {
+  letter-spacing: .12em;
+  color: #C1B8A5;
+  font-size: 1.15em;
+}
+#workskin .do-radio {
+  margin: 2em 0;
+  padding: 1.3em 1.5em;
+  background: #172B32;
+  border: 1px solid #526D73;
+  border-top: 3px solid #526D73;
+  color: #EAE5D9;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  line-height: 1.65;
+  text-indent: 0;
+  text-align: left;
+}
+#workskin .do-radio p {
+  margin: 0 0 .55em;
+}
+#workskin .do-radio .do-ts {
+  color: #C1B8A5;
+  margin-right: .6em;
+}
+#workskin .do-radio .do-cs {
+  font-weight: bold;
+  color: #F7F5EF;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+#workskin .do-ts {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .92em;
+  color: #26383A;
+}
+#workskin .do-doc-label {
+  margin-bottom: 1.1em;
+  padding-bottom: .6em;
+  border-bottom: 1px solid #C1B8A5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-doc-title {
+  display: block;
+  margin: 0 0 .8em;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.25em;
+  line-height: 1.3;
+  color: #26383A;
+}
+#workskin .do-ref {
+  display: block;
+  margin-bottom: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .76em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-docmeta {
+  margin: 0 0 1.2em;
+  padding: .55em 0;
+  border-top: 1px solid #26383A;
+  border-bottom: 1px solid #26383A;
+  font-size: .94em;
+}
+#workskin .do-docmeta span {
+  display: inline-block;
+  margin-right: 1.6em;
+}
+#workskin .do-docmeta b {
+  margin-right: .4em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-sect {
+  margin: 1.4em 0 .6em;
+  padding-bottom: .25em;
+  border-bottom: 1px solid #A7B3AF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-sigline {
+  display: inline-block;
+  min-width: 12em;
+  max-width: 100%;
+  margin: 1.8em 1.5em 0 0;
+  padding-top: .3em;
+  border-top: 1px solid #26383A;
+  font-size: .88em;
+  vertical-align: top;
+}
+#workskin .do-d-personnel {
+  border-left: 6px solid #526D73;
+}
+#workskin .do-d-service {
+  border-left: 6px double #526D73;
+}
+#workskin .do-d-intel {
+  border-top-color: #26383A;
+}
+#workskin .do-d-brief {
+  border-top: 4px solid #526D73;
+}
+#workskin .do-d-field {
+  border-left: 6px solid #C1B8A5;
+}
+#workskin .do-d-incident {
+  border-top-color: #A47D68;
+}
+#workskin .do-d-medical {
+  border-top: 4px solid #526D73;
+  border-left: 1px solid #526D73;
+}
+#workskin .do-d-inv {
+  border-left: 6px solid #26383A;
+}
+#workskin .do-d-interrog {
+  border-top: 4px solid #26383A;
+}
+#workskin .do-d-casualty {
+  border-top: 4px solid #A47D68;
+  border-left: 6px solid #A47D68;
+}
+#workskin .do-d-chain {
+  border-left: 6px double #526D73;
+}
+#workskin .do-d-corr {
+  border-top: 4px double #C1B8A5;
+}
+#workskin .do-lh {
+  text-align: center;
+  margin: 0 0 1.2em;
+  padding-bottom: .7em;
+  border-bottom: 3px double #26383A;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .86em;
+  font-weight: bold;
+  color: #172B32;
+}
+#workskin .do-lh small {
+  display: block;
+  margin-top: .25em;
+  font-weight: normal;
+  font-size: .82em;
+  letter-spacing: .14em;
+  color: #26383A;
+}
+#workskin .do-photo {
+  float: right;
+  box-sizing: border-box;
+  width: 7.5em;
+  height: 9.5em;
+  margin: 0 0 .8em 1.2em;
+  padding-top: 3.8em;
+  text-align: center;
+  background: #EAE5D9;
+  border: 1px solid #26383A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .66em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-dossier {
+  margin: 1em 0;
+  overflow: hidden;
+}
+#workskin .do-dossier dt {
+  float: left;
+  clear: left;
+  width: 9em;
+  padding-top: .3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  font-weight: bold;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-dossier dd {
+  margin: 0 0 .35em 9.6em;
+  padding-bottom: .3em;
+  border-bottom: 1px dotted #C1B8A5;
+}
+#workskin .do-status-open {
+  background: #526D73;
+  color: #F7F5EF;
+}
+#workskin .do-status-closed {
+  background: #26383A;
+  border-color: #26383A;
+  color: #F7F5EF;
+}
+#workskin .do-status-hold {
+  border-color: #A47D68;
+  color: #A47D68;
+}
+#workskin .do-dist {
+  margin-top: 1.4em;
+  padding-top: .7em;
+  border-top: 1px solid #C1B8A5;
+  font-size: .9em;
+}
+#workskin .do-dist b {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-chainlist {
+  list-style: none;
+  margin: .8em 0;
+  padding: 0;
+}
+#workskin .do-chainlist li {
+  margin: 0;
+  padding: .3em 0 .3em 1.2em;
+  border-left: 2px solid #526D73;
+}
+#workskin .do-chainlist li:before {
+  content: "▪ ";
+  color: #526D73;
+  margin-left: -1.2em;
+}
+#workskin .do-class {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 0 1.2em;
+  padding: .25em .8em;
+  background: #26383A;
+  border: 2px solid #26383A;
+  color: #F7F5EF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .76em;
+  font-weight: bold;
+  letter-spacing: .3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+#workskin .do-stamp {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: .1em .8em;
+  background: #26383A;
+  border: 2px solid #26383A;
+  color: #F7F5EF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  font-weight: bold;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+#workskin .do-stamp-y {
+  background: #C1B8A5;
+  border-color: #C1B8A5;
+  color: #26383A;
+}
+#workskin .do-stamp-r {
+  background: transparent;
+  border-color: #A47D68;
+  color: #A47D68;
+}
+#workskin .do-class-ts,
+#workskin .do-stamp-ts {
+  background: #A47D68;
+  border-color: #A47D68;
+  color: #F7F5EF;
+}
+#workskin .do-class-s,
+#workskin .do-stamp-s {
+  background: transparent;
+  border: 3px double #A47D68;
+  color: #A47D68;
+}
+#workskin .do-class-c,
+#workskin .do-stamp-c {
+  background: #526D73;
+  border-color: #526D73;
+  color: #F7F5EF;
+}
+#workskin .do-class-rs,
+#workskin .do-stamp-rs {
+  background: #26383A;
+  border-color: #26383A;
+  color: #F7F5EF;
+}
+#workskin .do-class-dc,
+#workskin .do-stamp-dc {
+  background: transparent;
+  border-color: #526D73;
+  color: #526D73;
+}
+#workskin .do-class-fouo,
+#workskin .do-stamp-fouo {
+  background: transparent;
+  border: 2px dashed #26383A;
+  color: #26383A;
+}
+#workskin .do-redact {
+  padding: 0 .25em;
+  background: #26383A;
+  color: #26383A;
+  border-radius: 1px;
+  text-shadow: none;
+}
+#workskin .do-redact-name {
+  display: inline-block;
+  min-width: 7em;
+  padding: 0 .25em;
+  background: #26383A;
+  color: #26383A;
+  vertical-align: bottom;
+  line-height: 1.2;
+}
+#workskin .do-redact-block {
+  display: block;
+  margin: .2em 0 .6em;
+  padding: 0 .25em;
+  background: #26383A;
+  color: #26383A;
+  line-height: 1.3;
+  overflow: hidden;
+}
+#workskin .do-missing {
+  display: inline-block;
+  padding: 0 .6em;
+  border: 1px solid #26383A;
+  background: #EAE5D9;
+  color: #26383A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+#workskin .do-news {
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: .95em;
+  background: #F7F5EF;
+}
+#workskin .do-news .do-doc-title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+#workskin .do-dateline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-spk {
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-receipt {
+  max-width: 320px;
+  margin: 2em auto;
+  padding: 1.4em;
+  background: #F7F5EF;
+  border: 1px dashed #26383A;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  line-height: 1.6;
+  text-indent: 0;
+  text-align: left;
+}
+#workskin .do-receipt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#workskin .do-receipt td {
+  padding: .1em 0;
+  border: 0;
+}
+#workskin .do-receipt td+td {
+  text-align: right;
+}
+#workskin .do-cert {
+  margin: 2.2em 0;
+  padding: 2em 1.6em;
+  background: #F7F5EF;
+  border: 6px double #A7B3AF;
+  text-align: center;
+  text-indent: 0;
+}
+#workskin .do-cert .do-doc-title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+#workskin .do-frame {
+  margin: 2em 0;
+  padding: 1.4em 1.6em;
+  border: 1px solid #A7B3AF;
+  box-shadow: 0 0 0 4px #EAE5D9, 0 0 0 5px #C1B8A5;
+}
+#workskin .do-hl {
+  background-color: #EAE5D9;
+  padding: 0 .15em;
+}
+#workskin .do-hl-sea {
+  background-color: #DCE5E1;
+  padding: 0 .15em;
+}
+#workskin .do-fnref {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7em;
+  vertical-align: super;
+  line-height: 0;
+  color: #526D73;
+}
+#workskin .do-footnotes {
+  margin-top: 2em;
+  padding-top: .8em;
+  border-top: 1px solid #C1B8A5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  line-height: 1.6;
+  color: #26383A;
+}
+#workskin .do-center {
+  text-align: center;
+}
+#workskin .do-label {
+  display: inline-block;
+  padding: .1em .7em;
+  background: #EAE5D9;
+  border: 1px solid #C1B8A5;
+  color: #26383A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+#workskin .preface .title,
+#workskin .do-title {
+  font-size: 2.4em;
+}
+#workskin .preface .title,
+#workskin .do-title {
+  font-size: 2.05em;
+}
+#workskin .do-chapter-title {
+  font-size: 1.5em;
+}
+#workskin .do-meta dt,
+#workskin .do-k,
+#workskin .do-dossier dt {
+  float: none;
+  width: auto;
+}
+#workskin .do-meta dd,
+#workskin .do-v,
+#workskin .do-email-subject,
+#workskin .do-dossier dd {
+  margin-left: 0;
+}
+#workskin .do-pull {
+  margin: 1.6em 0;
+  font-size: 1.3em;
+}
+#workskin .do-letter,
+#workskin .do-doc,
+#workskin .do-cert,
+#workskin .do-radio {
+  padding: 1.2em 1em;
+}
+#workskin .do-thought {
+  padding: 0 .8em;
+}
+#workskin .do-dropcap {
+  font-size: 3.6em;
+}
+#workskin .do-poem {
+  margin: 2em 0;
+}
+#workskin .do-docmeta span {
+  display: block;
+  margin-right: 0;
+}
+#workskin .do-sigline {
+  display: block;
+  min-width: 0;
+  margin-right: 0;
+}
+#workskin .do-photo {
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1em;
+  padding: 1em 0;
+}
+#workskin .do-class,
+#workskin .do-stamp {
+  letter-spacing: .16em;
+  white-space: normal;
+}
+#workskin .do-redact-name {
+  min-width: 5em;
+}
+#workskin .do-th {
+  font-style: italic;
+  color: #26383A;
+}
+#workskin p.do-thought.do-thought {
+  margin: 0 0 .95em;
+  padding: 0 .8em;
+  text-indent: 0;
+  text-align: left;
+  font-style: italic;
+  color: #26383A;
+}
+#workskin p.do-thought-bar.do-thought-bar {
+  margin: 0 0 .95em .6em;
+  padding: 0 0 0 1em;
+  border-left: 1px solid #526D73;
+  text-indent: 0;
+  text-align: left;
+  font-style: italic;
+  color: #26383A;
+}
+#workskin .do-bank {
+  box-sizing: border-box;
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .9em 1.1em .4em;
+  background: #F7F5EF;
+  border: 1px solid #C1B8A5;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(38,56,58,.3), 0 8px 18px -10px rgba(38,56,58,.4);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  line-height: 1.5;
+  color: #26383A;
+  text-indent: 0;
+  text-align: left;
+}
+#workskin .do-bank.do-bank p,
+#workskin .do-bank.do-bank p+p {
+  margin: 0 0 .5em;
+  padding: 0;
+  text-indent: 0;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#workskin .do-bank-app {
+  overflow: hidden;
+  font-size: .8em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-bank-app:before {
+  content: "";
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: .6em;
+  vertical-align: middle;
+  border-radius: .35em;
+  background: #26383A;
+  border-bottom: 3px solid #C1B8A5;
+  box-sizing: border-box;
+}
+#workskin .do-bank-icon {
+  display: none;
+}
+#workskin .do-bank-time {
+  float: right;
+  letter-spacing: .04em;
+  text-transform: none;
+}
+#workskin .do-bank-title {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: #26383A;
+}
+#workskin .do-bank-amt {
+  font-weight: bold;
+  white-space: nowrap;
+}
+#workskin .do-bank-cr {
+  color: #526D73;
+}
+#workskin .do-bank-dr {
+  color: #A47D68;
+}
+#workskin .do-bank.do-bank p.do-bank-bal {
+  margin-bottom: 0;
+  padding: .5em 0 .6em;
+  border-top: 1px solid #C1B8A5;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .88em;
+  color: #26383A;
+}
+#workskin .do-bank-alert {
+  border-left: 5px solid #A47D68;
+  border-radius: 4px 12px 12px 4px;
+}
+#workskin .do-bank-alert .do-bank-title {
+  color: #A47D68;
+}
+#workskin .do-bank-dark {
+  background: #172B32;
+  border-color: #526D73;
+  color: #EAE5D9;
+}
+#workskin .do-bank-dark .do-bank-app,
+#workskin .do-bank-dark.do-bank p.do-bank-bal {
+  color: #C1B8A5;
+}
+#workskin .do-bank-dark .do-bank-app:before {
+  background: #EAE5D9;
+}
+#workskin .do-bank-dark .do-bank-title {
+  color: #F7F5EF;
+}
+#workskin .do-bank-dark .do-bank-cr {
+  color: #A7B3AF;
+}
+#workskin .do-bank-dark .do-bank-dr {
+  color: #D8B7A6;
+}
+#workskin .do-bank-dark.do-bank p.do-bank-bal {
+  border-top-color: #526D73;
+}
+#workskin .do-bank-alert.do-bank-dark .do-bank-title {
+  color: #D8B7A6;
+}
+#workskin .do-sign {
+  display: inline-block;
+  font-family: "Segoe Script", "Snell Roundhand", "Apple Chancery", "Brush Script MT", "Lucida Handwriting", "URW Chancery L", "Z003", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  padding: 0 .2em;
+  text-indent: 0;
+  text-align: left;
+  transform: rotate(-3deg);
+  transform-origin: left bottom;
+  color: #172B32;
+  text-shadow: 0 0 1px rgba(23,43,50,.35), .6px .6px 0 rgba(23,43,50,.18);
+}
+#workskin .do-sign-blue {
+  color: #263F4A;
+  text-shadow: 0 0 1px rgba(38,63,74,.4), .6px .6px 0 rgba(38,63,74,.2);
+}
+#workskin .do-sign-red {
+  color: #A47D68;
+  text-shadow: 0 0 1px rgba(164,125,104,.4), .6px .6px 0 rgba(164,125,104,.2);
+}
+#workskin .do-sign-black {
+  color: #172B32;
+  text-shadow: 0 0 1px rgba(23,43,50,.35), .6px .6px 0 rgba(23,43,50,.18);
+}
+#workskin .do-sign-sm {
+  font-size: 1.4em;
+}
+#workskin .do-sign-lg {
+  font-size: 2.8em;
+}
+#workskin .do-initials {
+  font-size: 1.35em;
+  transform: rotate(-6deg);
+  letter-spacing: .04em;
+}
+#workskin .do-sign-flat {
+  transform: none;
+}
+#workskin .do-sign-light {
+  color: #EAE5D9;
+  text-shadow: 0 0 1px rgba(234,229,217,.35);
+}
+#workskin .do-signature {
+  display: block;
+  box-sizing: border-box;
+  max-width: 18em;
+  margin: 1.8em 0 1em;
+  text-indent: 0;
+  text-align: left;
+}
+#workskin .do-signature-right {
+  margin-left: auto;
+}
+#workskin .do-signature-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+#workskin .do-signature .do-sign {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -.3em;
+  padding-left: .5em;
+}
+#workskin .do-signature-line {
+  display: block;
+  padding-top: .35em;
+  border-top: 1px solid #26383A;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-signature-line small {
+  display: block;
+  margin-top: .15em;
+  font-size: .86em;
+  letter-spacing: .1em;
+  color: #26383A;
+}
+#workskin .do-signature-blue .do-signature-line {
+  border-top-color: #263F4A;
+}
+#workskin .do-signature-red .do-signature-line {
+  border-top-color: #A47D68;
+}
+#workskin .do-signature-x:before {
+  content: "×";
+  display: block;
+  margin-bottom: -.9em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  color: #26383A;
+}
+#workskin .do-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 1.8em 0;
+  padding: .8em 1em;
+  background: #F7F5EF;
+  border: 1px solid #C1B8A5;
+  border-top: 5px solid #26383A;
+  box-shadow: 0 1px 3px rgba(38,56,58,.25), 0 8px 16px -12px rgba(38,56,58,.45);
+  text-indent: 0;
+  text-align: left;
+}
+#workskin .do-brand-mark {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 3.2em;
+  height: 3.2em;
+  margin-right: .9em;
+  border: 2px solid #26383A;
+  background: #26383A;
+  color: #F7F5EF;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: .06em;
+  line-height: 2.9em;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 2px #F7F5EF;
+}
+#workskin .do-brand-body {
+  flex: 1 1 10em;
+  min-width: 0;
+}
+#workskin .do-brand-name {
+  display: block;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: bold;
+  font-size: 1.15em;
+  line-height: 1.25;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-brand-tag {
+  display: block;
+  margin-top: .2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-brand-ref {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-left: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .74em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #26383A;
+}
+#workskin .do-brand-blue {
+  border-top-color: #263F4A;
+}
+#workskin .do-brand-blue .do-brand-mark {
+  background: #263F4A;
+  border-color: #263F4A;
+}
+#workskin .do-brand-blue .do-brand-name {
+  color: #263F4A;
+}
+#workskin .do-brand-red {
+  border-top-color: #A47D68;
+}
+#workskin .do-brand-red .do-brand-mark {
+  background: #A47D68;
+  border-color: #A47D68;
+}
+#workskin .do-brand-red .do-brand-name {
+  color: #805D4D;
+}
+#workskin .do-brand-black {
+  border-top-color: #172B32;
+}
+#workskin .do-brand-black .do-brand-mark {
+  background: #172B32;
+  border-color: #172B32;
+}
+#workskin .do-banner {
+  box-sizing: border-box;
+  margin: 2em 0;
+  padding: 1.5em .9em 1.3em;
+  background: #172B32;
+  color: #F7F5EF;
+  border-top: 4px solid #C1B8A5;
+  border-bottom: 4px solid #C1B8A5;
+  box-shadow: inset 0 0 0 4px #172B32, inset 0 0 0 5px rgba(193,184,165,.55);
+  text-align: center;
+  text-indent: 0;
+}
+#workskin .do-banner-name {
+  display: block;
+  padding-left: .2em;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.9em;
+  line-height: 1.1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #F7F5EF;
+}
+#workskin .do-banner-tag {
+  display: block;
+  margin-top: .6em;
+  padding-left: .3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #C1B8A5;
+}
+#workskin .do-banner-est {
+  display: block;
+  margin-top: .9em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .74em;
+  letter-spacing: .2em;
+  color: #C1B8A5;
+}
+#workskin .do-banner-est:before,
+#workskin .do-banner-est:after {
+  content: "──";
+  padding: 0 .8em;
+  color: #A7B3AF;
+}
+#workskin .do-banner-blue {
+  background: #263F4A;
+  box-shadow: inset 0 0 0 4px #263F4A, inset 0 0 0 5px rgba(167,179,175,.5);
+  border-top-color: #A7B3AF;
+  border-bottom-color: #A7B3AF;
+}
+#workskin .do-banner-blue .do-banner-tag,
+#workskin .do-banner-blue .do-banner-est {
+  color: #A7B3AF;
+}
+#workskin .do-banner-red {
+  background: #805D4D;
+  box-shadow: inset 0 0 0 4px #805D4D, inset 0 0 0 5px rgba(164,125,104,.5);
+  border-top-color: #D8B7A6;
+  border-bottom-color: #D8B7A6;
+}
+#workskin .do-banner-red .do-banner-tag,
+#workskin .do-banner-red .do-banner-est {
+  color: #D8B7A6;
+}
+#workskin .do-banner-black {
+  background: #172B32;
+}
+
+
+/* ==========================================================
+   DEEP OCEAN — centered component layout
+   Keeps each insert centered while preserving its own text alignment.
+   ========================================================== */
+
+#workskin .fic-page > .chapter-content > .userstuff > [class*="do-"],
+#workskin .fic-page > .chapter-content > .userstuff > .insert,
+#workskin .fic-page > .chapter-content > .userstuff > .thought-block,
+#workskin .fic-page > .chapter-content > .userstuff > .author-note,
+#workskin .fic-page > .chapter-content > .userstuff > .end-notes,
+#workskin .fic-page > .chapter-content > .userstuff > blockquote.fic-quote,
+#workskin .fic-page > .chapter-content > .userstuff > dl.fic-metadata {
+  box-sizing: border-box;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workskin .fic-page > .chapter-content > .userstuff > p.fic-label,
+#workskin .fic-page > .chapter-content > .userstuff > .do-center {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workskin .fic-page > .chapter-content > .userstuff > hr.fic-divider,
+#workskin .fic-page > .chapter-content > .userstuff > hr.scene-break,
+#workskin .fic-page > .chapter-content > .userstuff > hr.scene-break-ocean,
+#workskin .fic-page > .chapter-content > .userstuff > hr.scene-break-line,
+#workskin .fic-page > .chapter-content > .userstuff > hr.do-break {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 42em) {
+  #workskin .fic-page { padding: 1.25em .85em; }
+  #workskin .fic-page > .chapter-content > .userstuff > [class*="do-"],
+  #workskin .fic-page > .chapter-content > .userstuff > .insert {
+    max-width: 100%;
+  }
+}
+</style></head>
+<body>
+<div id="workskin"><div class="fic-page">
+<!-- ===== AO3-style work preface ===== -->
+<div class="fic-header">
+<h2 class="fic-title">The Salt Archive</h2>
+<h3 class="fic-kicker"><a class="" href="#" rel="author">A. N. Author</a></h3>
+<div class="fic-metadata fic-section">
+<h3 class="fic-label">Summary:</h3>
+<blockquote class="userstuff"><p class="">A style sampler. Every component in this work skin appears below, in roughly the order a story might use it.</p></blockquote>
+</div>
+<div class="fic-metadata fic-section">
+<h3 class="fic-label">Notes:</h3>
+<blockquote class="userstuff"><p class="">Wrap the text in <em class="">&lt;div class="do-book"&gt;</em> for indented book-style paragraphs. <a class="" href="#">Links</a> pick up the skin's moss colour.</p></blockquote>
+</div>
+</div>
+<!-- ===== Chapters ===== -->
+<div class="chapter-content" id="chapters" role="article">
+<div class="chapter-header">
+<h3 class="chapter-title">Chapter 1: Low Water</h3>
+<div class="fic-section">
+<h3 class="fic-label">Chapter Notes:</h3>
+<blockquote class="userstuff"><p class="">Chapter preface inside #chapters uses the Baskerville-style title with no underline rule.</p></blockquote>
+</div>
+</div>
+<div class="chapter-content userstuff">
+<p class="fic-label"><span class="do-label">Organisation / Brand Banners</span></p>
+<div class="do-banner insert">
+<span class="do-banner-name">Umbrella Corporation</span>
+<span class="do-banner-tag">We make life better</span>
+<span class="do-banner-est">EST. 1968</span>
+</div>
+<div class="do-banner do-banner-blue insert">
+<span class="do-banner-name">Raccoon Police Department</span>
+<span class="do-banner-tag">To protect and to serve</span>
+<span class="do-banner-est">RACCOON CITY · EST. 1969</span>
+</div>
+<div class="do-banner do-banner-red insert">
+<span class="do-banner-name">Lightfoot Medical Transport</span>
+<span class="do-banner-tag">Emergency &amp; Specialist Logistics</span>
+<span class="do-banner-est">EST. 1987</span>
+</div>
+<div class="do-banner do-banner-black insert">
+<span class="do-banner-name">Special Tactics and Rescue Service</span>
+<span class="do-banner-tag">S.T.A.R.S. · Raccoon City</span>
+<span class="do-banner-est">HONOUR · DUTY · SERVICE</span>
+</div>
+<p class="fic-label"><span class="do-label">Compact Brand Banners</span></p>
+<div class="do-brand insert">
+<span class="do-brand-mark">UC</span>
+<span class="do-brand-body">
+<span class="do-brand-name">Umbrella Federal Credit Union</span>
+<span class="do-brand-tag">Member banking · Raccoon City</span>
+</span>
+<span class="do-brand-ref">EST. 1978</span>
+</div>
+<div class="do-brand do-brand-blue insert">
+<span class="do-brand-mark">RPD</span>
+<span class="do-brand-body">
+<span class="do-brand-name">Raccoon Police Department</span>
+<span class="do-brand-tag">Public Safety Division</span>
+</span>
+<span class="do-brand-ref">RC-01</span>
+</div>
+<div class="do-brand do-brand-red insert">
+<span class="do-brand-mark">LMT</span>
+<span class="do-brand-body">
+<span class="do-brand-name">Lightfoot Medical Transport</span>
+<span class="do-brand-tag">Medical courier services</span>
+</span>
+<span class="do-brand-ref">LMT-04</span>
+</div>
+<p class="fic-label"><span class="do-label">Signature Styles</span></p>
+<div class="do-signature do-signature-blue insert">
+<span class="do-sign do-sign-blue">Brad Pitt</span>
+<span class="do-signature-line">Brad Pitt<small class="">Recipient signature</small></span>
+</div>
+<div class="do-signature do-signature-red insert">
+<span class="do-sign do-sign-red">George Clooney</span>
+<span class="do-signature-line">George Clooney<small class="">Authorised representative</small></span>
+</div>
+<h1 class="fic-title">The Salt Archive</h1>
+<p class="fic-subtitle">A novel in letters, logs and rumour</p>
+<div class="fic-quote">
+<p class="">What the tide takes, the tide keeps for a while.</p>
+<cite class="">Harbour proverb</cite>
+</div>
+<dl class="fic-metadata">
+<dt class="">Rating</dt><dd class=""><span class="fic-tag">Teen</span></dd>
+<dt class="">Setting</dt><dd class=""><span class="fic-tag">Coastal</span> <span class="fic-tag">1940s</span> <span class="fic-tag">Slow burn</span></dd>
+<dt class="">Status</dt><dd class=""><span class="fic-tag">In progress</span></dd>
+</dl>
+<div class="do-chapter insert">
+<span class="do-chapter-num">Chapter One</span>
+<span class="do-chapter-title">Low Water</span>
+<span class="do-chapter-sub">in which nobody is early</span>
+<span class="do-chapter-orn">■■■</span>
+</div>
+<p class="fic-label"><span class="do-label">.do-pov · .do-tag</span></p>
+<p class="do-pov fic-kicker">Maren</p>
+<div class="do-book do-justify insert">
+<p class=""><span class="do-dropcap">T</span><span class="do-lead">he lighthouse had been dark</span> for eleven days before anyone thought to ask why. Maren climbed the last of the stairs with her coat still wet, one hand on the rail, the other holding a lantern she did not need. Salt had worked its way into everything: the stone, the brass, the pages of the logbook lying open on the desk.</p>
+<p class="">She read it standing up. The handwriting was her father's, and then, partway down the page, it was not.</p>
+<p class="do-dialogue">"You shouldn't be up here," said a voice behind her.</p>
+<p class="do-dialogue">"Neither should you," Maren said, without turning around. "That's the first thing I've learned today."</p>
+<p class="thought-block">He lied about the date. Why would he lie about the date?</p>
+<p class="do-th">A shorter italic aside using the .do-th helper.</p>
+<p class="do-thought-bar">A private thought set apart with a slim moss-green rule, useful for a more deliberate internal monologue.</p>
+<p class="">The keeper laughed, short and dry, and set a kettle on the stove as though the whole matter had been settled. <span class="do-hl">The ledger had been altered</span>, and <span class="do-hl-sea">the sea chart had not</span>, and between those two facts lay the whole of the winter.<span class="do-fnref">1</span></p>
+</div>
+<span class="thought">…</span> puts a thought inside a normal paragraph. It is italic in a slightly cooler teal.
+    <p class="thought">…</p> makes a whole paragraph of thought. It is indented, italic, and has a thin rule on the left.
+    <p class="thought-plain">…</p> is the same indented italic paragraph without the rule.
+
+    <p class="fic-label"><span class="do-label">.do-flashback · .do-memory · .do-dream</span></p>
+<div class="do-flashback insert">
+<span class="fic-kicker do-tag">Flashback · Six years earlier</span>
+<p class="">Her father had taught her the lamp on a night like this one: wind from the north, the glass sweating, his hands steady over hers.</p>
+</div>
+<div class="thought-block">
+<p class="">"Count the flashes," he'd said. "The sea will lie to you. The count never does."</p>
+</div>
+<div class="thought-block">
+<span class="fic-kicker do-tag">Dream</span>
+<p class="">She is walking on the floor of the bay. The boats hang above her like lanterns, and every one of them is lit.</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-pull</span></p>
+<blockquote class="fic-quote">The count never lies.<cite class="">Maren's father</cite></blockquote>
+<p class="fic-label"><span class="do-label">hr.do-break · -dots · -tide · -line</span></p>
+<hr class="fic-divider"/>
+<hr class="scene-break"/>
+<hr class="scene-break-ocean"/>
+<hr class="scene-break-line"/>
+<p class="fic-label"><span class="do-label">.do-note · .do-warn · .do-disclaimer</span></p>
+<div class="author-note">
+<span class="do-note-title">Author's Note</span>
+<p class="">Tide tables in this story are invented. Please do not plan a crossing by them.</p>
+</div>
+<div class="do-warn insert">
+<span class="do-warn-title">Content Warning</span>
+      Drowning (non-graphic), implied family loss.
+    </div>
+<p class="do-disclaimer">This is a work of fiction. Names, places and lighthouses are invented or used fictitiously.</p>
+<p class="fic-label"><span class="do-label">.do-letter · .do-sig</span></p>
+<div class="do-letter">
+<p class="">My dear Maren,</p>
+<p class="">If you are reading this, the lamp has gone out and I have been a coward about telling you why. Go to the cellar. Look behind the third cask.</p>
+<p class="do-sig">Your father</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-diary · .do-date</span></p>
+<div class="do-diary">
+<span class="do-date">14 November · Night</span>
+<p class="">Wind backing west. Lamp lit at dusk. A boat showed no light and did not answer the signal. I wrote it down so that someone would know I saw it.</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-poem · .do-poem-title</span></p>
+<div class="do-poem insert">
+<span class="do-poem-title">Low Water</span>
+<p class="">The harbour holds its breath at noon,<br class=""/>the boats lean over, sleeping.</p>
+<p class="">Something small the tide forgot<br class=""/>lies shining in the shingle.</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-chat (default)</span></p>
+<div class="do-chat">
+<div class="do-chat-head insert">Harbour Group<small class="">4 members</small></div>
+<div class="do-chat-body insert">
+<div class="do-day insert">Tuesday</div>
+<div class="do-msg insert"><span class="do-sender">Maren</span>Anyone seen the logbook?<span class="do-time">09:12</span></div>
+<div class="do-msg insert"><span class="do-sender do-s2">Tomas</span>Check the desk. Second drawer.<span class="do-time">09:14</span></div>
+<div class="do-msg insert"><span class="do-sender do-s3">Ilse</span>Which desk?<span class="do-time">09:15</span></div>
+<div class="do-msg do-out insert">Found it. Don't touch anything.<span class="do-time">09:20 <span class="do-tick">✓✓</span></span></div>
+<p class="do-typing">Tomas is typing…</p>
+</div>
+</div>
+<p class="fic-label"><span class="do-label">.do-chat.do-wa</span></p>
+<div class="do-chat do-wa">
+<div class="do-chat-head insert">Mum<small class="">online</small></div>
+<div class="do-chat-body insert">
+<div class="do-day insert">Today</div>
+<div class="do-msg insert">Are you eating properly?<span class="do-time">18:01</span></div>
+<div class="do-msg do-out insert">Yes. Soup.<span class="do-time">18:03 <span class="do-tick">✓✓</span></span></div>
+</div>
+</div>
+<p class="fic-label"><span class="do-label">.do-chat.do-secure</span></p>
+<div class="do-chat do-secure">
+<div class="do-chat-head insert">Encrypted Channel<small class="">session 7F-2A</small></div>
+<div class="do-chat-body insert">
+<div class="do-day insert">Day 3</div>
+<div class="do-msg insert"><span class="do-sender">Unknown</span>Meet at the west pier.<span class="do-time">23:41</span></div>
+<div class="do-msg do-out insert">Who is this?<span class="do-time">23:42</span></div>
+<p class="do-typing">Unknown is typing…</p>
+</div>
+</div>
+<p class="fic-label"><span class="do-label">.do-post</span></p>
+<div class="do-post">
+<span class="do-avatar">M</span><span class="do-name">Maren Voss</span> <span class="do-handle">@mvoss</span>
+<div class="do-post-body insert">Lamp's back on. Nobody ask me how.</div>
+<div class="do-post-stats insert">214 reposts · 1.3K likes</div>
+</div>
+<div class="do-bank insert">
+<p class="do-bank-app"><span class="do-bank-icon"></span>Meridian Bank<span class="do-bank-time">now</span></p>
+<p class="do-bank-title">Transfer received</p>
+<p class="do-bank-text">You received <span class="do-bank-amt do-bank-cr">$250.00</span> from A. Reyes.</p>
+<p class="do-bank-bal">Available balance: $2,731.48</p>
+</div>
+<p class="fic-label"><span class="do-label">Bank notification variants</span></p>
+<div class="do-bank do-bank-alert insert">
+<p class="do-bank-app"><span class="do-bank-icon"></span>Meridian Bank<span class="do-bank-time">just now</span></p>
+<p class="do-bank-title">Payment declined</p>
+<p class="do-bank-text">Your card payment of <span class="do-bank-amt do-bank-dr">$42.80</span> could not be processed.</p>
+<p class="do-bank-bal">Please check your available balance.</p>
+</div>
+<div class="do-bank do-bank-dark insert">
+<p class="do-bank-app"><span class="do-bank-icon"></span>Meridian Bank<span class="do-bank-time">now</span></p>
+<p class="do-bank-title">Transfer sent</p>
+<p class="do-bank-text">You sent <span class="do-bank-amt do-bank-dr">$75.00</span> to J. Morgan.</p>
+<p class="do-bank-bal">Available balance: $2,656.48</p>
+</div>
+<div class="do-bank do-bank-alert do-bank-dark insert">
+<p class="do-bank-app"><span class="do-bank-icon"></span>Security alert<span class="do-bank-time">now</span></p>
+<p class="do-bank-title">Unusual activity detected</p>
+<p class="do-bank-text">A sign-in attempt was blocked.</p>
+<p class="do-bank-bal">If this was not you, contact the bank.</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-email (nested reply)</span></p>
+<div class="do-email">
+<div class="do-email-head insert">
+<span class="do-k">From</span><span class="do-v">keeper@saltarchive.example</span>
+<span class="do-k">To</span><span class="do-v">maren@saltarchive.example</span>
+<span class="do-k">Subj</span><span class="do-email-subject">Re: the ledger</span>
+</div>
+<div class="do-email-body insert">
+<p class="">I've attached the corrected pages. Please don't circulate them.</p>
+<div class="do-email">
+<div class="do-email-body insert"><p class="">Original message: Which pages were altered, exactly?</p></div>
+</div>
+</div>
+</div>
+<p class="fic-label"><span class="do-label">.do-notify · .do-system · .do-call · .do-voice</span></p>
+<div class="do-notify"><b class="">Weather Alert</b>Gale warning in effect until 06:00.</div>
+<div class="do-system"><b class="">System</b><br class=""/>BEACON OFFLINE. Retry in 30s.</div>
+<div class="do-call"><b class="">Missed call</b><span class="do-missed">Unknown number</span> · 02:14</div>
+<div class="do-voice insert"><span class="do-wave">▌▎▌▌▎▌▎▎▌▎</span> 0:42</div>
+<p class="fic-label"><span class="do-label">.do-radio</span></p>
+<div class="do-radio insert">
+<p class=""><span class="do-ts">02:14</span><span class="do-cs">Station</span> Harbour control, vessel not responding.</p>
+<p class=""><span class="do-ts">02:15</span><span class="do-cs">Maren</span> Copy. I have eyes on the lamp.</p>
+<p class=""><span class="do-ts">02:15</span><span class="do-cs">Station</span> Say again?</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-class variants</span></p>
+<div class="do-class insert">Unclassified</div>
+<div class="do-class do-class-ts insert">Top Secret</div>
+<div class="do-class do-class-s insert">Secret</div>
+<div class="do-class do-class-c insert">Confidential</div>
+<div class="do-class do-class-rs insert">Restricted</div>
+<div class="do-class do-class-dc insert">Declassified</div>
+<div class="do-class do-class-fouo insert">For Official Use Only</div>
+<p class="fic-label"><span class="do-label">.do-stamp variants</span></p>
+<p class="fic-label">
+<span class="do-stamp">Received</span>
+<span class="do-stamp do-stamp-y">Pending</span>
+<span class="do-stamp do-stamp-r">Denied</span>
+<span class="do-stamp do-stamp-ts">Top Secret</span>
+<span class="do-stamp do-stamp-s">Secret</span>
+<span class="do-stamp do-stamp-c">Confidential</span>
+<span class="do-stamp do-stamp-rs">Restricted</span>
+<span class="do-stamp do-stamp-dc">Declassified</span>
+<span class="do-stamp do-stamp-fouo">FOUO</span>
+</p>
+<p class="fic-label"><span class="do-label">.do-doc · dossier · photo · statuses · redaction</span></p>
+<div class="do-doc do-d-personnel">
+<div class="do-lh insert">Harbour Authority<small class="">Office of the Lighthouse Service</small></div>
+<div class="do-doc-label insert">Personnel File</div>
+<span class="do-ref">Ref: HA/PF/0147</span>
+<span class="do-doc-title">Keeper's Record: M. Voss</span>
+<div class="do-docmeta insert"><span class=""><b class="">Filed</b>3 Nov</span><span class=""><b class="">Clerk</b>R. Hale</span><span class=""><b class="">Pages</b>4</span></div>
+<div class="do-photo insert">Photo</div>
+<dl class="do-dossier">
+<dt class="">Name</dt><dd class="">Maren Voss</dd>
+<dt class="">Post</dt><dd class="">Assistant Keeper</dd>
+<dt class="">Status</dt><dd class=""><span class="do-status do-status-open">Open</span> <span class="do-status do-status-hold">On hold</span> <span class="do-status do-status-closed">Closed</span> <span class="do-status">Default</span></dd>
+<dt class="">Last seen</dt><dd class=""><span class="do-redact-name">Redacted Name</span></dd>
+</dl>
+<div class="do-sect insert">Summary</div>
+<p class="">Subject reported the lamp inoperative on <span class="do-redact">11 November</span> and was last recorded at <span class="do-missing">Record missing</span>.</p>
+<span class="do-redact-block">This entire paragraph has been removed from the record under section nine.</span>
+<table class="">
+<tr class=""><th class="">Date</th><th class="">Entry</th><th class="">Initials</th></tr>
+<tr class=""><td class="">03 Nov</td><td class="">Posted to station</td><td class="">RH</td></tr>
+<tr class=""><td class="">11 Nov</td><td class="">Lamp failure reported</td><td class="">MV</td></tr>
+</table>
+<span class="do-sigline">Keeper</span><span class="do-sigline">Clerk</span>
+<div class="do-dist insert"><b class="">Distribution</b>Station file · Regional office · Archive</div>
+</div>
+<p class="fic-label"><span class="do-label">.do-doc variants (.do-d-*)</span></p>
+<div class="do-doc do-d-personnel"><div class="do-doc-label insert">do-d-personnel</div><p class="">Left rule, solid green.</p></div>
+<div class="do-doc do-d-service"><div class="do-doc-label insert">do-d-service</div><p class="">Left rule, double, moss.</p></div>
+<div class="do-doc do-d-intel"><div class="do-doc-label insert">do-d-intel</div><p class="">Top rule colour only.</p></div>
+<div class="do-doc do-d-brief"><div class="do-doc-label insert">do-d-brief</div><p class="">Top rule, thick.</p></div>
+<div class="do-doc do-d-field"><div class="do-doc-label insert">do-d-field</div><p class="">Left rule, sand.</p></div>
+<div class="do-doc do-d-incident"><div class="do-doc-label insert">do-d-incident</div><p class="">Top rule, red.</p></div>
+<div class="do-doc do-d-medical"><div class="do-doc-label insert">do-d-medical</div><p class="">Top thick and left thin, moss.</p></div>
+<div class="do-doc do-d-inv"><div class="do-doc-label insert">do-d-inv</div><p class="">Left rule, slate.</p></div>
+<div class="do-doc do-d-interrog"><div class="do-doc-label insert">do-d-interrog</div><p class="">Top rule, slate.</p></div>
+<div class="do-doc do-d-casualty"><div class="do-doc-label insert">do-d-casualty</div><p class="">Top and left rules, red.</p></div>
+<div class="do-doc do-d-chain">
+<div class="do-doc-label insert">do-d-chain</div>
+<ul class="do-chainlist"><li class="">Logbook found, cellar</li><li class="">Handed to keeper</li><li class="">Locked in desk</li></ul>
+</div>
+<div class="do-doc do-d-corr"><div class="do-doc-label insert">do-d-corr</div><p class="">Top rule, double, sand.</p></div>
+<p class="fic-label"><span class="do-label">.do-news · .do-dateline · .do-transcript</span></p>
+<div class="do-doc do-news">
+<span class="do-dateline">Harbour Gazette · Thursday</span>
+<span class="do-doc-title">Lamp Relit After Eleven Dark Nights</span>
+<p class="">Residents reported a steady beam from the point shortly after midnight, ending an outage that had kept the fishing fleet in port.</p>
+</div>
+<div class="do-doc do-transcript">
+<div class="do-doc-label insert">Interview Transcript</div>
+<p class=""><span class="do-spk">Interviewer:</span> When did you first notice the lamp had failed?</p>
+<p class=""><span class="do-spk">Maren:</span> The ninth. I thought it was fog.</p>
+</div>
+<p class="fic-label"><span class="do-label">.do-receipt · .do-cert · .do-frame</span></p>
+<div class="do-receipt insert">
+<table class="">
+<tr class=""><td class="">Lamp oil, 5 L</td><td class="">12.00</td></tr>
+<tr class=""><td class="">Wick</td><td class="">3.50</td></tr>
+<tr class=""><td class="">Kettle repair</td><td class="">7.25</td></tr>
+<tr class=""><td class=""><b class="">Total</b></td><td class=""><b class="">22.75</b></td></tr>
+</table>
+</div>
+<p class="fic-label"><span class="do-label">.do-signature-sheet</span></p>
+<div class="do-signature-sheet insert">
+<span class="do-doc-title">Acknowledgement</span>
+<div class="do-signature-entry insert">
+<span class="do-signature-name">Brad Pitt</span>
+<span class="do-signature-caption">Signature</span>
+</div>
+<div class="do-signature-entry insert">
+<span class="do-signature-name">George Clooney</span>
+<span class="do-signature-caption">Signature</span>
+</div>
+</div>
+<div class="do-cert insert">
+<span class="do-doc-title">Certificate of Service</span>
+<p class="">Awarded to Maren Voss for twelve winters at the point.</p>
+</div>
+<div class="do-frame insert"><p class="">A framed passage, set apart with a thin double border.</p></div>
+<p class="fic-label"><span class="do-label">.do-endnotes · .do-footnotes</span></p>
+<div class="end-notes">
+<span class="do-note-title">Endnotes</span>
+<ol class=""><li class="">The ledger was altered in a hand that imitates, but does not match, the keeper's.</li><li class="">Tide tables are fictional.</li></ol>
+</div>
+<div class="do-footnotes insert"><p class=""><span class="do-fnref">1</span> Footnote text appears in small sans-serif beneath a thin rule.</p></div>
+</div>
+</div>
+<!-- ===== Afterword ===== -->
+<div class="end-notes">
+<div class="module end notes">
+<h3 class="end-notes-label">End Notes:</h3>
+<blockquote class="userstuff"><p class="">Thank you for reading. Comments feed the lighthouse.</p></blockquote>
+</div>
+</div>
+</div></div>
+</body>
+</html>

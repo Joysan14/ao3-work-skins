@@ -1,0 +1,2160 @@
+#workskin {
+  background-color: #252C26;
+  background-image: repeating-linear-gradient(90deg, rgba(181,170,139,.03) 0, rgba(181,170,139,.03) 1px, transparent 1px, transparent 140px),
+    repeating-linear-gradient(0deg, rgba(0,0,0,.08) 0, rgba(0,0,0,.08) 1px, transparent 1px, transparent 96px),
+    radial-gradient(ellipse at 50% 0, rgba(89,99,74,.3), transparent 62%);
+  box-shadow: inset 0 0 0 1px rgba(181,170,139,.18), inset 0 0 0 11px #252C26, inset 0 0 0 12px rgba(119,124,120,.3),
+    inset 0 160px 180px -70px rgba(89,99,74,.22), inset 0 -160px 180px -70px rgba(0,0,0,.75), inset 0 0 220px rgba(0,0,0,.55);
+  border: 1px solid #454B35;
+  border-radius: 2px;
+  padding: 4em 1.5em 3em;
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+}
+
+#workskin .preface,
+#workskin #chapters,
+#workskin .afterword {
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 0 auto 1.6em;
+  background-color: #E8E1CE;
+  background-image: linear-gradient(180deg, rgba(249,247,240,.35), transparent 12%, transparent 88%, rgba(69,75,53,.08));
+  color: #252724;
+  border: 1px solid #B5AA8B;
+  box-shadow: 0 24px 64px rgba(0,0,0,.65), 0 2px 8px rgba(0,0,0,.45), inset 0 0 0 6px #E8E1CE, inset 0 0 0 7px #B5AA8B;
+  padding: 3.2em 3.4em;
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.0625em;
+  line-height: 1.75;
+  letter-spacing: .004em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#workskin #chapters .preface,
+#workskin #chapters .afterword {
+  max-width: none;
+  margin: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+#workskin .userstuff {
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+}
+
+#workskin .userstuff p {
+  margin: 0 0 .95em;
+  text-indent: 0;
+}
+
+#workskin .userstuff p+p {
+  margin-top: 0;
+}
+
+#workskin .do-book p+p {
+  text-indent: 1.5em;
+  margin-top: -.2em;
+}
+
+#workskin .do-justify p {
+  text-align: justify;
+}
+
+#workskin .userstuff em,
+#workskin .userstuff i {
+  font-style: italic;
+}
+
+#workskin .userstuff img,
+#workskin .userstuff table {
+  max-width: 100%;
+}
+
+#workskin .userstuff a {
+  color: #454B35;
+  text-decoration: underline;
+  text-decoration-color: #777C78;
+}
+
+#workskin .userstuff a:hover {
+  color: #252724;
+}
+
+#workskin .userstuff a:focus,
+#workskin .preface a:focus,
+#workskin .afterword a:focus {
+  outline: 2px solid #454B35;
+  outline-offset: 2px;
+}
+
+#workskin .preface {
+  text-align: center;
+}
+
+#workskin .preface .title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 2.9em;
+  line-height: 1.08;
+  color: #252724;
+  letter-spacing: .01em;
+  margin: .1em 0 .25em;
+  text-align: center;
+}
+
+#workskin .preface .title:after {
+  content: "";
+  display: block;
+  width: 3.2em;
+  height: 2px;
+  background: #59634A;
+  margin: .35em auto 0;
+}
+
+#workskin .preface .byline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: .76em;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #414747;
+  text-align: center;
+  margin: 0 0 1.8em;
+}
+
+#workskin .preface .byline a {
+  color: #414747;
+}
+
+#workskin .preface .module {
+  text-align: left;
+  border-top: 1px solid #B5AA8B;
+  margin-top: 1.5em;
+  padding-top: 1.1em;
+}
+
+#workskin .preface .module h3.heading,
+#workskin .afterword .module h3.heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #414747;
+  margin: 0 0 .6em;
+}
+
+#workskin .preface blockquote.userstuff {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: italic;
+}
+
+#workskin .preface .notes,
+#workskin .preface .summary {
+  font-size: .95em;
+}
+
+#workskin #chapters .preface {
+  text-align: center;
+  margin-bottom: 1.6em;
+}
+
+#workskin #chapters .preface .title {
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: bold;
+  font-size: 1.55em;
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin: 0 0 .3em;
+}
+
+#workskin #chapters .preface .title:after {
+  display: none;
+}
+
+#workskin .do-title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2.9em;
+  font-weight: 600;
+  line-height: 1.08;
+  color: #252724;
+  text-align: center;
+  margin: 0 0 .15em;
+}
+
+#workskin .do-subtitle {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.35em;
+  color: #414747;
+  text-align: center;
+  margin: 0 0 1.2em;
+}
+
+#workskin .do-epigraph {
+  max-width: 26em;
+  margin: 1.6em auto;
+  text-align: center;
+  font-style: italic;
+  color: #414747;
+}
+
+#workskin .do-epigraph cite {
+  display: block;
+  margin-top: .4em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: .72em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-meta {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  background: #DDD5BF;
+  border: 1px solid #B5AA8B;
+  border-top: 3px solid #343D32;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  line-height: 1.6;
+  overflow: hidden;
+  text-align: left;
+}
+
+#workskin .do-meta dt {
+  float: left;
+  clear: left;
+  width: 8em;
+  font-weight: bold;
+  font-size: .84em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #414747;
+  padding-top: .16em;
+}
+
+#workskin .do-meta dd {
+  margin: 0 0 .45em 8.5em;
+}
+
+#workskin .do-chip {
+  display: inline-block;
+  border: 1px solid #B5AA8B;
+  background: #F4F0E5;
+  padding: .04em .6em;
+  margin: .1em .25em .1em 0;
+  border-radius: 2px;
+}
+
+#workskin .do-chapter {
+  text-align: center;
+  margin: 2.2em 0;
+  padding: .9em 0 .8em;
+  border-top: 1px solid #454B35;
+  border-bottom: 1px solid #B5AA8B;
+}
+
+#workskin .do-chapter-num {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-chapter-title {
+  display: block;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: bold;
+  font-size: 1.75em;
+  line-height: 1.25;
+  color: #252724;
+  margin: .3em 0 .15em;
+}
+
+#workskin .do-chapter-sub {
+  display: block;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #414747;
+}
+
+#workskin .do-chapter-orn {
+  display: block;
+  margin-top: .7em;
+  color: #59634A;
+  letter-spacing: .7em;
+  padding-left: .7em;
+}
+
+#workskin .do-dialogue {
+  margin-bottom: .8em;
+}
+
+#workskin .do-thought {
+  font-style: italic;
+  color: #414747;
+  padding: 0 1.5em;
+}
+
+#workskin .do-dropcap {
+  float: left;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 4.3em;
+  line-height: .78;
+  padding: .06em .1em 0 0;
+  color: #343D32;
+}
+
+#workskin .do-lead {
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+
+#workskin .do-pov {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #414747;
+  margin: 1.6em 0 1.2em;
+}
+
+#workskin .do-pov:before,
+#workskin .do-pov:after {
+  content: "\2014";
+  color: #59634A;
+  padding: 0 .9em;
+}
+
+#workskin .do-tag {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #414747;
+  margin-bottom: .5em;
+}
+
+#workskin .do-flashback {
+  margin: 1.8em 0;
+  padding: .6em 0 .4em 1.4em;
+  background: rgba(181,170,139,.16);
+  border-left: 3px solid #B5AA8B;
+}
+
+#workskin .do-memory {
+  margin: 1.8em 0;
+  padding: 1em 1.4em;
+  background: #DDD5BF;
+  border-left: 3px solid #777C78;
+  font-style: italic;
+}
+
+#workskin .do-dream {
+  margin: 1.8em 0;
+  padding: 1.1em 1.5em;
+  background: #DDD5BF;
+  border: 1px dashed #414747;
+  font-style: italic;
+  color: #414747;
+}
+
+#workskin .do-pull {
+  margin: 2em 1.5em;
+  padding: 1em 0;
+  border-top: 3px double #777C78;
+  border-bottom: 3px double #777C78;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.6em;
+  line-height: 1.3;
+  text-align: center;
+  color: #252C26;
+}
+
+#workskin .do-pull cite {
+  display: block;
+  margin-top: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: .5em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin hr.do-break {
+  border: 0;
+  height: auto;
+  overflow: visible;
+  margin: 2.2em 0;
+  text-align: center;
+  background: none;
+  color: #59634A;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+#workskin hr.do-break:after {
+  content: "\2500\2500\00a0\00a0\25A0\00a0\00a0\2500\2500";
+}
+
+#workskin hr.do-break-dots:after {
+  content: "\00B7\00a0\00a0\00B7\00a0\00a0\00B7";
+}
+
+#workskin hr.do-break-tide:after {
+  content: "\2550\2550\2550\00a0\25AA\00a0\2550\2550\2550";
+}
+
+#workskin hr.do-break-line {
+  border-top: 1px solid #454B35;
+  width: 30%;
+  margin: 2.2em auto;
+}
+
+#workskin hr.do-break-line:after {
+  content: "";
+}
+
+#workskin .do-note,
+#workskin .do-endnotes {
+  margin: 2em 0;
+  padding: 1.2em 1.5em;
+  background: #DDD5BF;
+  border: 1px solid #B5AA8B;
+  border-top: 3px solid #454B35;
+  font-size: .92em;
+  line-height: 1.65;
+  text-align: left;
+}
+
+#workskin .do-note-title {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #414747;
+  margin-bottom: .6em;
+}
+
+#workskin .do-endnotes ol {
+  margin: .4em 0 0;
+  padding-left: 1.4em;
+}
+
+#workskin .do-endnotes li {
+  margin-bottom: .45em;
+}
+
+#workskin .do-warn {
+  margin: 1.6em 0;
+  padding: 1em 1.3em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-left: 6px solid #8B3737;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#workskin .do-warn-title {
+  display: block;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #8B3737;
+  margin-bottom: .3em;
+}
+
+#workskin .do-disclaimer {
+  margin: 1.6em 0;
+  padding-top: .9em;
+  border-top: 1px solid #B5AA8B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #414747;
+  line-height: 1.7;
+}
+
+#workskin .do-letter {
+  max-width: 34em;
+  margin: 2em auto;
+  padding: 2em 2.3em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  box-shadow: 0 1px 4px rgba(37,39,36,.3), 0 8px 18px -10px rgba(37,39,36,.4), inset 0 0 44px rgba(125,113,86,.16);
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.18em;
+  line-height: 1.65;
+}
+
+#workskin .do-letter p {
+  margin-bottom: .9em;
+}
+
+#workskin .do-sig {
+  text-align: right;
+  font-style: italic;
+}
+
+#workskin .do-diary {
+  margin: 2em 0;
+  padding: 1.2em 1.6em;
+  background: #DDD5BF;
+  border: 1px solid #B5AA8B;
+  border-left: 6px double #454B35;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.12em;
+  font-style: italic;
+}
+
+#workskin .do-date {
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  font-size: .7em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #414747;
+  margin-bottom: .6em;
+}
+
+#workskin .do-poem {
+  max-width: 28em;
+  margin: 2em auto;
+  padding-left: 1.5em;
+  border-left: 1px solid #59634A;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+#workskin .do-poem p {
+  margin: 0 0 1.2em;
+}
+
+#workskin .do-poem-title {
+  display: block;
+  font-style: normal;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: .9em;
+  margin-bottom: .6em;
+  color: #252724;
+}
+
+#workskin .do-chat {
+  max-width: 420px;
+  margin: 2em auto;
+  background: #DDD5BF;
+  border: 1px solid #B5AA8B;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .86em;
+  line-height: 1.45;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-chat-head {
+  background: #252C26;
+  color: #F4F0E5;
+  padding: .75em 1em;
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#workskin .do-chat-head small {
+  display: block;
+  font-weight: normal;
+  font-size: .82em;
+  letter-spacing: .04em;
+  text-transform: none;
+  color: #B5AA8B;
+}
+
+#workskin .do-chat-body {
+  padding: 1em .8em .5em;
+}
+
+#workskin .do-day {
+  display: table;
+  margin: 0 auto .8em;
+  padding: .15em .8em;
+  background: #B5AA8B;
+  color: #252724;
+  border-radius: 2px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .78em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#workskin .do-msg {
+  display: table;
+  max-width: 82%;
+  margin: 0 0 .55em;
+  padding: .5em .8em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-radius: 8px 8px 8px 2px;
+  color: #252724;
+}
+
+#workskin .do-out {
+  margin-left: auto;
+  background: #343D32;
+  border-color: #343D32;
+  border-radius: 8px 8px 2px 8px;
+  color: #F4F0E5;
+}
+
+#workskin .do-sender {
+  display: block;
+  font-size: .76em;
+  font-weight: bold;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-s2 {
+  color: #59634A;
+}
+
+#workskin .do-s3 {
+  color: #7D7156;
+}
+
+#workskin .do-out .do-sender {
+  color: #B5AA8B;
+}
+
+#workskin .do-time {
+  display: block;
+  margin-top: .15em;
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .72em;
+  color: #414747;
+}
+
+#workskin .do-out .do-time {
+  color: #B5AA8B;
+}
+
+#workskin .do-tick {
+  letter-spacing: .05em;
+}
+
+#workskin .do-wa {
+  background: #D3CBB3;
+}
+
+#workskin .do-wa .do-out {
+  background: #59634A;
+  border-color: #59634A;
+  color: #F9F7F0;
+}
+
+#workskin .do-wa .do-out .do-time,
+#workskin .do-wa .do-out .do-sender {
+  color: #E8E1CE;
+}
+
+#workskin .do-wa .do-chat-head {
+  background: #343D32;
+}
+
+#workskin .do-typing {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .78em;
+  color: #414747;
+  font-style: italic;
+  padding: 0 .3em .6em;
+}
+
+#workskin .do-secure {
+  font-family: "Courier New", Courier, monospace;
+  background: #252C26;
+  border-color: #454B35;
+}
+
+#workskin .do-secure .do-chat-head {
+  background: #1D221E;
+  border-bottom: 1px solid #454B35;
+  color: #E8E1CE;
+}
+
+#workskin .do-secure .do-chat-body {
+  background: #252C26;
+}
+
+#workskin .do-secure .do-msg {
+  background: #343D32;
+  border-color: #454B35;
+  color: #E8E1CE;
+}
+
+#workskin .do-secure .do-out {
+  background: #59634A;
+  border-color: #59634A;
+  color: #F9F7F0;
+}
+
+#workskin .do-secure .do-sender,
+#workskin .do-secure .do-time,
+#workskin .do-secure .do-typing {
+  color: #B5AA8B;
+}
+
+#workskin .do-secure .do-day {
+  background: #454B35;
+  color: #E8E1CE;
+}
+
+#workskin .do-post {
+  max-width: 470px;
+  margin: 2em auto;
+  padding: 1.1em 1.2em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-top: 3px solid #454B35;
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .88em;
+  line-height: 1.5;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-avatar {
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  line-height: 2.4em;
+  margin-right: .6em;
+  border-radius: 50%;
+  background: #454B35;
+  color: #F4F0E5;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+#workskin .do-name {
+  font-weight: bold;
+  color: #252724;
+}
+
+#workskin .do-handle {
+  font-family: "Courier New", Courier, monospace;
+  color: #414747;
+}
+
+#workskin .do-post-body {
+  margin: .7em 0 .2em;
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.08em;
+}
+
+#workskin .do-post-stats {
+  margin-top: .8em;
+  padding-top: .5em;
+  border-top: 1px solid #B5AA8B;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  letter-spacing: .04em;
+  color: #414747;
+}
+
+#workskin .do-email {
+  margin: 2em 0;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .88em;
+  line-height: 1.55;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-email-head {
+  padding: .8em 1.2em;
+  background: #343D32;
+  color: #F4F0E5;
+  border-bottom: 1px solid #B5AA8B;
+  border-top: 3px solid #252C26;
+  overflow: hidden;
+}
+
+#workskin .do-k {
+  float: left;
+  clear: left;
+  width: 5.2em;
+  font-weight: bold;
+  font-size: .82em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #B5AA8B;
+  padding-top: .15em;
+}
+
+#workskin .do-v {
+  display: block;
+  margin-left: 5.6em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .94em;
+}
+
+#workskin .do-email-subject {
+  display: block;
+  margin-left: 5.6em;
+  font-weight: bold;
+  color: #F9F7F0;
+}
+
+#workskin .do-email-body {
+  padding: 1em 1.2em;
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: 1.04em;
+  color: #252724;
+}
+
+#workskin .do-email-body p {
+  margin-bottom: .8em;
+}
+
+#workskin .do-email .do-email {
+  margin: 1em 0 0 .4em;
+  border: 0;
+  border-left: 3px solid #59634A;
+  font-size: .94em;
+  background: #E8E1CE;
+}
+
+#workskin .do-notify {
+  max-width: 430px;
+  margin: 1.8em auto;
+  padding: .8em 1.1em;
+  background: #252C26;
+  border: 1px solid #454B35;
+  border-left: 4px solid #B5AA8B;
+  border-radius: 2px;
+  color: #E8E1CE;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  line-height: 1.5;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-notify b {
+  display: block;
+  color: #F9F7F0;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#workskin .do-system {
+  max-width: 430px;
+  margin: 1.8em auto;
+  padding: .9em 1.2em;
+  background: #1D221E;
+  border: 1px solid #454B35;
+  border-left: 4px solid #8B3737;
+  color: #B5AA8B;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .82em;
+  line-height: 1.6;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-system b {
+  color: #F4F0E5;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .do-call {
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .9em 1.2em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .86em;
+  line-height: 1.5;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-call b {
+  display: block;
+  font-size: 1.05em;
+  color: #252724;
+}
+
+#workskin .do-missed {
+  color: #8B3737;
+  font-weight: bold;
+}
+
+#workskin .do-voice {
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .8em 1.1em;
+  background: #343D32;
+  border-radius: 24px;
+  color: #F4F0E5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-wave {
+  letter-spacing: .12em;
+  color: #B5AA8B;
+  font-size: 1.15em;
+}
+
+#workskin .do-radio {
+  margin: 2em 0;
+  padding: 1.3em 1.5em;
+  background: #252C26;
+  border: 1px solid #454B35;
+  border-top: 3px solid #59634A;
+  color: #E8E1CE;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  line-height: 1.65;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-radio p {
+  margin: 0 0 .55em;
+}
+
+#workskin .do-radio .do-ts {
+  color: #B5AA8B;
+  margin-right: .6em;
+}
+
+#workskin .do-radio .do-cs {
+  font-weight: bold;
+  color: #F9F7F0;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#workskin .do-ts {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .92em;
+  color: #414747;
+}
+
+#workskin .do-doc {
+  margin: 2.2em 0;
+  padding: 1.7em 1.9em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-top: 4px double #343D32;
+  box-shadow: 0 1px 3px rgba(37,39,36,.25), 0 10px 18px -12px rgba(37,39,36,.45);
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  line-height: 1.65;
+  color: #252724;
+  text-indent: 0;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+#workskin .do-doc p {
+  margin-bottom: .8em;
+}
+
+#workskin .do-doc-label {
+  margin-bottom: 1.1em;
+  padding-bottom: .6em;
+  border-bottom: 1px solid #B5AA8B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-doc-title {
+  display: block;
+  margin: 0 0 .8em;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.25em;
+  line-height: 1.3;
+  color: #252724;
+}
+
+#workskin .do-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .8em 0;
+  table-layout: fixed;
+}
+
+#workskin .do-doc th,
+#workskin .do-doc td {
+  padding: .4em .6em;
+  border: 1px solid #B5AA8B;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+#workskin .do-doc th {
+  background: #E8E1CE;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-doc hr {
+  border: 0;
+  border-top: 1px solid #B5AA8B;
+  margin: 1em 0;
+}
+
+#workskin .do-ref {
+  display: block;
+  margin-bottom: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .76em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-docmeta {
+  margin: 0 0 1.2em;
+  padding: .55em 0;
+  border-top: 1px solid #343D32;
+  border-bottom: 1px solid #343D32;
+  font-size: .94em;
+}
+
+#workskin .do-docmeta span {
+  display: inline-block;
+  margin-right: 1.6em;
+}
+
+#workskin .do-docmeta b {
+  margin-right: .4em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-sect {
+  margin: 1.4em 0 .6em;
+  padding-bottom: .25em;
+  border-bottom: 1px solid #777C78;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #343D32;
+}
+
+#workskin .do-sigline {
+  display: inline-block;
+  min-width: 12em;
+  max-width: 100%;
+  margin: 1.8em 1.5em 0 0;
+  padding-top: .3em;
+  border-top: 1px solid #252724;
+  font-size: .88em;
+  vertical-align: top;
+}
+
+#workskin .do-d-personnel {
+  border-left: 6px solid #454B35;
+}
+
+#workskin .do-d-service {
+  border-left: 6px double #59634A;
+}
+
+#workskin .do-d-intel {
+  border-top-color: #343D32;
+}
+
+#workskin .do-d-brief {
+  border-top: 4px solid #454B35;
+}
+
+#workskin .do-d-field {
+  border-left: 6px solid #B5AA8B;
+}
+
+#workskin .do-d-incident {
+  border-top-color: #8B3737;
+}
+
+#workskin .do-d-medical {
+  border-top: 4px solid #59634A;
+  border-left: 1px solid #59634A;
+}
+
+#workskin .do-d-inv {
+  border-left: 6px solid #414747;
+}
+
+#workskin .do-d-interrog {
+  border-top: 4px solid #414747;
+}
+
+#workskin .do-d-casualty {
+  border-top: 4px solid #8B3737;
+  border-left: 6px solid #8B3737;
+}
+
+#workskin .do-d-chain {
+  border-left: 6px double #454B35;
+}
+
+#workskin .do-d-corr {
+  border-top: 4px double #B5AA8B;
+}
+
+#workskin .do-lh {
+  text-align: center;
+  margin: 0 0 1.2em;
+  padding-bottom: .7em;
+  border-bottom: 3px double #343D32;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .86em;
+  font-weight: bold;
+  color: #252C26;
+}
+
+#workskin .do-lh small {
+  display: block;
+  margin-top: .25em;
+  font-weight: normal;
+  font-size: .82em;
+  letter-spacing: .14em;
+  color: #414747;
+}
+
+#workskin .do-photo {
+  float: right;
+  box-sizing: border-box;
+  width: 7.5em;
+  height: 9.5em;
+  margin: 0 0 .8em 1.2em;
+  padding-top: 3.8em;
+  text-align: center;
+  background: #DDD5BF;
+  border: 1px solid #414747;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .66em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-dossier {
+  margin: 1em 0;
+  overflow: hidden;
+}
+
+#workskin .do-dossier dt {
+  float: left;
+  clear: left;
+  width: 9em;
+  padding-top: .3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  font-weight: bold;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-dossier dd {
+  margin: 0 0 .35em 9.6em;
+  padding-bottom: .3em;
+  border-bottom: 1px dotted #B5AA8B;
+}
+
+#workskin .do-status {
+  display: inline-block;
+  padding: .05em .7em;
+  border: 1px solid #454B35;
+  color: #454B35;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .76em;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+#workskin .do-status-open {
+  background: #454B35;
+  color: #F4F0E5;
+}
+
+#workskin .do-status-closed {
+  background: #252724;
+  border-color: #252724;
+  color: #F4F0E5;
+}
+
+#workskin .do-status-hold {
+  border-color: #8B3737;
+  color: #8B3737;
+}
+
+#workskin .do-dist {
+  margin-top: 1.4em;
+  padding-top: .7em;
+  border-top: 1px solid #B5AA8B;
+  font-size: .9em;
+}
+
+#workskin .do-dist b {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-chainlist {
+  list-style: none;
+  margin: .8em 0;
+  padding: 0;
+}
+
+#workskin .do-chainlist li {
+  margin: 0;
+  padding: .3em 0 .3em 1.2em;
+  border-left: 2px solid #59634A;
+}
+
+#workskin .do-chainlist li:before {
+  content: "\25AA\00a0";
+  color: #59634A;
+  margin-left: -1.2em;
+}
+
+#workskin .do-class {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 0 1.2em;
+  padding: .25em .8em;
+  background: #343D32;
+  border: 2px solid #343D32;
+  color: #F4F0E5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .76em;
+  font-weight: bold;
+  letter-spacing: .3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#workskin .do-stamp {
+  display: inline-block;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: .1em .8em;
+  background: #252724;
+  border: 2px solid #252724;
+  color: #F4F0E5;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85em;
+  font-weight: bold;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+#workskin .do-stamp-y {
+  background: #B5AA8B;
+  border-color: #B5AA8B;
+  color: #252724;
+}
+
+#workskin .do-stamp-r {
+  background: transparent;
+  border-color: #8B3737;
+  color: #8B3737;
+}
+
+#workskin .do-class-ts,
+#workskin .do-stamp-ts {
+  background: #8B3737;
+  border-color: #8B3737;
+  color: #F9F7F0;
+}
+
+#workskin .do-class-s,
+#workskin .do-stamp-s {
+  background: transparent;
+  border: 3px double #8B3737;
+  color: #8B3737;
+}
+
+#workskin .do-class-c,
+#workskin .do-stamp-c {
+  background: #454B35;
+  border-color: #454B35;
+  color: #F4F0E5;
+}
+
+#workskin .do-class-rs,
+#workskin .do-stamp-rs {
+  background: #414747;
+  border-color: #414747;
+  color: #F4F0E5;
+}
+
+#workskin .do-class-dc,
+#workskin .do-stamp-dc {
+  background: transparent;
+  border-color: #454B35;
+  color: #454B35;
+}
+
+#workskin .do-class-fouo,
+#workskin .do-stamp-fouo {
+  background: transparent;
+  border: 2px dashed #414747;
+  color: #414747;
+}
+
+#workskin .do-redact {
+  padding: 0 .25em;
+  background: #252724;
+  color: #252724;
+  border-radius: 1px;
+  text-shadow: none;
+}
+
+#workskin .do-redact-name {
+  display: inline-block;
+  min-width: 7em;
+  padding: 0 .25em;
+  background: #252724;
+  color: #252724;
+  vertical-align: bottom;
+  line-height: 1.2;
+}
+
+#workskin .do-redact-block {
+  display: block;
+  margin: .2em 0 .6em;
+  padding: 0 .25em;
+  background: #252724;
+  color: #252724;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+#workskin .do-missing {
+  display: inline-block;
+  padding: 0 .6em;
+  border: 1px solid #252724;
+  background: #DDD5BF;
+  color: #252724;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .do-news {
+  font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
+  font-size: .95em;
+  background: #F9F7F0;
+}
+
+#workskin .do-news .do-doc-title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+#workskin .do-dateline {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-transcript p {
+  margin-bottom: .5em;
+}
+
+#workskin .do-spk {
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #252724;
+}
+
+#workskin .do-receipt {
+  max-width: 320px;
+  margin: 2em auto;
+  padding: 1.4em;
+  background: #F9F7F0;
+  border: 1px dashed #414747;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .84em;
+  line-height: 1.6;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-receipt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#workskin .do-receipt td {
+  padding: .1em 0;
+  border: 0;
+}
+
+#workskin .do-receipt td+td {
+  text-align: right;
+}
+
+#workskin .do-cert {
+  margin: 2.2em 0;
+  padding: 2em 1.6em;
+  background: #F4F0E5;
+  border: 6px double #777C78;
+  text-align: center;
+  text-indent: 0;
+}
+
+#workskin .do-cert .do-doc-title {
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+#workskin .do-frame {
+  margin: 2em 0;
+  padding: 1.4em 1.6em;
+  border: 1px solid #777C78;
+  box-shadow: 0 0 0 4px #E8E1CE, 0 0 0 5px #B5AA8B;
+}
+
+#workskin .do-hl {
+  background-color: #D6CBA3;
+  padding: 0 .15em;
+}
+
+#workskin .do-hl-sea {
+  background-color: #CDD2BE;
+  padding: 0 .15em;
+}
+
+#workskin .do-fnref {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7em;
+  vertical-align: super;
+  line-height: 0;
+  color: #454B35;
+}
+
+#workskin .do-footnotes {
+  margin-top: 2em;
+  padding-top: .8em;
+  border-top: 1px solid #B5AA8B;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78em;
+  line-height: 1.6;
+  color: #414747;
+}
+
+#workskin .do-center {
+  text-align: center;
+}
+
+#workskin .do-label {
+  display: inline-block;
+  padding: .1em .7em;
+  background: #DDD5BF;
+  border: 1px solid #B5AA8B;
+  color: #252724;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .7em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#workskin {
+  padding: 2.4em .9em 2em;
+}
+
+#workskin .preface,
+#workskin #chapters,
+#workskin .afterword {
+  padding: 2.4em 2.2em;
+}
+
+#workskin .preface .title,
+#workskin .do-title {
+  font-size: 2.4em;
+}
+
+#workskin {
+  padding: .8em .35em .5em;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px rgba(181,170,139,.18), inset 0 120px 140px -70px rgba(89,99,74,.22), inset 0 -120px 140px -70px rgba(0,0,0,.7), inset 0 0 120px rgba(0,0,0,.5);
+}
+
+#workskin .preface,
+#workskin #chapters,
+#workskin .afterword {
+  padding: 1.7em 1.15em;
+  margin-bottom: .8em;
+  box-shadow: 0 12px 32px rgba(0,0,0,.6), inset 0 0 0 4px #E8E1CE, inset 0 0 0 5px #B5AA8B;
+}
+
+#workskin .preface .title,
+#workskin .do-title {
+  font-size: 2.05em;
+}
+
+#workskin .do-chapter-title {
+  font-size: 1.5em;
+}
+
+#workskin .do-meta dt,
+#workskin .do-k,
+#workskin .do-dossier dt {
+  float: none;
+  width: auto;
+}
+
+#workskin .do-meta dd,
+#workskin .do-v,
+#workskin .do-email-subject,
+#workskin .do-dossier dd {
+  margin-left: 0;
+}
+
+#workskin .do-msg {
+  max-width: 92%;
+}
+
+#workskin .do-pull {
+  margin: 1.6em 0;
+  font-size: 1.3em;
+}
+
+#workskin .do-letter,
+#workskin .do-doc,
+#workskin .do-cert,
+#workskin .do-radio {
+  padding: 1.2em 1em;
+}
+
+#workskin .do-thought {
+  padding: 0 .8em;
+}
+
+#workskin .do-dropcap {
+  font-size: 3.6em;
+}
+
+#workskin .do-poem {
+  margin: 2em 0;
+}
+
+#workskin .do-doc th,
+#workskin .do-doc td {
+  padding: .3em .4em;
+}
+
+#workskin .do-docmeta span {
+  display: block;
+  margin-right: 0;
+}
+
+#workskin .do-sigline {
+  display: block;
+  min-width: 0;
+  margin-right: 0;
+}
+
+#workskin .do-photo {
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1em;
+  padding: 1em 0;
+}
+
+#workskin .do-class,
+#workskin .do-stamp {
+  letter-spacing: .16em;
+  white-space: normal;
+}
+
+#workskin .do-redact-name {
+  min-width: 5em;
+}
+
+#workskin .do-th {
+  font-style: italic;
+  color: #414747;
+}
+
+#workskin p.do-thought.do-thought {
+  margin: 0 0 .95em;
+  padding: 0 .8em;
+  text-indent: 0;
+  text-align: left;
+  font-style: italic;
+  color: #414747;
+}
+
+#workskin p.do-thought-bar.do-thought-bar {
+  margin: 0 0 .95em .6em;
+  padding: 0 0 0 1em;
+  border-left: 1px solid #59634A;
+  text-indent: 0;
+  text-align: left;
+  font-style: italic;
+  color: #414747;
+}
+
+#workskin .do-bank {
+  box-sizing: border-box;
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .9em 1.1em .4em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(37,39,36,.3), 0 8px 18px -10px rgba(37,39,36,.4);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .84em;
+  line-height: 1.5;
+  color: #252724;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-bank.do-bank p,
+#workskin .do-bank.do-bank p+p {
+  margin: 0 0 .5em;
+  padding: 0;
+  text-indent: 0;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#workskin .do-bank-app {
+  overflow: hidden;
+  font-size: .8em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-bank-app:before {
+  content: "";
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: .6em;
+  vertical-align: middle;
+  border-radius: .35em;
+  background: #343D32;
+  border-bottom: 3px solid #B5AA8B;
+  box-sizing: border-box;
+}
+
+#workskin .do-bank-icon {
+  display: none;
+}
+
+#workskin .do-bank-time {
+  float: right;
+  letter-spacing: .04em;
+  text-transform: none;
+}
+
+#workskin .do-bank-title {
+  font-weight: bold;
+  font-size: 1.05em;
+  color: #252724;
+}
+
+#workskin .do-bank-amt {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+#workskin .do-bank-cr {
+  color: #454B35;
+}
+
+#workskin .do-bank-dr {
+  color: #8B3737;
+}
+
+#workskin .do-bank.do-bank p.do-bank-bal {
+  margin-bottom: 0;
+  padding: .5em 0 .6em;
+  border-top: 1px solid #B5AA8B;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .88em;
+  color: #414747;
+}
+
+#workskin .do-bank-alert {
+  border-left: 5px solid #8B3737;
+  border-radius: 4px 12px 12px 4px;
+}
+
+#workskin .do-bank-alert .do-bank-title {
+  color: #8B3737;
+}
+
+#workskin .do-bank-dark {
+  background: #252C26;
+  border-color: #454B35;
+  color: #E8E1CE;
+}
+
+#workskin .do-bank-dark .do-bank-app,
+#workskin .do-bank-dark.do-bank p.do-bank-bal {
+  color: #B5AA8B;
+}
+
+#workskin .do-bank-dark .do-bank-app:before {
+  background: #E8E1CE;
+}
+
+#workskin .do-bank-dark .do-bank-title {
+  color: #F9F7F0;
+}
+
+#workskin .do-bank-dark .do-bank-cr {
+  color: #B9C79A;
+}
+
+#workskin .do-bank-dark .do-bank-dr {
+  color: #E0A28C;
+}
+
+#workskin .do-bank-dark.do-bank p.do-bank-bal {
+  border-top-color: #454B35;
+}
+
+#workskin .do-bank-alert.do-bank-dark .do-bank-title {
+  color: #E0A28C;
+}
+
+
+/* =====================================================================
+   ADD-ON: SIGNATURES + ORGANISATION / BRAND BANNERS
+   Paste this at the END of your existing workskin CSS.
+
+   USAGE
+   -----
+   Signature only (inline, any colour):
+     <span class="do-sign do-sign-blue">J. Harlan</span>
+
+   Signature block (signature on a line, printed name under it):
+     <div class="do-signature">
+       <span class="do-sign do-sign-black">J. Harlan</span>
+       <span class="do-signature-line">James Harlan<small>Chapter President</small></span>
+     </div>
+
+   Initials:
+     <span class="do-sign do-initials do-sign-red">JH</span>
+
+   Compact brand banner (emblem + name + tagline):
+     <div class="do-brand do-brand-blue">
+       <span class="do-brand-mark">OC</span>
+       <span class="do-brand-body">
+         <span class="do-brand-name">Organisation Name</span>
+         <span class="do-brand-tag">Motto or department</span>
+       </span>
+       <span class="do-brand-ref">EST. 1998</span>
+     </div>
+
+   Wide banner (title-card style):
+     <div class="do-banner do-banner-black">
+       <span class="do-banner-name">Organisation Name</span>
+       <span class="do-banner-tag">Motto or department</span>
+       <span class="do-banner-est">EST. 1998</span>
+     </div>
+
+   Colour classes: -blue  -red  -black  (no colour class = black)
+
+   NOTE: AO3 workskins cannot load web fonts, so the cursive font is a
+   stack of fonts already installed on the reader's device. It will look
+   a little different on Windows, Mac, Android and iPhone.
+   ===================================================================== */
+
+
+/* ---------- SIGNATURE (cursive ink) ---------- */
+
+#workskin .do-sign {
+  display: inline-block;
+  font-family: "Segoe Script", "Snell Roundhand", "Apple Chancery", "Brush Script MT", "Lucida Handwriting", "URW Chancery L", "Z003", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  padding: 0 .2em;
+  text-indent: 0;
+  text-align: left;
+  transform: rotate(-3deg);
+  transform-origin: left bottom;
+  color: #1E1F1D;
+  text-shadow: 0 0 1px rgba(30,31,29,.35), .6px .6px 0 rgba(30,31,29,.18);
+}
+
+/* Ink colours */
+#workskin .do-sign-blue {
+  color: #1F3F8F;
+  text-shadow: 0 0 1px rgba(31,63,143,.4), .6px .6px 0 rgba(31,63,143,.2);
+}
+
+#workskin .do-sign-red {
+  color: #A12B2B;
+  text-shadow: 0 0 1px rgba(161,43,43,.4), .6px .6px 0 rgba(161,43,43,.2);
+}
+
+#workskin .do-sign-black {
+  color: #1E1F1D;
+  text-shadow: 0 0 1px rgba(30,31,29,.35), .6px .6px 0 rgba(30,31,29,.18);
+}
+
+/* Sizes and shapes */
+#workskin .do-sign-sm {
+  font-size: 1.4em;
+}
+
+#workskin .do-sign-lg {
+  font-size: 2.8em;
+}
+
+#workskin .do-initials {
+  font-size: 1.35em;
+  transform: rotate(-6deg);
+  letter-spacing: .04em;
+}
+
+#workskin .do-sign-flat {
+  transform: none;
+}
+
+/* Signature for dark panels (secure chats, radio, dark banners) */
+#workskin .do-sign-light {
+  color: #E8E1CE;
+  text-shadow: 0 0 1px rgba(232,225,206,.35);
+}
+
+/* Signature block: signature sits on a line with the printed name below */
+#workskin .do-signature {
+  display: block;
+  box-sizing: border-box;
+  max-width: 18em;
+  margin: 1.8em 0 1em;
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-signature-right {
+  margin-left: auto;
+}
+
+#workskin .do-signature-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#workskin .do-signature .do-sign {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -.3em;
+  padding-left: .5em;
+}
+
+#workskin .do-signature-line {
+  display: block;
+  padding-top: .35em;
+  border-top: 1px solid #252724;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .74em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #252724;
+}
+
+#workskin .do-signature-line small {
+  display: block;
+  margin-top: .15em;
+  font-size: .86em;
+  letter-spacing: .1em;
+  color: #414747;
+}
+
+/* Coloured rule under the signature to match the ink */
+#workskin .do-signature-blue .do-signature-line {
+  border-top-color: #1F3F8F;
+}
+
+#workskin .do-signature-red .do-signature-line {
+  border-top-color: #A12B2B;
+}
+
+/* Small "x" sign-here mark before the line */
+#workskin .do-signature-x:before {
+  content: "\00D7";
+  display: block;
+  margin-bottom: -.9em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  color: #414747;
+}
+
+
+/* ---------- COMPACT BRAND / ORGANISATION BANNER ---------- */
+
+#workskin .do-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 1.8em 0;
+  padding: .8em 1em;
+  background: #F4F0E5;
+  border: 1px solid #B5AA8B;
+  border-top: 5px solid #252724;
+  box-shadow: 0 1px 3px rgba(37,39,36,.25), 0 8px 16px -12px rgba(37,39,36,.45);
+  text-indent: 0;
+  text-align: left;
+}
+
+#workskin .do-brand-mark {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 3.2em;
+  height: 3.2em;
+  margin-right: .9em;
+  border: 2px solid #252724;
+  background: #252724;
+  color: #F4F0E5;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: .06em;
+  line-height: 2.9em;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: inset 0 0 0 2px #F4F0E5;
+}
+
+#workskin .do-brand-body {
+  flex: 1 1 10em;
+  min-width: 0;
+}
+
+#workskin .do-brand-name {
+  display: block;
+  font-family: "Libre Baskerville", Baskerville, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-weight: bold;
+  font-size: 1.15em;
+  line-height: 1.25;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #252724;
+}
+
+#workskin .do-brand-tag {
+  display: block;
+  margin-top: .2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+#workskin .do-brand-ref {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-left: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .74em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #414747;
+}
+
+/* Colours */
+#workskin .do-brand-blue {
+  border-top-color: #1F3F8F;
+}
+
+#workskin .do-brand-blue .do-brand-mark {
+  background: #1F3F8F;
+  border-color: #1F3F8F;
+}
+
+#workskin .do-brand-blue .do-brand-name {
+  color: #1B2F66;
+}
+
+#workskin .do-brand-red {
+  border-top-color: #A12B2B;
+}
+
+#workskin .do-brand-red .do-brand-mark {
+  background: #A12B2B;
+  border-color: #A12B2B;
+}
+
+#workskin .do-brand-red .do-brand-name {
+  color: #7A2020;
+}
+
+#workskin .do-brand-black {
+  border-top-color: #1E1F1D;
+}
+
+#workskin .do-brand-black .do-brand-mark {
+  background: #1E1F1D;
+  border-color: #1E1F1D;
+}
+
+
+/* ---------- WIDE ORGANISATION BANNER (title card) ---------- */
+
+#workskin .do-banner {
+  box-sizing: border-box;
+  margin: 2em 0;
+  padding: 1.5em .9em 1.3em;
+  background: #1E1F1D;
+  color: #F4F0E5;
+  border-top: 4px solid #B5AA8B;
+  border-bottom: 4px solid #B5AA8B;
+  box-shadow: inset 0 0 0 4px #1E1F1D, inset 0 0 0 5px rgba(181,170,139,.55);
+  text-align: center;
+  text-indent: 0;
+}
+
+#workskin .do-banner-name {
+  display: block;
+  padding-left: .2em;
+  font-family: "Cormorant Garamond", Garamond, "EB Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 1.9em;
+  line-height: 1.1;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #F9F7F0;
+}
+
+#workskin .do-banner-tag {
+  display: block;
+  margin-top: .6em;
+  padding-left: .3em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .72em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #B5AA8B;
+}
+
+#workskin .do-banner-est {
+  display: block;
+  margin-top: .9em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: .74em;
+  letter-spacing: .2em;
+  color: #B5AA8B;
+}
+
+#workskin .do-banner-est:before,
+#workskin .do-banner-est:after {
+  content: "\2500\2500";
+  padding: 0 .8em;
+  color: #777C78;
+}
+
+/* Colours */
+#workskin .do-banner-blue {
+  background: #1B2F66;
+  box-shadow: inset 0 0 0 4px #1B2F66, inset 0 0 0 5px rgba(184,196,230,.5);
+  border-top-color: #B8C4E6;
+  border-bottom-color: #B8C4E6;
+}
+
+#workskin .do-banner-blue .do-banner-tag,
+#workskin .do-banner-blue .do-banner-est {
+  color: #B8C4E6;
+}
+
+#workskin .do-banner-red {
+  background: #6E2222;
+  box-shadow: inset 0 0 0 4px #6E2222, inset 0 0 0 5px rgba(227,189,180,.5);
+  border-top-color: #E3BDB4;
+  border-bottom-color: #E3BDB4;
+}
+
+#workskin .do-banner-red .do-banner-tag,
+#workskin .do-banner-red .do-banner-est {
+  color: #E3BDB4;
+}
+
+#workskin .do-banner-black {
+  background: #1E1F1D;
+}

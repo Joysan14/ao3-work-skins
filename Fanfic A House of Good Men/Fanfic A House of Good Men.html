@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A House of Good Men — AO3 Work Skin Preview</title>
+<style>
+/* Browser-only page surroundings. The Work Skin below is embedded unchanged. */
+* { box-sizing: border-box; }
+html { background: #e8e8e8; }
+body {
+  margin: 0;
+  padding: 2.5rem 1rem;
+  background: #e8e8e8;
+  color: #241912;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+}
+.preview-note {
+  max-width: 52rem;
+  margin: 0 auto 1rem;
+  color: #555;
+  font: 12px/1.5 Arial, sans-serif;
+  text-align: center;
+}
+#workskin .hgm-open,
+#workskin .hgm-chap,
+#workskin .hgm-sep,
+#workskin .hgm-mark,
+#workskin .hgm-n-std,
+#workskin .hgm-n-mono,
+#workskin .hgm-n-stream,
+#workskin .hgm-n-flash,
+#workskin .hgm-n-dream,
+#workskin .hgm-n-pov,
+#workskin .hgm-n-quote,
+#workskin .hgm-letter,
+#workskin .hgm-diary,
+#workskin .hgm-mail,
+#workskin .hgm-sms,
+#workskin .hgm-doc,
+#workskin .hgm-news,
+#workskin .hgm-tx,
+#workskin .hgm-skel,
+#workskin .hgm-an {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#workskin .hgm-field {
+  margin: 0;
+  padding: .12em 0;
+  overflow: hidden;
+  font-size: .92em;
+  line-height: 1.5;
+}
+
+#workskin .hgm-field__k {
+  float: left;
+  width: 5.5em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .8em;
+  font-weight: bold;
+  letter-spacing: .14em;
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-field__v {
+  display: block;
+  margin-left: 6em;
+}
+
+#workskin .hgm-open {
+  max-width: 40em;
+  margin: 2.5em auto;
+  padding: 3.5em 2em;
+  text-align: center;
+  background: #F4EFE6;
+  color: #241912;
+  border: 3px double #B99A72;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  line-height: 1.5;
+}
+
+#workskin .hgm-open__kicker {
+  margin: 0 0 2.2em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .75em;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: #344F6B;
+}
+
+#workskin .hgm-open__title {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 2.4em;
+  font-weight: normal;
+  letter-spacing: .08em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #0C1114;
+}
+
+#workskin .hgm-open__subtitle {
+  margin: .9em 0 0;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+#workskin .hgm-open__rule {
+  width: 3em;
+  height: 1px;
+  margin: 2.2em auto;
+  border: 0;
+  background: #A63D2D;
+}
+
+#workskin .hgm-open__epigraph {
+  max-width: 28em;
+  margin: 0 auto;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+#workskin .hgm-open__attrib {
+  display: block;
+  margin-top: 1em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .7em;
+  font-style: normal;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #A63D2D;
+}
+
+#workskin .hgm-open__dedication {
+  max-width: 26em;
+  margin: 2.5em auto 0;
+  font-size: .95em;
+  font-style: italic;
+}
+
+#workskin .hgm-open__meta {
+  margin: 2.5em 0 0;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-open--minimal {
+  padding: 2.5em 1.5em;
+  border: 0;
+  border-top: 1px solid #B99A72;
+  border-bottom: 1px solid #B99A72;
+}
+
+#workskin .hgm-open--minimal .hgm-open__title {
+  font-size: 1.8em;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+#workskin .hgm-open--minimal .hgm-open__rule {
+  background: #B99A72;
+}
+
+#workskin .hgm-open--cinematic {
+  padding: 5em 2em;
+  background: #0C1114;
+  color: #E9DFCE;
+}
+
+#workskin .hgm-open--cinematic .hgm-open__kicker {
+  color: #C47755;
+}
+
+#workskin .hgm-open--cinematic .hgm-open__title {
+  font-size: 2.6em;
+  letter-spacing: .22em;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-open--cinematic .hgm-open__rule {
+  background: #C47755;
+}
+
+#workskin .hgm-open--cinematic .hgm-open__attrib {
+  color: #B99A72;
+}
+
+#workskin .hgm-chap {
+  max-width: 40em;
+  margin: 3.5em auto 2.5em;
+  padding: 0 0 1.6em;
+  text-align: center;
+  border-bottom: 1px solid #B99A72;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  line-height: 1.4;
+}
+
+#workskin .hgm-chap__num {
+  margin: 0;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .75em;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-chap__num:before,
+#workskin .hgm-chap__num:after {
+  content: "\2014";
+  margin: 0 .8em;
+  letter-spacing: 0;
+  color: #C47755;
+}
+
+#workskin .hgm-chap__title {
+  margin: .35em 0 0;
+  padding: 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: .04em;
+  line-height: 1.2;
+}
+
+#workskin .hgm-chap__subtitle {
+  margin: .5em 0 0;
+  font-size: 1.05em;
+  font-style: italic;
+}
+
+#workskin .hgm-chap__date {
+  margin: 1.2em 0 0;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-chap__epigraph {
+  max-width: 26em;
+  margin: 1.8em auto 0;
+  padding-top: 1.2em;
+  border-top: 1px solid #B99A72;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+#workskin .hgm-chap__source {
+  display: block;
+  margin-top: .6em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .72em;
+  font-style: normal;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-chap--ornament {
+  border-bottom: 0;
+}
+
+#workskin .hgm-chap--ornament:after {
+  content: "\2766";
+  display: block;
+  margin-top: 1.2em;
+  font-size: 1.4em;
+  color: #C47755;
+}
+
+#workskin .hgm-chap--left {
+  text-align: left;
+}
+
+#workskin .hgm-chap--left .hgm-chap__num:before {
+  display: none;
+}
+
+#workskin .hgm-chap--cinematic {
+  padding: 3em 2em;
+  background: #0C1114;
+  color: #E9DFCE;
+  border-top: 4px solid #A63D2D;
+  border-bottom: 1px solid #1B2425;
+}
+
+#workskin .hgm-chap--cinematic .hgm-chap__num {
+  color: #C47755;
+}
+
+#workskin .hgm-chap--cinematic .hgm-chap__title {
+  font-size: 1.7em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-chap--cinematic .hgm-chap__date {
+  color: #B99A72;
+}
+
+#workskin .hgm-sep {
+  clear: both;
+  margin: 2.5em auto;
+  border: 0;
+  text-align: center;
+  color: #C47755;
+}
+
+#workskin .hgm-sep--rule {
+  width: 30%;
+  height: 1px;
+  background: #B99A72;
+}
+
+#workskin .hgm-sep--ornament {
+  font-size: 1.4em;
+  line-height: 1;
+}
+
+#workskin .hgm-sep--dots {
+  padding-left: .8em;
+  font-size: 1.2em;
+  letter-spacing: .8em;
+  line-height: 1;
+}
+
+#workskin .hgm-sep--cine {
+  max-width: 20em;
+  padding: .55em 0;
+  border-top: 1px solid #B99A72;
+  border-bottom: 1px solid #B99A72;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .78em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+#workskin .hgm-mark {
+  margin: 2.2em 0 1.6em;
+  padding: .5em 0 0;
+  border-top: 1px solid #B99A72;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .78em;
+  letter-spacing: .16em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-mark__tag {
+  display: inline-block;
+  margin: 0 .9em 0 0;
+  padding: .15em .7em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  background: #1B2425;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-mark__text {
+  letter-spacing: .12em;
+}
+
+#workskin .hgm-mark--flashback {
+  border-top-color: #65734B;
+}
+
+#workskin .hgm-mark--flashback .hgm-mark__tag {
+  background: #65734B;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-mark--memory {
+  border-top-color: #C47755;
+}
+
+#workskin .hgm-mark--memory .hgm-mark__tag {
+  background: #C47755;
+  color: #0C1114;
+}
+
+#workskin .hgm-mark--timejump {
+  border-top-color: #344F6B;
+}
+
+#workskin .hgm-mark--timejump .hgm-mark__tag {
+  background: #344F6B;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-mark--location {
+  border-top-color: #B99A72;
+}
+
+#workskin .hgm-mark--location .hgm-mark__tag {
+  background: #B99A72;
+  color: #0C1114;
+}
+
+#workskin .hgm-mark--pov {
+  border-top-color: #A63D2D;
+}
+
+#workskin .hgm-mark--pov .hgm-mark__tag {
+  background: #A63D2D;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-mark--interlude {
+  border-top-color: #1B2425;
+}
+
+#workskin .hgm-mark--interlude .hgm-mark__tag {
+  background: #0C1114;
+  color: #B99A72;
+  border: 1px solid #B99A72;
+}
+
+#workskin .hgm-n-std {
+  margin: 1.5em 0;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.1em;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+#workskin .hgm-n-std p {
+  margin: 0;
+  text-indent: 1.6em;
+}
+
+#workskin .hgm-n-std p:first-child,
+#workskin .hgm-n-std .hgm-n-std__flush {
+  text-indent: 0;
+}
+
+#workskin .hgm-n-std--dropcap p:first-child:first-letter {
+  float: left;
+  padding: .06em .1em 0 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 3.6em;
+  line-height: .8;
+}
+
+#workskin .hgm-n-std--lead p:first-child:first-line {
+  font-variant: small-caps;
+  letter-spacing: .06em;
+}
+
+#workskin .hgm-n-mono {
+  margin: 1.8em 0 1.8em 1.2em;
+  padding: .2em 0 .2em 1.3em;
+  border-left: 2px solid #C47755;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.08em;
+  font-style: italic;
+  line-height: 1.75;
+}
+
+#workskin .hgm-n-mono p {
+  margin: 0 0 .8em;
+}
+
+#workskin .hgm-n-mono p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .hgm-n-stream {
+  margin: 2.2em 1.5em;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.08em;
+  font-style: italic;
+  line-height: 1.95;
+  letter-spacing: .015em;
+  word-spacing: .12em;
+}
+
+#workskin .hgm-n-stream p {
+  margin: 0 0 .35em;
+}
+
+#workskin .hgm-n-stream__drift {
+  display: block;
+  padding-left: 2.5em;
+}
+
+#workskin .hgm-n-stream__fade {
+  opacity: .7;
+}
+
+#workskin .hgm-n-flash {
+  margin: 2em 0;
+  padding: 1.1em 1.5em;
+  border-left: 3px double #65734B;
+  background: rgba(185,154,114,.14);
+  font-family: "Times New Roman",Times,serif;
+  line-height: 1.75;
+}
+
+#workskin .hgm-n-flash p {
+  margin: 0 0 .9em;
+}
+
+#workskin .hgm-n-flash p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .hgm-n-flash--memory {
+  border-left: 3px solid #C47755;
+  background: rgba(196,119,85,.10);
+  font-style: italic;
+}
+
+#workskin .hgm-n-dream {
+  max-width: 32em;
+  margin: 2.5em auto;
+  padding: 1.6em 1.4em;
+  border-top: 1px dotted #B99A72;
+  border-bottom: 1px dotted #B99A72;
+  background: rgba(52,79,107,.10);
+  text-align: center;
+  font-style: italic;
+  line-height: 1.95;
+  letter-spacing: .03em;
+}
+
+#workskin .hgm-n-dream p {
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-n-dream p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .hgm-n-dream--left {
+  text-align: left;
+}
+
+#workskin .hgm-n-pov {
+  margin: 2.6em 0 1.4em;
+}
+
+#workskin .hgm-n-pov__name {
+  display: inline-block;
+  padding-bottom: .25em;
+  border-bottom: 2px solid #C47755;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.05em;
+  font-variant: small-caps;
+  letter-spacing: .2em;
+}
+
+#workskin .hgm-n-pov__loc {
+  display: block;
+  margin-top: .5em;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-n-quote {
+  max-width: 30em;
+  margin: 2.5em auto;
+  padding: 1.3em .5em;
+  border-top: 2px solid #A63D2D;
+  border-bottom: 1px solid #B99A72;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+#workskin .hgm-n-quote__cite {
+  display: block;
+  margin-top: .9em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .6em;
+  font-style: normal;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-n-quote--scripture {
+  padding: .4em 0 .4em 1.4em;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 3px solid #B99A72;
+  text-align: left;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.1em;
+}
+
+#workskin .hgm-n-quote__v {
+  margin-right: .3em;
+  font-size: .6em;
+  font-style: normal;
+  vertical-align: super;
+}
+
+#workskin .hgm-n-em {
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+
+#workskin .hgm-n-soft {
+  font-size: .92em;
+  font-style: italic;
+  letter-spacing: .03em;
+}
+
+#workskin .hgm-n-loud {
+  font-size: .95em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-n-strike {
+  text-decoration: line-through;
+}
+
+#workskin .hgm-letter {
+  max-width: 38em;
+  margin: 2.5em auto;
+  padding: 2.4em 2.6em;
+  background: #E9DFCE;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-bottom: 3px double #B99A72;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.08em;
+  line-height: 1.7;
+}
+
+#workskin .hgm-letter__head {
+  margin: 0 0 2em;
+  text-align: right;
+  font-size: .95em;
+  line-height: 1.5;
+}
+
+#workskin .hgm-letter__sender {
+  display: block;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+
+#workskin .hgm-letter__place {
+  display: block;
+}
+
+#workskin .hgm-letter__date {
+  display: block;
+  margin-top: .5em;
+  font-style: italic;
+}
+
+#workskin .hgm-letter__recipient {
+  margin: 0 0 1.6em;
+  font-size: .95em;
+  line-height: 1.5;
+}
+
+#workskin .hgm-letter__salutation {
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-letter__body p {
+  margin: 0 0 .9em;
+}
+
+#workskin .hgm-letter__closing {
+  margin: 1.6em 0 0;
+}
+
+#workskin .hgm-letter__signature {
+  display: block;
+  margin-top: .8em;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+#workskin .hgm-letter__ps {
+  margin: 1.8em 0 0;
+  padding-top: .8em;
+  border-top: 1px dotted #B99A72;
+  font-size: .95em;
+}
+
+#workskin .hgm-letter--formal {
+  background: #F4EFE6;
+  border-top: 4px solid #344F6B;
+}
+
+#workskin .hgm-letter__letterhead {
+  margin: 0 0 .3em;
+  padding-bottom: .9em;
+  border-bottom: 1px solid #344F6B;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.1em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #344F6B;
+}
+
+#workskin .hgm-letter__ref {
+  margin: 1em 0 1.6em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .75em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-diary {
+  max-width: 38em;
+  margin: 2.5em auto;
+  padding: 2em 2.2em 2em 2.6em;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-left: 4px double #A63D2D;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.08em;
+  line-height: 1.85;
+}
+
+#workskin .hgm-diary__head {
+  margin: 0 0 1.4em;
+  padding-bottom: .7em;
+  border-bottom: 1px dotted #B99A72;
+}
+
+#workskin .hgm-diary__no {
+  display: block;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #A63D2D;
+}
+
+#workskin .hgm-diary__date {
+  display: block;
+  margin-top: .2em;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+#workskin .hgm-diary__meta {
+  display: block;
+  margin-top: .3em;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-diary__body p {
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-diary__body p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .hgm-diary__struck {
+  text-decoration: line-through;
+}
+
+#workskin .hgm-diary__margin {
+  margin: .4em 0 1em 2em;
+  padding-left: .8em;
+  border-left: 2px solid #C47755;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .75em;
+  line-height: 1.5;
+}
+
+#workskin .hgm-diary__sign {
+  margin: 1.2em 0 0;
+  text-align: right;
+  font-style: italic;
+}
+
+#workskin .hgm-diary--fragment .hgm-diary__body p {
+  margin: 0 0 1.5em;
+  padding-left: 1em;
+  border-left: 1px dotted #B99A72;
+}
+
+#workskin .hgm-diary__body .hgm-diary__indent {
+  padding-left: 3em;
+}
+
+#workskin .hgm-diary--aged {
+  background: #E9DFCE;
+}
+
+#workskin .hgm-diary--dark {
+  background: #0C1114;
+  color: #E9DFCE;
+  border-color: #B99A72;
+  border-left-color: #C47755;
+}
+
+#workskin .hgm-diary--dark .hgm-diary__no {
+  color: #C47755;
+}
+
+#workskin .hgm-diary--dark .hgm-diary__head {
+  border-bottom-color: #1B2425;
+}
+
+#workskin .hgm-mail {
+  max-width: 40em;
+  margin: 2.5em auto;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-top: 4px solid #344F6B;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .95em;
+  line-height: 1.6;
+}
+
+#workskin .hgm-mail__head {
+  padding: 1em 1.4em .6em;
+  background: #E9DFCE;
+  border-bottom: 1px solid #B99A72;
+}
+
+#workskin .hgm-mail .hgm-field__k {
+  color: #344F6B;
+}
+
+#workskin .hgm-mail__subject {
+  margin: 0 0 .6em;
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #0C1114;
+}
+
+#workskin .hgm-mail__flag {
+  display: inline-block;
+  margin-left: .6em;
+  padding: .05em .55em;
+  background: #A63D2D;
+  color: #F4EFE6;
+  font-size: .6em;
+  letter-spacing: .15em;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-mail__body {
+  padding: 1.2em 1.4em .4em;
+}
+
+#workskin .hgm-mail__body p {
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-mail__quote {
+  margin: .6em 1.4em 1.2em;
+  padding: .2em 0 .2em 1em;
+  border-left: 3px solid #B99A72;
+  font-size: .92em;
+}
+
+#workskin .hgm-mail__quote-head {
+  margin: 0 0 .6em;
+  font-size: .85em;
+  font-style: italic;
+}
+
+#workskin .hgm-mail__quote p {
+  margin: 0 0 .8em;
+}
+
+#workskin .hgm-mail__fwd {
+  margin: .6em 1.4em 1.2em;
+  padding-top: .8em;
+  border-top: 1px dashed #B99A72;
+}
+
+#workskin .hgm-mail__fwd-label {
+  margin: 0 0 .6em;
+  text-align: center;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-mail__fwd-body {
+  margin-top: .8em;
+}
+
+#workskin .hgm-mail__fwd-body p {
+  margin: 0 0 .8em;
+}
+
+#workskin .hgm-mail__foot {
+  padding: 0 1.4em 1.2em;
+}
+
+#workskin .hgm-mail__sig {
+  margin: .4em 0 0;
+  padding-top: .8em;
+  border-top: 1px solid #B99A72;
+  font-size: .88em;
+  line-height: 1.5;
+  color: #344F6B;
+}
+
+#workskin .hgm-mail__legal {
+  margin: 1em 0 0;
+  font-size: .75em;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+#workskin .hgm-mail--urgent {
+  border-top-color: #A63D2D;
+}
+
+#workskin .hgm-mail--chapter {
+  border-top-color: #A63D2D;
+}
+
+#workskin .hgm-mail--chapter .hgm-mail__head {
+  background: #1B2425;
+  color: #E9DFCE;
+  border-bottom-color: #A63D2D;
+}
+
+#workskin .hgm-mail--chapter .hgm-field__k {
+  color: #B99A72;
+}
+
+#workskin .hgm-mail--chapter .hgm-mail__subject {
+  color: #F4EFE6;
+}
+
+#workskin .hgm-sms {
+  max-width: 28em;
+  margin: 2.5em auto;
+  padding: 0 1em 1em;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-radius: 1.2em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .95em;
+  line-height: 1.4;
+}
+
+#workskin .hgm-sms__bar {
+  margin: 0 -1em 1em;
+  padding: .8em 1em;
+  background: #E9DFCE;
+  border-bottom: 1px solid #B99A72;
+  border-radius: 1.2em 1.2em 0 0;
+  text-align: center;
+}
+
+#workskin .hgm-sms__contact {
+  display: block;
+  font-weight: bold;
+}
+
+#workskin .hgm-sms__status {
+  display: block;
+  font-size: .72em;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-sms__date {
+  margin: 1.2em 0 .8em;
+  text-align: center;
+  font-size: .72em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-sms__sys {
+  margin: 1em 0;
+  text-align: center;
+  font-size: .75em;
+  font-style: italic;
+}
+
+#workskin .hgm-sms__row {
+  margin: 0 0 .55em;
+  text-align: left;
+}
+
+#workskin .hgm-sms__row--in {
+  text-align: left;
+}
+
+#workskin .hgm-sms__row--out {
+  text-align: right;
+}
+
+#workskin .hgm-sms__name {
+  display: block;
+  margin: 0 0 .15em .9em;
+  font-size: .72em;
+  font-weight: bold;
+  letter-spacing: .06em;
+}
+
+#workskin .hgm-sms__row--out .hgm-sms__name {
+  margin: 0 .9em .15em 0;
+}
+
+#workskin .hgm-sms__bubble {
+  display: inline-block;
+  max-width: 82%;
+  padding: .55em .9em;
+  background: #E9DFCE;
+  color: #241912;
+  border-radius: 1.1em;
+  text-align: left;
+}
+
+#workskin .hgm-sms__row--out .hgm-sms__bubble {
+  background: #344F6B;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-sms__time {
+  display: block;
+  margin: .15em .9em 0;
+  font-size: .68em;
+}
+
+#workskin .hgm-sms--dark {
+  background: #0C1114;
+  color: #E9DFCE;
+  border-color: #1B2425;
+}
+
+#workskin .hgm-sms--dark .hgm-sms__bar {
+  background: #1B2425;
+  border-bottom-color: #0C1114;
+}
+
+#workskin .hgm-sms--dark .hgm-sms__bubble {
+  background: #1B2425;
+  color: #E9DFCE;
+}
+
+#workskin .hgm-sms--dark .hgm-sms__row--out .hgm-sms__bubble {
+  background: #A63D2D;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-sms .hgm-sms__bubble--b {
+  background: #65734B;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-sms .hgm-sms__bubble--c {
+  background: #C47755;
+  color: #0C1114;
+}
+
+#workskin .hgm-sms .hgm-sms__bubble--d {
+  background: #B99A72;
+  color: #0C1114;
+}
+
+#workskin .hgm-doc {
+  max-width: 40em;
+  margin: 2.5em auto;
+  padding: 2.2em 2.4em 1.6em;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-top: 5px solid #344F6B;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .95em;
+  line-height: 1.65;
+}
+
+#workskin .hgm-doc__stamp {
+  float: right;
+  margin: 0 0 1em 1em;
+  padding: .2em .8em;
+  border: 2px solid #A63D2D;
+  font-size: .72em;
+  font-weight: bold;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #A63D2D;
+}
+
+#workskin .hgm-doc__stamp--confidential {
+  border-color: #A63D2D;
+  color: #A63D2D;
+}
+
+#workskin .hgm-doc__stamp--restricted {
+  border-color: #344F6B;
+  color: #344F6B;
+}
+
+#workskin .hgm-doc__stamp--draft {
+  border-style: dashed;
+  border-color: #65734B;
+  color: #65734B;
+}
+
+#workskin .hgm-doc__stamp--archived {
+  border-color: #B99A72;
+  color: #241912;
+}
+
+#workskin .hgm-doc__org {
+  margin: 0;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.1em;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #0C1114;
+}
+
+#workskin .hgm-doc__orgsub {
+  margin: .25em 0 0;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: .8em;
+  font-style: italic;
+}
+
+#workskin .hgm-doc__title {
+  clear: both;
+  margin: 1.8em 0 .3em;
+  padding: 0;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.35em;
+  font-weight: normal;
+  letter-spacing: .12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-doc__ref {
+  margin: 0 0 1.4em;
+  text-align: center;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-doc__meta {
+  margin: 0 0 1.4em;
+  padding: .7em 0;
+  border-top: 1px solid #241912;
+  border-bottom: 1px solid #241912;
+}
+
+#workskin .hgm-doc .hgm-field__k {
+  color: #344F6B;
+}
+
+#workskin .hgm-doc__body p {
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-doc__body ol,
+#workskin .hgm-doc__body ul {
+  margin: 0 0 1em;
+  padding-left: 2em;
+}
+
+#workskin .hgm-doc__body li {
+  margin: 0 0 .4em;
+}
+
+#workskin .hgm-doc__h {
+  margin: 1.4em 0 .5em;
+  font-size: .78em;
+  font-weight: bold;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: #344F6B;
+}
+
+#workskin .hgm-doc__table {
+  width: 100%;
+  margin: 0 0 1em;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: .9em;
+}
+
+#workskin .hgm-doc__table th,
+#workskin .hgm-doc__table td {
+  padding: .45em .6em;
+  border: 1px solid #B99A72;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#workskin .hgm-doc__table th {
+  background: #E9DFCE;
+  font-size: .82em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-doc__blank {
+  display: inline-block;
+  min-width: 8em;
+  border-bottom: 1px solid #241912;
+}
+
+#workskin .hgm-doc__fill {
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+#workskin .hgm-doc__sigs {
+  margin: 1.2em 0 0;
+}
+
+#workskin .hgm-doc__sig {
+  display: inline-block;
+  width: 46%;
+  margin: 1.8em 3% 0 0;
+  padding-top: .4em;
+  border-top: 1px solid #241912;
+  vertical-align: top;
+  font-size: .85em;
+  line-height: 1.4;
+}
+
+#workskin .hgm-doc__sig-name {
+  display: block;
+  font-weight: bold;
+}
+
+#workskin .hgm-doc__sig-role {
+  display: block;
+}
+
+#workskin .hgm-doc__footer {
+  margin: 2em 0 0;
+  padding-top: .8em;
+  border-top: 1px solid #B99A72;
+  text-align: center;
+  font-size: .7em;
+  letter-spacing: .16em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-doc--fraternity {
+  background: #0C1114;
+  color: #E9DFCE;
+  border-color: #1B2425;
+  border-top-color: #A63D2D;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__org {
+  color: #B99A72;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__title {
+  color: #F4EFE6;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__meta {
+  border-color: #B99A72;
+}
+
+#workskin .hgm-doc--fraternity .hgm-field__k,
+#workskin .hgm-doc--fraternity .hgm-doc__h {
+  color: #B99A72;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__stamp {
+  border-color: #C47755;
+  color: #C47755;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__stamp--restricted {
+  border-color: #B99A72;
+  color: #B99A72;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__stamp--draft {
+  border-color: #E9DFCE;
+  color: #E9DFCE;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__stamp--archived {
+  border-color: #B99A72;
+  color: #E9DFCE;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__table th {
+  background: #1B2425;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__sig {
+  border-top-color: #B99A72;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__blank {
+  border-bottom-color: #B99A72;
+}
+
+#workskin .hgm-doc--file {
+  background: #E9DFCE;
+  border-top-color: #C47755;
+}
+
+#workskin .hgm-doc--file .hgm-doc__stamp--draft {
+  border-color: #241912;
+  color: #241912;
+}
+
+#workskin .hgm-doc--file .hgm-doc__table th {
+  background: #F4EFE6;
+}
+
+#workskin .hgm-news {
+  max-width: 40em;
+  margin: 2.5em auto;
+  padding: 1.6em 2em 2em;
+  background: #E9DFCE;
+  color: #241912;
+  border: 1px solid #241912;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.05em;
+  line-height: 1.65;
+}
+
+#workskin .hgm-news__masthead {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 2.1em;
+  font-weight: bold;
+  letter-spacing: .1em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #0C1114;
+}
+
+#workskin .hgm-news__dateline {
+  margin: .7em 0 1.6em;
+  padding: .35em 0;
+  border-top: 3px double #241912;
+  border-bottom: 1px solid #241912;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .68em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-news__kicker {
+  margin: 0 0 .6em;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: #A63D2D;
+}
+
+#workskin .hgm-news__hed {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.9em;
+  font-weight: bold;
+  line-height: 1.15;
+  color: #0C1114;
+}
+
+#workskin .hgm-news__sub {
+  margin: .6em 0 0;
+  text-align: center;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#workskin .hgm-news__by {
+  margin: 1.2em 0;
+  padding: .4em 0;
+  border-top: 1px solid #B99A72;
+  border-bottom: 1px solid #B99A72;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .68em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-news__body p {
+  margin: 0 0 .8em;
+  text-align: justify;
+  text-indent: 1.2em;
+}
+
+#workskin .hgm-news__body .hgm-news__lead {
+  text-indent: 0;
+}
+
+#workskin .hgm-news__body .hgm-news__lead:first-letter {
+  float: left;
+  padding: .05em .1em 0 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 3.2em;
+  line-height: .8;
+}
+
+#workskin .hgm-news__fig {
+  margin: 1.4em 0;
+}
+
+#workskin .hgm-news__plate {
+  padding: 2.2em 1em;
+  background: #1B2425;
+  color: #E9DFCE;
+  text-align: center;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-news__cap {
+  margin: .4em 0 0;
+  padding-left: .8em;
+  border-left: 3px solid #C47755;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .75em;
+  line-height: 1.5;
+}
+
+#workskin .hgm-news__pull {
+  margin: 1.4em 1.5em;
+  padding: .8em 0;
+  border-top: 2px solid #241912;
+  border-bottom: 1px solid #241912;
+  text-align: center;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+#workskin .hgm-news__box {
+  margin: 1.4em 0;
+  padding: .9em 1.1em;
+  border: 1px solid #241912;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .82em;
+  line-height: 1.55;
+}
+
+#workskin .hgm-news__box-title {
+  margin: 0 0 .4em;
+  font-size: .85em;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-news--campus {
+  background: #F4EFE6;
+  border: 0;
+  border-top: 6px solid #A63D2D;
+}
+
+#workskin .hgm-news--campus .hgm-news__masthead {
+  text-align: left;
+  font-size: 1.7em;
+  letter-spacing: .04em;
+  text-transform: none;
+}
+
+#workskin .hgm-news--campus .hgm-news__dateline {
+  text-align: left;
+  border-top: 1px solid #241912;
+}
+
+#workskin .hgm-news--campus .hgm-news__kicker,
+#workskin .hgm-news--campus .hgm-news__hed,
+#workskin .hgm-news--campus .hgm-news__sub,
+#workskin .hgm-news--campus .hgm-news__by {
+  text-align: left;
+}
+
+#workskin .hgm-news--editorial {
+  background: #F4EFE6;
+  border: 0;
+  border-top: 1px solid #241912;
+  border-bottom: 1px solid #241912;
+}
+
+#workskin .hgm-news--editorial .hgm-news__masthead {
+  font-size: 1.4em;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+#workskin .hgm-news--editorial .hgm-news__kicker {
+  color: #344F6B;
+}
+
+#workskin .hgm-news--editorial .hgm-news__hed {
+  font-weight: normal;
+  font-style: italic;
+}
+
+#workskin .hgm-tx {
+  max-width: 40em;
+  margin: 2.5em auto;
+  padding: 1.8em 2em;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-left: 5px solid #1B2425;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .92em;
+  line-height: 1.7;
+}
+
+#workskin .hgm-tx__title {
+  margin: 0 0 .3em;
+  padding: 0;
+  font-family: "Courier New",Courier,monospace;
+  font-size: 1.05em;
+  font-weight: bold;
+  letter-spacing: .14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-tx__sub {
+  margin: 0 0 1em;
+  font-size: .85em;
+  letter-spacing: .08em;
+}
+
+#workskin .hgm-tx__meta {
+  margin: 0 0 1.4em;
+  padding: .7em 0;
+  border-top: 1px solid #241912;
+  border-bottom: 1px dashed #241912;
+  font-size: .88em;
+}
+
+#workskin .hgm-tx .hgm-field__k {
+  width: 8em;
+  color: #344F6B;
+  font-family: "Courier New",Courier,monospace;
+}
+
+#workskin .hgm-tx .hgm-field__v {
+  margin-left: 8.5em;
+}
+
+#workskin .hgm-tx__line {
+  margin: 0 0 .75em;
+}
+
+#workskin .hgm-tx__time {
+  margin-right: .6em;
+  font-size: .85em;
+  color: #344F6B;
+}
+
+#workskin .hgm-tx__who {
+  margin-right: .5em;
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-tx__who:after {
+  content: ":";
+}
+
+#workskin .hgm-tx__who--1 {
+  color: #A63D2D;
+}
+
+#workskin .hgm-tx__who--2 {
+  color: #344F6B;
+}
+
+#workskin .hgm-tx__who--3 {
+  color: #65734B;
+}
+
+#workskin .hgm-tx__pause {
+  margin: 0 0 .75em;
+  padding-left: 1.2em;
+  font-size: .9em;
+  font-style: italic;
+}
+
+#workskin .hgm-tx__note {
+  margin: 1em 0;
+  padding: .35em .8em;
+  border: 1px dashed #B99A72;
+  font-size: .82em;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-tx__break {
+  margin: 1.4em 0;
+  padding: .4em 0;
+  border-top: 1px solid #B99A72;
+  border-bottom: 1px solid #B99A72;
+  text-align: center;
+  font-size: .8em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-tx__cut {
+  color: #A63D2D;
+}
+
+#workskin .hgm-tx__ln {
+  float: left;
+  width: 2.3em;
+  margin-left: -3em;
+  text-align: right;
+  font-size: .8em;
+  line-height: 2.1;
+}
+
+#workskin .hgm-tx--readable .hgm-tx__say {
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.12em;
+}
+
+#workskin .hgm-tx--numbered .hgm-tx__line {
+  padding-left: 3em;
+}
+
+#workskin .hgm-tx--dark {
+  background: #0C1114;
+  color: #E9DFCE;
+  border-color: #1B2425;
+  border-left-color: #A63D2D;
+}
+
+#workskin .hgm-tx--dark .hgm-tx__meta {
+  border-top-color: #B99A72;
+  border-bottom-color: #B99A72;
+}
+
+#workskin .hgm-tx--dark .hgm-field__k,
+#workskin .hgm-tx--dark .hgm-tx__time {
+  color: #B99A72;
+}
+
+#workskin .hgm-tx--dark .hgm-tx__who--1 {
+  color: #C47755;
+}
+
+#workskin .hgm-tx--dark .hgm-tx__who--2 {
+  color: #B99A72;
+}
+
+#workskin .hgm-tx--dark .hgm-tx__who--3 {
+  color: #E9DFCE;
+}
+
+#workskin .hgm-tx--dark .hgm-tx__cut {
+  color: #C47755;
+}
+
+#workskin .hgm-skel {
+  max-width: 40em;
+  margin: 2.5em auto;
+  padding: 2em 2.2em;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-top: 3px double #B99A72;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+#workskin .hgm-skel__head {
+  margin: 0 0 1.4em;
+  padding-bottom: .9em;
+  border-bottom: 1px solid #B99A72;
+}
+
+#workskin .hgm-skel__kicker {
+  margin: 0 0 .5em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .72em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #A63D2D;
+}
+
+#workskin .hgm-skel__title {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  letter-spacing: .03em;
+  line-height: 1.25;
+}
+
+#workskin .hgm-skel__sub {
+  margin: .3em 0 0;
+  font-size: .95em;
+  font-style: italic;
+}
+
+#workskin .hgm-skel__h {
+  margin: 1.8em 0 .7em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #B99A72;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .72em;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-skel__text p {
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-skel__text p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .hgm-skel__tl {
+  margin: 0;
+  padding: 0 0 0 1.2em;
+  border-left: 2px solid #B99A72;
+}
+
+#workskin .hgm-skel__ev {
+  margin: 0 0 1em;
+  overflow: hidden;
+}
+
+#workskin .hgm-skel__when {
+  float: left;
+  width: 6.5em;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .78em;
+  letter-spacing: .08em;
+  line-height: 2.1;
+  text-transform: uppercase;
+  color: #344F6B;
+}
+
+#workskin .hgm-skel__what {
+  display: block;
+  margin-left: 7em;
+}
+
+#workskin .hgm-skel__frag {
+  margin: 0 0 1.2em;
+  padding: .1em 0 .1em 1em;
+  border-left: 3px solid #C47755;
+}
+
+#workskin .hgm-skel__stamp {
+  display: block;
+  margin: 0 0 .25em;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .75em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-skel__profile {
+  margin: 0 0 1.4em;
+  padding: 1em 1.2em;
+  border: 1px solid #B99A72;
+  background: rgba(185,154,114,.12);
+}
+
+#workskin .hgm-skel__name {
+  margin: 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.25em;
+  letter-spacing: .04em;
+}
+
+#workskin .hgm-skel__role {
+  margin: .1em 0 .8em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .72em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #344F6B;
+}
+
+#workskin .hgm-skel .hgm-field__k {
+  color: #344F6B;
+}
+
+#workskin .hgm-skel__case {
+  margin: 0 0 1.4em;
+  border: 1px solid #241912;
+}
+
+#workskin .hgm-skel__case-head {
+  padding: .7em 1em;
+  background: #1B2425;
+  color: #E9DFCE;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .8em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-skel__case-body {
+  padding: 1em 1.2em;
+}
+
+#workskin .hgm-skel__status {
+  float: right;
+  padding: 0 .7em;
+  border: 1px solid #B99A72;
+  color: #B99A72;
+}
+
+#workskin .hgm-skel__status--open {
+  background: #A63D2D;
+  border-color: #A63D2D;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-skel__status--closed {
+  background: #65734B;
+  border-color: #65734B;
+  color: #F4EFE6;
+}
+
+#workskin .hgm-skel__status--sealed {
+  background: #0C1114;
+  border-color: #B99A72;
+  color: #B99A72;
+}
+
+#workskin .hgm-skel__list {
+  margin: 0 0 1em;
+  padding: 0;
+  list-style: none;
+}
+
+#workskin .hgm-skel__list li {
+  margin: 0;
+  padding: .35em 0;
+  border-bottom: 1px dotted #B99A72;
+}
+
+#workskin .hgm-skel__list li:before {
+  content: "\2014";
+  margin-right: .6em;
+  color: #C47755;
+}
+
+#workskin .hgm-skel__qty {
+  float: right;
+  margin-left: 1em;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .82em;
+}
+
+#workskin .hgm-skel__item {
+  display: inline;
+}
+
+#workskin .hgm-skel__note {
+  display: block;
+  margin-left: 1.6em;
+  font-size: .85em;
+  font-style: italic;
+}
+
+#workskin .hgm-skel__mark {
+  padding: 0 .15em;
+  background: rgba(196,119,85,.25);
+}
+
+#workskin .hgm-skel__annot {
+  margin: .6em 0 1.2em 1.4em;
+  padding: .2em 0 .2em .9em;
+  border-left: 2px solid #C47755;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .78em;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+#workskin .hgm-skel__annot-by {
+  display: block;
+  margin-top: .2em;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .85em;
+  font-style: normal;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-skel__rec {
+  margin: 0 0 1.4em;
+  padding: 0 1.2em 1em;
+  border: 1px solid #B99A72;
+}
+
+#workskin .hgm-skel__label {
+  display: block;
+  margin: 0 -1.2em 1em;
+  padding: .4em 1.2em;
+  background: #241912;
+  color: #E9DFCE;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .68em;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-skel--dark {
+  background: #0C1114;
+  color: #E9DFCE;
+  border-color: #1B2425;
+  border-top-color: #A63D2D;
+}
+
+#workskin .hgm-skel--dark .hgm-skel__kicker {
+  color: #C47755;
+}
+
+#workskin .hgm-skel--dark .hgm-skel__title {
+  color: #F4EFE6;
+}
+
+#workskin .hgm-skel--dark .hgm-skel__role,
+#workskin .hgm-skel--dark .hgm-skel__when,
+#workskin .hgm-skel--dark .hgm-field__k {
+  color: #B99A72;
+}
+
+#workskin .hgm-skel--dark .hgm-skel__profile {
+  background: rgba(185,154,114,.08);
+}
+
+#workskin .hgm-skel--dark .hgm-skel__case {
+  border-color: #B99A72;
+}
+
+#workskin .hgm-skel--dark .hgm-skel__case-head {
+  background: #1B2425;
+}
+
+#workskin .hgm-skel--dark .hgm-skel__label {
+  background: #B99A72;
+  color: #0C1114;
+}
+
+#workskin .hgm-skel--archival {
+  background: #E9DFCE;
+  border: 1px solid #241912;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .92em;
+  line-height: 1.65;
+}
+
+#workskin .hgm-skel--archival .hgm-skel__title {
+  font-family: "Courier New",Courier,monospace;
+  font-size: 1.2em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#workskin .hgm-skel--archival .hgm-skel__profile {
+  background: rgba(255,255,255,.25);
+}
+
+#workskin .hgm-an {
+  max-width: 40em;
+  margin: 2.5em auto;
+  padding: 1.2em 1.5em;
+  background: #F4EFE6;
+  color: #241912;
+  border: 1px solid #B99A72;
+  border-left: 5px solid #65734B;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .9em;
+  line-height: 1.65;
+}
+
+#workskin .hgm-an__label {
+  display: block;
+  margin: 0 0 .7em;
+  font-size: .72em;
+  font-weight: bold;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: #344F6B;
+}
+
+#workskin .hgm-an__title {
+  margin: 0 0 .5em;
+  padding: 0;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.15em;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+#workskin .hgm-an__body p {
+  margin: 0 0 .85em;
+}
+
+#workskin .hgm-an__body p:last-child {
+  margin-bottom: 0;
+}
+
+#workskin .hgm-an__list {
+  margin: .4em 0 .6em;
+  padding: 0 0 0 1.4em;
+}
+
+#workskin .hgm-an__list li {
+  margin: 0 0 .3em;
+}
+
+#workskin .hgm-an__refs {
+  margin: .6em 0 0;
+  padding: 0 0 0 1.4em;
+  font-size: .88em;
+  line-height: 1.55;
+}
+
+#workskin .hgm-an__refs li {
+  margin: 0 0 .4em;
+}
+
+#workskin .hgm-an__sign {
+  margin: 1em 0 0;
+  text-align: right;
+  font-family: Georgia,"Palatino Linotype",Palatino,"Book Antiqua",serif;
+  font-size: 1.05em;
+  font-style: italic;
+}
+
+#workskin .hgm-an--open {
+  border-top: 3px double #B99A72;
+}
+
+#workskin .hgm-an--close {
+  border-bottom: 3px double #B99A72;
+}
+
+#workskin .hgm-an--chapter {
+  padding: .8em 1.2em;
+  font-size: .85em;
+  border-left-color: #B99A72;
+}
+
+#workskin .hgm-an--content {
+  border-left-color: #A63D2D;
+}
+
+#workskin .hgm-an--content .hgm-an__label {
+  color: #A63D2D;
+}
+
+#workskin .hgm-an--research {
+  border-left-color: #344F6B;
+}
+
+#workskin .hgm-an--thanks {
+  border-left-color: #C47755;
+  font-family: "Times New Roman",Times,serif;
+  font-size: 1em;
+}
+
+#workskin .hgm-an--thanks .hgm-an__body {
+  font-style: italic;
+}
+
+#workskin .hgm-redact {
+  padding: 0 .2em;
+  background: #0C1114;
+  color: #0C1114;
+}
+
+#workskin .hgm-doc--fraternity .hgm-redact,
+#workskin .hgm-tx--dark .hgm-redact,
+#workskin .hgm-skel--dark .hgm-redact,
+#workskin .hgm-diary--dark .hgm-redact {
+  background: #E9DFCE;
+  color: #E9DFCE;
+}
+
+#workskin .hgm-sc {
+  font-variant: small-caps;
+  letter-spacing: .06em;
+}
+
+#workskin .hgm-open {
+  padding: 2.5em 1.2em;
+}
+
+#workskin .hgm-open__title {
+  font-size: 1.7em;
+  letter-spacing: .05em;
+}
+
+#workskin .hgm-open--cinematic {
+  padding: 3em 1.2em;
+}
+
+#workskin .hgm-open--cinematic .hgm-open__title {
+  font-size: 1.7em;
+  letter-spacing: .12em;
+}
+
+#workskin .hgm-chap__title {
+  font-size: 1.55em;
+}
+
+#workskin .hgm-chap--cinematic {
+  padding: 2em 1.2em;
+}
+
+#workskin .hgm-chap--cinematic .hgm-chap__title {
+  font-size: 1.35em;
+  letter-spacing: .08em;
+}
+
+#workskin .hgm-sep--rule {
+  width: 50%;
+}
+
+#workskin .hgm-n-std {
+  text-align: left;
+}
+
+#workskin .hgm-n-mono {
+  margin-left: .3em;
+}
+
+#workskin .hgm-n-stream {
+  margin: 1.8em .3em;
+}
+
+#workskin .hgm-n-flash {
+  padding: 1em;
+}
+
+#workskin .hgm-n-quote {
+  font-size: 1.1em;
+}
+
+#workskin .hgm-letter {
+  padding: 1.6em 1.3em;
+}
+
+#workskin .hgm-diary {
+  padding: 1.4em 1.2em 1.4em 1.5em;
+}
+
+#workskin .hgm-field__k {
+  float: none;
+  display: block;
+  width: auto;
+}
+
+#workskin .hgm-field__v {
+  margin-left: 0;
+}
+
+#workskin .hgm-tx .hgm-field__k {
+  float: none;
+  display: block;
+  width: auto;
+}
+
+#workskin .hgm-tx .hgm-field__v {
+  margin-left: 0;
+}
+
+#workskin .hgm-mail__head {
+  padding: .9em 1em .5em;
+}
+
+#workskin .hgm-mail__body {
+  padding: 1em 1em .3em;
+}
+
+#workskin .hgm-mail__quote,
+#workskin .hgm-mail__fwd {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#workskin .hgm-mail__foot {
+  padding: 0 1em 1em;
+}
+
+#workskin .hgm-sms {
+  padding: 0 .8em .8em;
+}
+
+#workskin .hgm-sms__bar {
+  margin: 0 -.8em 1em;
+}
+
+#workskin .hgm-sms__bubble {
+  max-width: 88%;
+}
+
+#workskin .hgm-doc {
+  padding: 1.5em 1.2em 1.2em;
+}
+
+#workskin .hgm-doc__stamp {
+  float: none;
+  display: inline-block;
+  margin: 0 0 1em;
+}
+
+#workskin .hgm-doc__sig {
+  width: 100%;
+  margin-right: 0;
+}
+
+#workskin .hgm-news {
+  padding: 1.2em 1.1em 1.4em;
+}
+
+#workskin .hgm-news__masthead {
+  font-size: 1.5em;
+}
+
+#workskin .hgm-news--campus .hgm-news__masthead {
+  font-size: 1.4em;
+}
+
+#workskin .hgm-news__hed {
+  font-size: 1.5em;
+}
+
+#workskin .hgm-news__pull {
+  margin-left: .3em;
+  margin-right: .3em;
+  font-size: 1.1em;
+}
+
+#workskin .hgm-tx {
+  padding: 1.4em 1.1em;
+}
+
+#workskin .hgm-skel {
+  padding: 1.4em 1.2em;
+}
+
+#workskin .hgm-skel__when {
+  float: none;
+  display: block;
+  width: auto;
+  line-height: 1.5;
+}
+
+#workskin .hgm-skel__what {
+  margin-left: 0;
+}
+
+#workskin .hgm-an {
+  padding: 1em 1.1em;
+}
+
+/* =========================================================
+   AO3 PAGE + STORY COLUMN FIX
+   Apply the parchment surface to AO3's actual story container
+   and constrain the reading column at both wrapper levels.
+   ========================================================= */
+#workskin {
+  box-sizing: border-box !important;
+  width: 92% !important;
+  max-width: 52rem !important;
+  margin: 2rem auto !important;
+  padding: 0 !important;
+  background: #F4EFE6 !important;
+  color: #241912 !important;
+  border: 1px solid #D8C8AE !important;
+  box-shadow: 0 8px 28px rgba(36,25,18,.10) !important;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif !important;
+  font-size: 16px !important;
+  line-height: 1.68 !important;
+}
+#workskin .userstuff,
+#workskin .userstuff.module,
+#workskin .preface,
+#workskin #chapters,
+#workskin .chapter {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 2.2rem 3rem !important;
+  background: #F4EFE6 !important;
+  color: #241912 !important;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif !important;
+  font-size: 16px !important;
+  line-height: 1.68 !important;
+}
+#workskin .userstuff p {
+  max-width: 100% !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.15em !important;
+  color: #241912 !important;
+  font-size: 1em !important;
+  line-height: 1.72 !important;
+}
+#workskin .hgm-n-std,
+#workskin .hgm-n-mono,
+#workskin .hgm-n-stream,
+#workskin .hgm-n-flash,
+#workskin .hgm-n-dream,
+#workskin .hgm-n-pov,
+#workskin .hgm-n-quote {
+  max-width: 100% !important;
+  font-size: 1em !important;
+  line-height: 1.72 !important;
+}
+#workskin .hgm-chap,
+#workskin .hgm-open {
+  max-width: 100% !important;
+}
+@media (max-width: 700px) {
+  #workskin {
+    width: 96% !important;
+    margin: .5rem auto !important;
+  }
+  #workskin .userstuff,
+  #workskin .userstuff.module,
+  #workskin .preface,
+  #workskin #chapters,
+  #workskin .chapter {
+    padding: 1.35rem 1.15rem !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Small browser-preview reset to resemble AO3's work text area. */
+#workskin .userstuff h1,
+#workskin .userstuff h2,
+#workskin .userstuff h3 { color: inherit; }
+#workskin .userstuff > :first-child { margin-top: 0; }
+#workskin .userstuff > :last-child { margin-bottom: 0; }
+</style>
+</head>
+<body>
+<p class="preview-note">Standalone preview · CSS embedded from the uploaded “Fanfic A House of Good Men(2).css”</p>
+
+<div id="workskin">
+  <div class="userstuff module">
+    <div class="hgm-open">
+      <p class="hgm-open__kicker">A story of power, loyalty, and belonging</p>
+      <h1 class="hgm-open__title">A House of Good Men</h1>
+      <p class="hgm-open__subtitle">An original work</p>
+      <hr class="hgm-open__rule">
+      <p class="hgm-open__epigraph">“Some places belonged to everyone. Others only pretended to.”</p>
+      <p class="hgm-open__meta">Sumpter College · Fiction</p>
+    </div>
+
+    <div class="hgm-chap">
+      <p class="hgm-chap__num">Chapter One</p>
+      <h2 class="hgm-chap__title">The Presidency</h2>
+    </div>
+
+    <p>At Sumpter College, some places belonged to everyone. Others only pretended to</p>
+    <p>The Kappa Nu Alpha house was the second kind.</p>
+    <p>It sat on top of College Hill, above the brick lecture halls and the bike racks. Six white columns held up the porch roof. The front steps were wide enough for a dozen brothers to lounge on at once.</p>
+    <p>The lawn was cut every Thursday. The brass Greek letters over the door were polished until they caught the afternoon sun and threw it back at anyone walking past.</p>
+    <p>Students walked past all day. Some stared up at it with hunger. Some muttered under their breath. A few kept their eyes on their phones and pretended it was just a building.</p>
+    <p>Inside, the air smelled of lemon polish and old beer. Hardwood floors sagged a little in the common room, worn down by decades of parties.</p>
+
+    <div class="hgm-sep hgm-sep--ornament">❦</div>
+
+    <div class="hgm-mark hgm-mark--pov">
+      <span class="hgm-mark__tag">POV</span>
+      <span class="hgm-mark__text">Ben</span>
+    </div>
+    <div class="hgm-n-pov">
+      <span class="hgm-n-pov__name">Ben Taylor</span>
+      <span class="hgm-n-pov__loc">Kappa Nu Alpha House · Late afternoon</span>
+    </div>
+    <div class="hgm-n-std hgm-n-std--dropcap">
+      <p>Ben had learned that a room could make a person feel unwelcome without anyone saying a word. It was in the furniture, the framed photographs, the way conversations paused when he entered.</p>
+      <p>He kept his hands in his pockets and tried not to look as though he was counting the exits.</p>
+    </div>
+
+    <div class="hgm-mark hgm-mark--flashback">
+      <span class="hgm-mark__tag">Flashback</span>
+      <span class="hgm-mark__text">Freshman year</span>
+    </div>
+    <div class="hgm-n-flash">
+      <p>He remembered the first time Todd had spoken to him. It had been a small kindness, almost forgettable to anyone else.</p>
+      <p>Ben had remembered it anyway.</p>
+    </div>
+
+    <div class="hgm-n-quote">
+      “A house can be beautiful and still teach people to be afraid.”
+      <span class="hgm-n-quote__cite">An observation</span>
+    </div>
+
+    <div class="hgm-letter">
+      <div class="hgm-letter__head">
+        <span class="hgm-letter__sender">Ben Taylor</span>
+        <span class="hgm-letter__place">Sumpter College</span>
+        <span class="hgm-letter__date">October 14</span>
+      </div>
+      <p class="hgm-letter__salutation">Dear Todd,</p>
+      <div class="hgm-letter__body">
+        <p>I have started this letter several times. Each version sounds either too formal or too honest, and I cannot decide which would be worse.</p>
+      </div>
+      <p class="hgm-letter__closing">Sincerely, <span class="hgm-letter__signature">Ben</span></p>
+    </div>
+
+    <div class="hgm-diary">
+      <div class="hgm-diary__head">
+        <span class="hgm-diary__no">Private entry</span>
+        <span class="hgm-diary__date">Sunday, October 19</span>
+        <span class="hgm-diary__meta">11:42 p.m.</span>
+      </div>
+      <div class="hgm-diary__body">
+        <p>I keep telling myself that tomorrow will be easier. I am beginning to suspect that I say it because I do not know what else to write.</p>
+      </div>
+      <p class="hgm-diary__sign">B.</p>
+    </div>
+
+    <div class="hgm-mail">
+      <div class="hgm-mail__head">
+        <p class="hgm-field"><span class="hgm-field__k">From</span><span class="hgm-field__v">Todd Stevens</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">To</span><span class="hgm-field__v">Ben Taylor</span></p>
+        <p class="hgm-mail__subject">Re: Sunday <span class="hgm-mail__flag">Important</span></p>
+      </div>
+      <div class="hgm-mail__body">
+        <p>Are you coming by the house tomorrow? We should talk before the meeting.</p>
+      </div>
+      <div class="hgm-mail__foot"><p class="hgm-mail__sig">Todd</p></div>
+    </div>
+
+    <div class="hgm-sms">
+      <div class="hgm-sms__bar">
+        <span class="hgm-sms__contact">Todd</span>
+        <span class="hgm-sms__status">iMessage</span>
+      </div>
+      <p class="hgm-sms__date">Tuesday · 8:14 p.m.</p>
+      <div class="hgm-sms__row hgm-sms__row--in">
+        <span class="hgm-sms__name">Todd</span>
+        <span class="hgm-sms__bubble">You still on campus?</span>
+        <span class="hgm-sms__time">8:14 p.m.</span>
+      </div>
+      <div class="hgm-sms__row hgm-sms__row--out">
+        <span class="hgm-sms__bubble">Yeah. Why?</span>
+        <span class="hgm-sms__time">8:15 p.m.</span>
+      </div>
+    </div>
+
+    <div class="hgm-doc">
+      <p class="hgm-doc__stamp hgm-doc__stamp--confidential">Confidential</p>
+      <p class="hgm-doc__org">Kappa Nu Alpha</p>
+      <p class="hgm-doc__orgsub">Sumpter College Chapter</p>
+      <h3 class="hgm-doc__title">Executive Meeting Minutes</h3>
+      <p class="hgm-doc__ref">Record No. KNA-014 · October 20</p>
+      <div class="hgm-doc__meta">
+        <p class="hgm-field"><span class="hgm-field__k">Location</span><span class="hgm-field__v">Chapter House</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Attendees</span><span class="hgm-field__v">Executive Board</span></p>
+      </div>
+      <div class="hgm-doc__body">
+        <p class="hgm-doc__h">Agenda</p>
+        <ol><li>Presidential succession</li><li>Upcoming chapter events</li><li>Member conduct</li></ol>
+      </div>
+      <p class="hgm-doc__footer">Internal chapter record</p>
+    </div>
+
+    <div class="hgm-news hgm-news--campus">
+      <p class="hgm-news__masthead">The Sumpter Sentinel</p>
+      <p class="hgm-news__dateline">Campus edition · October 22</p>
+      <p class="hgm-news__kicker">Campus life</p>
+      <h3 class="hgm-news__hed">Fraternity Election Draws Student Attention</h3>
+      <p class="hgm-news__sub">The Kappa Nu Alpha presidency is becoming a campus-wide conversation.</p>
+      <p class="hgm-news__by">By the Campus Desk</p>
+      <div class="hgm-news__body">
+        <p class="hgm-news__lead">Students have begun watching the fraternity's internal election with unusual interest, as questions about leadership and accountability circulate around campus.</p>
+        <p>The chapter has not issued a public statement. Its members are expected to meet later this week.</p>
+      </div>
+    </div>
+
+    <div class="hgm-tx">
+      <h3 class="hgm-tx__title">Recorded Interview</h3>
+      <p class="hgm-tx__sub">Excerpt · Student Affairs Office</p>
+      <div class="hgm-tx__meta">
+        <p class="hgm-field"><span class="hgm-field__k">Date</span><span class="hgm-field__v">October 23</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Participants</span><span class="hgm-field__v">Interviewer, Student</span></p>
+      </div>
+      <p class="hgm-tx__line"><span class="hgm-tx__time">00:01:12</span><span class="hgm-tx__who hgm-tx__who--1">Interviewer</span><span class="hgm-tx__say">Can you tell me what happened at the house?</span></p>
+      <p class="hgm-tx__line"><span class="hgm-tx__time">00:01:19</span><span class="hgm-tx__who hgm-tx__who--2">Student</span><span class="hgm-tx__say">I can tell you what I saw.</span></p>
+    </div>
+
+    <div class="hgm-skel">
+      <div class="hgm-skel__head">
+        <p class="hgm-skel__kicker">Case file · Internal</p>
+        <h3 class="hgm-skel__title">Incident Record</h3>
+        <p class="hgm-skel__sub">Student Conduct Office</p>
+      </div>
+      <div class="hgm-skel__case">
+        <div class="hgm-skel__case-head">
+          <span class="hgm-skel__case">File KNA-22</span>
+          <span class="hgm-skel__status hgm-skel__status--open">Open</span>
+        </div>
+        <div class="hgm-skel__case-body">
+          <p class="hgm-skel__item"><span class="hgm-skel__label">Subject</span> Chapter House Incident</p>
+          <p class="hgm-skel__item"><span class="hgm-skel__label">Status</span> Under review</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hgm-an hgm-an--close">
+      <p class="hgm-an__label">Author's note</p>
+      <h3 class="hgm-an__title">A note before you go</h3>
+      <div class="hgm-an__body">
+        <p>Thank you for reading. This story explores difficult themes. Please take care while reading, and consult the work's tags and content notes.</p>
+      </div>
+      <p class="hgm-an__sign">— The Author</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

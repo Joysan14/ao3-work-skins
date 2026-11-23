@@ -1,0 +1,1123 @@
+#workskin {
+  background-color: #0B2B3D;
+  box-shadow: inset 0 120px 140px -60px rgba(76,154,175,.38),inset 0 -120px 140px -60px rgba(2,10,16,.55);
+  padding: 4em 1.5em 3em;
+  border-radius: 6px;
+  font-family: Georgia,Palatino,"Palatino Linotype","Book Antiqua",serif;
+}
+
+#workskin .preface,
+#workskin #chapters,
+#workskin .afterword {
+  box-sizing: border-box;
+  max-width: 760px;
+  margin: 0 auto 1.6em;
+  background-color: #F6FAFB;
+  color: #1E3440;
+  border: 1px solid #B7D0DA;
+  box-shadow: 0 22px 60px rgba(2,10,16,.6),0 2px 8px rgba(2,10,16,.4);
+  padding: 3.2em 3.4em;
+  font-family: Georgia,Palatino,"Palatino Linotype","Book Antiqua",serif;
+  font-size: 1.0625em;
+  line-height: 1.75;
+  letter-spacing: .004em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#workskin #chapters .preface,
+#workskin #chapters .afterword {
+  max-width: none;
+  margin: 0;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+#workskin .userstuff {
+  font-family: Georgia,Palatino,"Palatino Linotype","Book Antiqua",serif;
+}
+
+#workskin .userstuff p {
+  margin: 0 0 .95em;
+  text-indent: 0;
+}
+
+#workskin .userstuff p+p {
+  margin-top: 0;
+}
+
+#workskin .do-book p+p {
+  text-indent: 1.5em;
+  margin-top: -.2em;
+}
+
+#workskin .do-justify p {
+  text-align: justify;
+}
+
+#workskin .userstuff em,
+#workskin .userstuff i {
+  font-style: italic;
+}
+
+#workskin .userstuff img,
+#workskin .userstuff table {
+  max-width: 100%;
+}
+
+#workskin .userstuff a {
+  color: #12445A;
+  text-decoration: underline;
+  text-decoration-color: #4C9AAF;
+}
+
+#workskin .userstuff a:hover {
+  color: #1F6A80;
+}
+
+#workskin .userstuff a:focus,
+#workskin .preface a:focus,
+#workskin .afterword a:focus {
+  outline: 2px solid #4C9AAF;
+  outline-offset: 2px;
+}
+
+#workskin .preface {
+  text-align: center;
+}
+
+#workskin .preface .title {
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-weight: 600;
+  font-size: 2.9em;
+  line-height: 1.08;
+  color: #0B2B3D;
+  letter-spacing: .01em;
+  margin: .1em 0 .25em;
+  text-align: center;
+}
+
+#workskin .preface .byline {
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: 400;
+  font-size: .76em;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #3A6379;
+  text-align: center;
+  margin: 0 0 1.8em;
+}
+
+#workskin .preface .byline a {
+  color: #3A6379;
+}
+
+#workskin .preface .module {
+  text-align: left;
+  border-top: 1px solid #B7D0DA;
+  margin-top: 1.5em;
+  padding-top: 1.1em;
+}
+
+#workskin .preface .module h3.heading {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .7em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+  margin: 0 0 .6em;
+}
+
+#workskin .preface blockquote.userstuff {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: italic;
+}
+
+#workskin .preface .notes,
+#workskin .preface .summary {
+  font-size: .95em;
+}
+
+#workskin #chapters .preface {
+  text-align: center;
+  margin-bottom: 1.6em;
+}
+
+#workskin #chapters .preface .title {
+  font-family: "Libre Baskerville",Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
+  font-weight: normal;
+  font-size: 1.55em;
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin: 0 0 .3em;
+}
+
+#workskin .afterword .module h3.heading {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .7em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-title {
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size: 2.9em;
+  font-weight: 600;
+  line-height: 1.08;
+  color: #0B2B3D;
+  text-align: center;
+  margin: 0 0 .15em;
+}
+
+#workskin .do-subtitle {
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-style: italic;
+  font-size: 1.35em;
+  color: #3A6379;
+  text-align: center;
+  margin: 0 0 1.2em;
+}
+
+#workskin .do-epigraph {
+  max-width: 26em;
+  margin: 1.6em auto;
+  text-align: center;
+  font-style: italic;
+  color: #12445A;
+}
+
+#workskin .do-epigraph cite {
+  display: block;
+  margin-top: .4em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-style: normal;
+  font-size: .72em;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-meta {
+  margin: 1.8em 0;
+  padding: 1.1em 1.3em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .8em;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+#workskin .do-meta dt {
+  float: left;
+  clear: left;
+  width: 8em;
+  font-weight: bold;
+  font-size: .84em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #3A6379;
+  padding-top: .16em;
+}
+
+#workskin .do-meta dd {
+  margin: 0 0 .45em 8.5em;
+}
+
+#workskin .do-chip {
+  display: inline-block;
+  border: 1px solid #B7D0DA;
+  background: #F6FAFB;
+  padding: .04em .6em;
+  margin: .1em .25em .1em 0;
+  border-radius: 2px;
+}
+
+#workskin .do-chapter {
+  text-align: center;
+  margin: 2.2em 0 2.2em;
+}
+
+#workskin .do-chapter-num {
+  display: block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .74em;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-chapter-title {
+  display: block;
+  font-family: "Libre Baskerville",Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
+  font-weight: normal;
+  font-size: 1.75em;
+  line-height: 1.25;
+  color: #0B2B3D;
+  margin: .3em 0 .15em;
+}
+
+#workskin .do-chapter-sub {
+  display: block;
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #3A6379;
+}
+
+#workskin .do-chapter-orn {
+  display: block;
+  margin-top: .7em;
+  color: #4C9AAF;
+  letter-spacing: .7em;
+  padding-left: .7em;
+}
+
+#workskin .do-dialogue {
+  margin-bottom: .8em;
+}
+
+#workskin .do-thought {
+  font-style: italic;
+  color: #12445A;
+  padding: 0 1.5em;
+}
+
+#workskin .do-dropcap {
+  float: left;
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-weight: 600;
+  font-size: 4.3em;
+  line-height: .78;
+  padding: .06em .1em 0 0;
+  color: #12445A;
+}
+
+#workskin .do-lead {
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+
+#workskin .do-pov {
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .74em;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: #3A6379;
+  margin: 1.6em 0 1.2em;
+}
+
+#workskin .do-pov:before,
+#workskin .do-pov:after {
+  content: "\2014";
+  color: #4C9AAF;
+  padding: 0 .9em;
+}
+
+#workskin .do-tag {
+  display: block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .72em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+  margin-bottom: .5em;
+}
+
+#workskin .do-flashback {
+  margin: 1.8em 0;
+  padding: .4em 0 .2em 1.4em;
+  border-left: 3px solid #B7D0DA;
+}
+
+#workskin .do-memory {
+  margin: 1.8em 0;
+  padding: 1em 1.4em;
+  background: #E4EEF2;
+  border-left: 3px solid #9FC3D1;
+  font-style: italic;
+}
+
+#workskin .do-dream {
+  margin: 1.8em 0;
+  padding: 1.1em 1.5em;
+  background: #E4EEF2;
+  border: 1px dashed #3F6F85;
+  font-style: italic;
+  color: #12445A;
+}
+
+#workskin .do-pull {
+  margin: 2em 1.5em;
+  padding: 1em 0;
+  border-top: 1px solid #4C9AAF;
+  border-bottom: 1px solid #4C9AAF;
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-style: italic;
+  font-size: 1.6em;
+  line-height: 1.3;
+  text-align: center;
+  color: #12445A;
+}
+
+#workskin .do-pull cite {
+  display: block;
+  margin-top: .5em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-style: normal;
+  font-size: .5em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin hr.do-break {
+  border: 0;
+  height: auto;
+  overflow: visible;
+  margin: 2.2em 0;
+  text-align: center;
+  background: none;
+  color: #4C9AAF;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+#workskin hr.do-break:after {
+  content: "\2248\00a0\00a0\25E6\00a0\00a0\2248";
+}
+
+#workskin hr.do-break-dots:after {
+  content: "\00B7\00a0\00a0\00B7\00a0\00a0\00B7";
+}
+
+#workskin hr.do-break-tide:after {
+  content: "\223C\223C\223C\00a0\25E6\00a0\223C\223C\223C";
+}
+
+#workskin hr.do-break-line {
+  border-top: 1px solid #B7D0DA;
+  width: 30%;
+  margin: 2.2em auto;
+}
+
+#workskin hr.do-break-line:after {
+  content: "";
+}
+
+#workskin .do-note,
+#workskin .do-endnotes {
+  margin: 2em 0;
+  padding: 1.2em 1.5em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  border-top: 3px solid #12445A;
+  font-size: .92em;
+  line-height: 1.65;
+}
+
+#workskin .do-note-title {
+  display: block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .78em;
+  font-weight: bold;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+  margin-bottom: .6em;
+}
+
+#workskin .do-endnotes ol {
+  margin: .4em 0 0;
+  padding-left: 1.4em;
+}
+
+#workskin .do-endnotes li {
+  margin-bottom: .45em;
+}
+
+#workskin .do-warn {
+  margin: 1.6em 0;
+  padding: 1em 1.3em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  border-left: 6px solid #4C9AAF;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .84em;
+  line-height: 1.6;
+}
+
+#workskin .do-warn-title {
+  display: block;
+  font-weight: bold;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #1F6A80;
+  margin-bottom: .3em;
+}
+
+#workskin .do-disclaimer {
+  margin: 1.6em 0;
+  padding-top: .9em;
+  border-top: 1px solid #B7D0DA;
+  font-size: .82em;
+  font-style: italic;
+  color: #3A6379;
+  line-height: 1.6;
+}
+
+#workskin .do-letter {
+  max-width: 34em;
+  margin: 2em auto;
+  padding: 2em 2.3em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  box-shadow: 0 1px 4px rgba(30,52,64,.2);
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size: 1.18em;
+  line-height: 1.65;
+}
+
+#workskin .do-letter p {
+  margin-bottom: .9em;
+}
+
+#workskin .do-sig {
+  text-align: right;
+  font-style: italic;
+}
+
+#workskin .do-diary {
+  margin: 2em 0;
+  padding: 1.2em 1.6em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  border-left: 6px double #4C9AAF;
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size: 1.12em;
+  font-style: italic;
+}
+
+#workskin .do-date {
+  display: block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-style: normal;
+  font-size: .68em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+  margin-bottom: .6em;
+}
+
+#workskin .do-poem {
+  max-width: 28em;
+  margin: 2em auto;
+  padding-left: 1.5em;
+  border-left: 1px solid #4C9AAF;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+#workskin .do-poem p {
+  margin: 0 0 1.2em;
+}
+
+#workskin .do-poem-title {
+  display: block;
+  font-style: normal;
+  font-family: "Libre Baskerville",Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
+  font-size: .9em;
+  margin-bottom: .6em;
+  color: #0B2B3D;
+}
+
+#workskin .do-chat {
+  max-width: 420px;
+  margin: 2em auto;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  border-radius: 14px;
+  overflow: hidden;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .86em;
+  line-height: 1.45;
+  text-indent: 0;
+}
+
+#workskin .do-chat-head {
+  background: #12445A;
+  color: #F6FAFB;
+  padding: .75em 1em;
+  font-weight: bold;
+  letter-spacing: .04em;
+}
+
+#workskin .do-chat-head small {
+  display: block;
+  font-weight: normal;
+  font-size: .82em;
+  color: #9FC3D1;
+}
+
+#workskin .do-chat-body {
+  padding: 1em .8em .5em;
+}
+
+#workskin .do-day {
+  display: table;
+  margin: 0 auto .8em;
+  padding: .15em .8em;
+  background: #B7D0DA;
+  color: #1E3440;
+  border-radius: 10px;
+  font-size: .78em;
+  letter-spacing: .06em;
+}
+
+#workskin .do-msg {
+  display: table;
+  max-width: 82%;
+  margin: 0 0 .55em;
+  padding: .5em .8em;
+  background: #F6FAFB;
+  border: 1px solid #B7D0DA;
+  border-radius: 12px 12px 12px 3px;
+  color: #1E3440;
+}
+
+#workskin .do-out {
+  margin-left: auto;
+  background: #12445A;
+  border-color: #12445A;
+  border-radius: 12px 12px 3px 12px;
+  color: #F6FAFB;
+}
+
+#workskin .do-sender {
+  display: block;
+  font-size: .76em;
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-s2 {
+  color: #1F6A80;
+}
+
+#workskin .do-s3 {
+  color: #2A6F63;
+}
+
+#workskin .do-out .do-sender {
+  color: #B7D0DA;
+}
+
+#workskin .do-time {
+  display: block;
+  margin-top: .15em;
+  text-align: right;
+  font-size: .72em;
+  color: #3A6379;
+}
+
+#workskin .do-out .do-time {
+  color: #9FC3D1;
+}
+
+#workskin .do-tick {
+  letter-spacing: .05em;
+}
+
+#workskin .do-wa {
+  background: #E4EEF2;
+}
+
+#workskin .do-wa .do-out {
+  background: #9FC3D1;
+  border-color: #9FC3D1;
+  color: #1E3440;
+}
+
+#workskin .do-wa .do-out .do-time,
+#workskin .do-wa .do-out .do-sender {
+  color: #12445A;
+}
+
+#workskin .do-wa .do-chat-head {
+  background: #0B2B3D;
+}
+
+#workskin .do-typing {
+  font-size: .78em;
+  color: #3A6379;
+  font-style: italic;
+  padding: 0 .3em .6em;
+}
+
+#workskin .do-post {
+  max-width: 470px;
+  margin: 2em auto;
+  padding: 1.1em 1.2em;
+  background: #F6FAFB;
+  border: 1px solid #B7D0DA;
+  border-radius: 10px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .88em;
+  line-height: 1.5;
+  text-indent: 0;
+}
+
+#workskin .do-avatar {
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  line-height: 2.4em;
+  margin-right: .6em;
+  border-radius: 50%;
+  background: #12445A;
+  color: #F6FAFB;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+#workskin .do-name {
+  font-weight: bold;
+  color: #0B2B3D;
+}
+
+#workskin .do-handle {
+  color: #3A6379;
+}
+
+#workskin .do-post-body {
+  margin: .7em 0 .2em;
+  font-family: Georgia,Palatino,"Palatino Linotype","Book Antiqua",serif;
+  font-size: 1.08em;
+}
+
+#workskin .do-post-stats {
+  margin-top: .8em;
+  padding-top: .5em;
+  border-top: 1px solid #B7D0DA;
+  font-size: .84em;
+  letter-spacing: .04em;
+  color: #3A6379;
+}
+
+#workskin .do-email {
+  margin: 2em 0;
+  background: #F6FAFB;
+  border: 1px solid #B7D0DA;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .88em;
+  line-height: 1.55;
+  text-indent: 0;
+}
+
+#workskin .do-email-head {
+  padding: .8em 1.2em;
+  background: #E4EEF2;
+  border-bottom: 1px solid #B7D0DA;
+  overflow: hidden;
+}
+
+#workskin .do-k {
+  float: left;
+  clear: left;
+  width: 5.2em;
+  font-weight: bold;
+  font-size: .82em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #3A6379;
+  padding-top: .15em;
+}
+
+#workskin .do-v {
+  display: block;
+  margin-left: 5.6em;
+}
+
+#workskin .do-email-subject {
+  display: block;
+  margin-left: 5.6em;
+  font-weight: bold;
+  color: #0B2B3D;
+}
+
+#workskin .do-email-body {
+  padding: 1em 1.2em;
+  font-family: Georgia,Palatino,"Palatino Linotype","Book Antiqua",serif;
+  font-size: 1.04em;
+}
+
+#workskin .do-email-body p {
+  margin-bottom: .8em;
+}
+
+#workskin .do-email .do-email {
+  margin: 1em 0 0 .4em;
+  border: 0;
+  border-left: 3px solid #4C9AAF;
+  font-size: .94em;
+  background: #E4EEF2;
+}
+
+#workskin .do-notify {
+  max-width: 430px;
+  margin: 1.8em auto;
+  padding: .8em 1.1em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  border-left: 4px solid #4C9AAF;
+  border-radius: 6px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .84em;
+  line-height: 1.5;
+  text-indent: 0;
+}
+
+#workskin .do-notify b {
+  display: block;
+  color: #0B2B3D;
+}
+
+#workskin .do-system {
+  max-width: 430px;
+  margin: 1.8em auto;
+  padding: .9em 1.2em;
+  background: #0B2B3D;
+  border: 1px solid #3F6F85;
+  color: #9FC3D1;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .82em;
+  line-height: 1.6;
+  text-indent: 0;
+}
+
+#workskin .do-system b {
+  color: #F6FAFB;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+#workskin .do-call {
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .9em 1.2em;
+  background: #F6FAFB;
+  border: 1px solid #B7D0DA;
+  border-radius: 10px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .86em;
+  line-height: 1.5;
+  text-indent: 0;
+}
+
+#workskin .do-call b {
+  display: block;
+  font-size: 1.05em;
+  color: #0B2B3D;
+}
+
+#workskin .do-missed {
+  color: #1F6A80;
+  font-weight: bold;
+}
+
+#workskin .do-voice {
+  max-width: 380px;
+  margin: 1.8em auto;
+  padding: .8em 1.1em;
+  background: #12445A;
+  border-radius: 24px;
+  color: #F6FAFB;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .84em;
+  text-indent: 0;
+}
+
+#workskin .do-wave {
+  letter-spacing: .12em;
+  color: #9FC3D1;
+  font-size: 1.15em;
+}
+
+#workskin .do-doc {
+  margin: 2.2em 0;
+  padding: 1.7em 1.9em;
+  background: #E4EEF2;
+  border: 1px solid #B7D0DA;
+  border-top: 4px double #3F6F85;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .84em;
+  line-height: 1.65;
+  color: #1E3440;
+  text-indent: 0;
+}
+
+#workskin .do-doc p {
+  margin-bottom: .8em;
+}
+
+#workskin .do-doc-label {
+  margin-bottom: 1.1em;
+  padding-bottom: .6em;
+  border-bottom: 1px solid #B7D0DA;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .8em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-doc-title {
+  display: block;
+  margin: 0 0 .8em;
+  font-family: "Libre Baskerville",Palatino,"Palatino Linotype","Book Antiqua",Georgia,serif;
+  font-size: 1.25em;
+  line-height: 1.3;
+  color: #0B2B3D;
+}
+
+#workskin .do-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .8em 0;
+}
+
+#workskin .do-doc th,
+#workskin .do-doc td {
+  padding: .4em .6em;
+  border: 1px solid #B7D0DA;
+  text-align: left;
+  vertical-align: top;
+}
+
+#workskin .do-doc th {
+  background: #F6FAFB;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-stamp {
+  display: inline-block;
+  padding: .1em .8em;
+  border: 2px solid #4C9AAF;
+  color: #1F6A80;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .85em;
+  font-weight: bold;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+}
+
+#workskin .do-redact {
+  padding: 0 .25em;
+  background: #1E3440;
+  color: #1E3440;
+  border-radius: 1px;
+}
+
+#workskin .do-news {
+  font-family: Georgia,Palatino,"Palatino Linotype","Book Antiqua",serif;
+  font-size: .95em;
+  background: #F6FAFB;
+}
+
+#workskin .do-news .do-doc-title {
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+#workskin .do-dateline {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .78em;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #3A6379;
+}
+
+#workskin .do-transcript p {
+  margin-bottom: .5em;
+}
+
+#workskin .do-spk {
+  font-weight: bold;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #12445A;
+}
+
+#workskin .do-receipt {
+  max-width: 320px;
+  margin: 2em auto;
+  padding: 1.4em 1.4em;
+  background: #F6FAFB;
+  border: 1px dashed #3F6F85;
+  font-family: "Courier New",Courier,monospace;
+  font-size: .84em;
+  line-height: 1.6;
+  text-indent: 0;
+}
+
+#workskin .do-receipt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#workskin .do-receipt td {
+  padding: .1em 0;
+  border: 0;
+}
+
+#workskin .do-receipt td+td {
+  text-align: right;
+}
+
+#workskin .do-cert {
+  margin: 2.2em 0;
+  padding: 2em 1.6em;
+  background: #F6FAFB;
+  border: 6px double #4C9AAF;
+  text-align: center;
+  text-indent: 0;
+}
+
+#workskin .do-cert .do-doc-title {
+  font-family: "Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+#workskin .do-frame {
+  margin: 2em 0;
+  padding: 1.4em 1.6em;
+  border: 1px solid #4C9AAF;
+  box-shadow: 0 0 0 4px #F6FAFB,0 0 0 5px #B7D0DA;
+}
+
+#workskin .do-hl {
+  background-color: #CFE3EA;
+  padding: 0 .15em;
+}
+
+#workskin .do-hl-sea {
+  background-color: #DCEBEF;
+  padding: 0 .15em;
+}
+
+#workskin .do-fnref {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .7em;
+  vertical-align: super;
+  line-height: 0;
+  color: #1F6A80;
+}
+
+#workskin .do-footnotes {
+  margin-top: 2em;
+  padding-top: .8em;
+  border-top: 1px solid #B7D0DA;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .78em;
+  line-height: 1.6;
+  color: #3A6379;
+}
+
+#workskin .do-label {
+  display: inline-block;
+  padding: .1em .7em;
+  background: #B7D0DA;
+  color: #1E3440;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .7em;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+#workskin {
+  padding: 2.4em .9em 2em;
+}
+
+#workskin .preface,
+#workskin #chapters,
+#workskin .afterword {
+  padding: 2.4em 2.2em;
+}
+
+#workskin {
+  padding: .8em .35em .5em;
+  border-radius: 0;
+}
+
+#workskin .preface,
+#workskin #chapters,
+#workskin .afterword {
+  padding: 1.7em 1.15em;
+  margin-bottom: .8em;
+}
+
+#workskin .preface .title,
+#workskin .do-title {
+  font-size: 2.05em;
+}
+
+#workskin .do-meta dt {
+  float: none;
+  width: auto;
+}
+
+#workskin .do-meta dd {
+  margin-left: 0;
+}
+
+#workskin .do-msg {
+  max-width: 92%;
+}
+
+#workskin .do-pull {
+  margin: 1.6em 0;
+  font-size: 1.3em;
+}
+
+#workskin .do-letter,
+#workskin .do-doc,
+#workskin .do-cert {
+  padding: 1.2em 1em;
+}
+
+#workskin .do-k {
+  float: none;
+  width: auto;
+}
+
+#workskin .do-v,
+#workskin .do-email-subject {
+  margin-left: 0;
+}
+
+#workskin .do-thought {
+  padding: 0 .8em;
+}
+
+#workskin .do-dropcap {
+  font-size: 3.6em;
+}
