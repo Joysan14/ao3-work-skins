@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15171b">
+  <meta name="description" content="A collection of custom AO3 Work Skins, CSS themes, browser previews, and design references by Joysan14.">
+  <title>AO3 Work Skins | Joysan14</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111317; --panel: #1b1e24; --panel2: #232730;
+      --ink: #eee9e1; --muted: #b0aaa2; --gold: #d6b779;
+      --line: #393e48; --gold-dark: #8c754f;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: radial-gradient(ellipse at 50% -15%, #36303a 0, #191a20 42%, var(--bg) 78%);
+      color: var(--ink); font: 16px/1.6 Georgia, "Times New Roman", serif;
+    }
+    a { color: inherit; }
+    .hero { text-align: center; padding: 76px 20px 58px; border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--gold); font: 700 11px/1.4 Arial, sans-serif; letter-spacing: .24em; text-transform: uppercase; }
+    h1 { margin: 18px 0 15px; color: #f4eadb; font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.05; font-weight: 400; }
+    .hero p { max-width: 690px; margin: auto; color: var(--muted); font-size: 1.1rem; }
+    .container { width: min(1160px, calc(100% - 36px)); margin: auto; }
+    .toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 30px 0 12px; }
+    .toolbar p { margin: 0; color: var(--muted); }
+    .count { color: var(--gold); font: 700 11px Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
+    .search { width: min(100%, 340px); border: 1px solid var(--line); border-radius: 7px; padding: 12px 14px; background: #171a20; color: var(--ink); font: 14px Arial, sans-serif; }
+    .search:focus { outline: 2px solid var(--gold-dark); outline-offset: 2px; }
+    h2 { margin: 34px 0 16px; color: #f1e5d2; font-weight: 400; font-size: 1.65rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 18px; padding-bottom: 25px; }
+    .card { min-width: 0; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 11px; background: linear-gradient(145deg, var(--panel2), var(--panel)); transition: transform .2s, border-color .2s; }
+    .card:hover { transform: translateY(-3px); border-color: var(--gold-dark); }
+    .preview { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: #282b31; }
+    .preview img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .3s; }
+    .card:hover .preview img { transform: scale(1.025); }
+    .card-body { display: flex; flex: 1; flex-direction: column; padding: 17px; }
+    h3 { margin: 0 0 13px; color: #f4eadb; font-size: 1.2rem; font-weight: 400; }
+    .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+    .actions a { border: 1px solid #6a5a40; border-radius: 5px; padding: 8px 10px; color: #ead9b8; font: 700 10px Arial, sans-serif; text-decoration: none; text-transform: uppercase; letter-spacing: .07em; }
+    .actions a:hover { background: #393329; border-color: var(--gold); }
+    .actions .download { background: #c4a574; border-color: #c4a574; color: #17191d; }
+    .actions .download:hover { background: #e0c795; }
+    .notice { margin: 16px 0 42px; padding: 19px 21px; border: 1px solid var(--line); border-radius: 9px; background: #191c22; color: var(--muted); }
+    .notice strong { color: var(--ink); }
+    .empty { display: none; padding: 20px; color: var(--muted); }
+    footer { margin-top: 20px; padding: 28px 16px 42px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font: 13px Arial, sans-serif; }
+    footer a { color: var(--gold); text-decoration: none; }
+    @media (max-width: 560px) { .hero { padding: 55px 18px 42px; } .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="eyebrow">A collection of AO3 Work Skins</div>
+    <h1>Stories deserve<br>beautiful spaces.</h1>
+    <p>Custom CSS themes, story layouts, and visual experiments for Archive of Our Own. Explore each design, open its browser preview, and get the stylesheet.</p>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <p>Designed and maintained by <strong>Joysan14</strong>.</p>
+      <span class="count">CSS · HTML previews · design references</span>
+      <input class="search" id="search" type="search" placeholder="Search themes..." aria-label="Search themes">
+    </div>
+
+    <h2>Theme collection</h2>
+    <div class="grid" id="theme-grid"></div>
+    <p class="empty" id="theme-empty">No themes match your search.</p>
+
+    <h2>Fanfiction-specific work skins</h2>
+    <div class="grid" id="fanfic-grid"></div>
+    <p class="empty" id="fanfic-empty">No fanfiction skins match your search.</p>
+
+    <aside class="notice">
+      <strong>How to use a theme:</strong> Open the CSS file and copy its contents into AO3's Site Skin editor. The HTML file is a standalone browser preview, not something you upload to AO3. Check each theme's README for installation notes, custom formatting classes, and limitations.
+    </aside>
+  </main>
+
+  <footer>
+    <div>Made by Joysan14 · Fan-created and unofficial AO3 Work Skin collection</div>
+    <div style="margin-top:8px"><a href="https://github.com/Joysan14/ao3-work-skins">Browse the source repository on GitHub</a></div>
+  </footer>
+
+  <script>
+    const themes = [
+      {title:'ABOverse',folder:'Theme ABOverse',base:'Theme ABOverse'},
+      {title:'Blood Skin',folder:'Theme Blood Skin',base:'Theme Blood Skin'},
+      {title:'Celestial Golden',folder:'Theme Celestial Golden',base:'Theme Celestial Golden'},
+      {title:'Cotton Candy Chaos',folder:'Theme Cotton_candy_chaos',base:'Theme Cotton_candy_chaos'},
+      {title:'Cranberries Kiss',folder:'Theme Cranberries Kiss',base:'Theme Cranberries Kiss'},
+      {title:'Deep Ocean',folder:'Theme Deep Ocean',base:'Theme Deep Ocean'},
+      {title:'Dusted Lilac',folder:'Theme Dusted_Lilac',base:'Theme Dusted_Lilac'},
+      {title:'Fig Velvet',folder:'Theme Fig_Velvet',base:'Theme Fig_Velvet'},
+      {title:'Grand Line',folder:'Theme Grand Line',base:'Theme Grand Line'},
+      {title:'Industrial Grunge',folder:'Theme Industrial Grunge',base:'Theme Industrial Grunge'},
+      {title:'Midnight Blue',folder:'Theme MIDNIGHT BLUE',base:'Theme MIDNIGHT BLUE'},
+      {title:'Military Classified Files',folder:'Theme MILITARY CLASSIFIED FILES',base:'Theme MILITARY CLASSIFIED FILES'},
+      {title:'Noir Cinema',folder:'Theme Noir Cinema',base:'Theme Noir Cinema'},
+      {title:'Vanilla Rose Sage',folder:'Theme Vanilla_Rose_Sage',base:'Theme Vanilla_Rose_Sage'},
+      {title:'Westerosi',folder:'Theme Westerosi',base:'Theme Westerosi'},
+      {title:'Cocoa',folder:'Theme cocoa',base:'Theme cocoa'}
+    ];
+    const fanfic = [
+      {title:'A House of Good Men',folder:'Fanfic A House of Good Men',base:'Fanfic A House of Good Men'},
+      {title:'Being Alive',folder:'Fanfic Being Alive',base:'Fanfic Being Alive'}
+    ];
+
+    function fileUrl(folder, filename) {
+      return encodeURIComponent(folder).replace(/%2F/g, "/") + "/" + encodeURIComponent(filename);
+    }
+
+    function makeCard(item) {
+      const root = document.createElement("article");
+      root.className = "card";
+      const previewLink = document.createElement("a");
+      previewLink.className = "preview";
+      previewLink.href = fileUrl(item.folder, item.base + ".html");
+      const img = document.createElement("img");
+      img.loading = "lazy";
+      img.alt = item.title + " theme preview";
+      img.src = fileUrl(item.folder, item.base + " Preview.png");
+      previewLink.appendChild(img);
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+      const actions = document.createElement("div");
+      actions.className = "actions";
+
+      const links = [
+        ["Get CSS", item.base + ".css", "download"],
+        ["Preview", item.base + ".html", ""],
+        ["Guide", "README.md", ""]
+      ];
+      links.forEach(([label, filename, cls]) => {
+        const a = document.createElement("a");
+        a.textContent = label;
+        a.href = fileUrl(item.folder, filename);
+        if (cls) a.className = cls;
+        actions.appendChild(a);
+      });
+
+      body.append(title, actions);
+      root.append(previewLink, body);
+      return root;
+    }
+
+    function render(list, targetId, emptyId, query) {
+      const target = document.getElementById(targetId);
+      target.replaceChildren();
+      const filtered = list.filter(item => item.title.toLowerCase().includes(query));
+      filtered.forEach(item => target.appendChild(makeCard(item)));
+      document.getElementById(emptyId).style.display = filtered.length ? "none" : "block";
+    }
+
+    function update() {
+      const query = document.getElementById("search").value.trim().toLowerCase();
+      render(themes, "theme-grid", "theme-empty", query);
+      render(fanfic, "fanfic-grid", "fanfic-empty", query);
+    }
+
+    document.getElementById("search").addEventListener("input", update);
+    update();
+  </script>
+</body>
+</html>
