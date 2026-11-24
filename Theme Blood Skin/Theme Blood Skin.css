@@ -3036,3 +3036,335 @@ body {
       inset 0 1px 0 rgba(255, 238, 222, .1);
   }
 }
+
+
+
+/* =========================================================
+   HIGH-CONTRAST TEXT FIX — LIGHT PAPER / DARK INK
+   These rules intentionally come last to override earlier
+   pale text settings that were leaking onto parchment cards.
+   ========================================================= */
+
+/* Light parchment documents: all ordinary text must be dark. */
+#workskin .hgm-letter,
+#workskin .hgm-letter *,
+#workskin .hgm-diary,
+#workskin .hgm-diary *,
+#workskin .hgm-doc,
+#workskin .hgm-doc *,
+#workskin .hgm-news,
+#workskin .hgm-news *,
+#workskin .hgm-skel,
+#workskin .hgm-skel *,
+#workskin .hgm-an,
+#workskin .hgm-an *,
+#workskin .hgm-tx,
+#workskin .hgm-tx *,
+#workskin .hgm-mail,
+#workskin .hgm-mail * {
+  color: #38251F;
+  text-shadow: none;
+}
+
+/* Strong, consistent hierarchy on pale paper. */
+#workskin .hgm-letter h1,
+#workskin .hgm-letter h2,
+#workskin .hgm-letter h3,
+#workskin .hgm-letter strong,
+#workskin .hgm-diary h1,
+#workskin .hgm-diary h2,
+#workskin .hgm-diary h3,
+#workskin .hgm-diary strong,
+#workskin .hgm-doc h1,
+#workskin .hgm-doc h2,
+#workskin .hgm-doc h3,
+#workskin .hgm-doc strong,
+#workskin .hgm-news h1,
+#workskin .hgm-news h2,
+#workskin .hgm-news h3,
+#workskin .hgm-news strong,
+#workskin .hgm-skel h1,
+#workskin .hgm-skel h2,
+#workskin .hgm-skel h3,
+#workskin .hgm-skel strong,
+#workskin .hgm-an h1,
+#workskin .hgm-an h2,
+#workskin .hgm-an h3,
+#workskin .hgm-an strong {
+  color: #241116;
+}
+
+/* Labels and metadata use a deep wine accent, not pale pink. */
+#workskin .hgm-letter__place,
+#workskin .hgm-letter__date,
+#workskin .hgm-letter__ref,
+#workskin .hgm-diary__no,
+#workskin .hgm-diary__date,
+#workskin .hgm-doc__stamp,
+#workskin .hgm-doc__ref,
+#workskin .hgm-doc__meta,
+#workskin .hgm-doc__orgsub,
+#workskin .hgm-news__kicker,
+#workskin .hgm-news__dateline,
+#workskin .hgm-news__by,
+#workskin .hgm-skel__kicker,
+#workskin .hgm-skel__when,
+#workskin .hgm-skel__role,
+#workskin .hgm-an__label,
+#workskin .hgm-an__refs,
+#workskin .hgm-field__k {
+  color: #7B2941;
+}
+
+/* Preserve the darker, intentionally dark document variants. */
+#workskin .hgm-diary--dark,
+#workskin .hgm-diary--dark *,
+#workskin .hgm-skel--dark,
+#workskin .hgm-skel--dark *,
+#workskin .hgm-doc--fraternity,
+#workskin .hgm-doc--fraternity *,
+#workskin .hgm-sms--dark,
+#workskin .hgm-sms--dark *,
+#workskin .hgm-tx--dark,
+#workskin .hgm-tx--dark *,
+#workskin .hgm-mail--chapter,
+#workskin .hgm-mail--chapter * {
+  color: #F1E6D9;
+  text-shadow: none;
+}
+
+/* Dark cards retain gold/wine label accents while staying legible. */
+#workskin .hgm-diary--dark .hgm-diary__no,
+#workskin .hgm-skel--dark .hgm-skel__kicker,
+#workskin .hgm-doc--fraternity .hgm-doc__org,
+#workskin .hgm-doc--fraternity .hgm-doc__meta,
+#workskin .hgm-mail--chapter .hgm-field__k {
+  color: #D7B58E;
+}
+
+/* Normal chapter prose stays warm ivory on the dark reading panel. */
+#workskin .userstuff > p,
+#workskin .userstuff > blockquote,
+#workskin .userstuff > ul,
+#workskin .userstuff > ol {
+  color: #E9DED2;
+  text-shadow: none;
+}
+
+/* Links remain distinguishable on both paper and dark surfaces. */
+#workskin .hgm-letter a,
+#workskin .hgm-diary a,
+#workskin .hgm-doc a,
+#workskin .hgm-news a,
+#workskin .hgm-skel a,
+#workskin .hgm-an a,
+#workskin .hgm-mail a {
+  color: #7B2941;
+  text-decoration: underline;
+}
+#workskin .hgm-letter a:hover,
+#workskin .hgm-diary a:hover,
+#workskin .hgm-doc a:hover,
+#workskin .hgm-news a:hover,
+#workskin .hgm-skel a:hover,
+#workskin .hgm-an a:hover,
+#workskin .hgm-mail a:hover {
+  color: #451A2A;
+}
+
+
+
+/* =========================================================
+   FINAL READABILITY OVERRIDE — BURGUNDY INK ON IVORY PAPER
+   Applied with !important because AO3/userstuff paragraph
+   styles can otherwise override the component's inherited ink.
+   ========================================================= */
+
+/* Every text node inside the pale letter and journal panels. */
+#workskin .hgm-letter,
+#workskin .hgm-letter *,
+#workskin .hgm-letter *:before,
+#workskin .hgm-letter *:after,
+#workskin .hgm-diary:not(.hgm-diary--dark),
+#workskin .hgm-diary:not(.hgm-diary--dark) *,
+#workskin .hgm-diary:not(.hgm-diary--dark) *:before,
+#workskin .hgm-diary:not(.hgm-diary--dark) *:after {
+  color: #7A172B !important;
+  text-shadow: none !important;
+}
+
+/* Keep headings and signatures a deeper, richer red. */
+#workskin .hgm-letter h1,
+#workskin .hgm-letter h2,
+#workskin .hgm-letter h3,
+#workskin .hgm-letter__signature,
+#workskin .hgm-diary:not(.hgm-diary--dark) h1,
+#workskin .hgm-diary:not(.hgm-diary--dark) h2,
+#workskin .hgm-diary:not(.hgm-diary--dark) h3,
+#workskin .hgm-diary:not(.hgm-diary--dark) .hgm-diary__date {
+  color: #591020 !important;
+}
+
+/* Ensure ordinary paragraphs, including AO3 userstuff paragraphs,
+   cannot retain pale text or decorative light shadows. */
+#workskin .hgm-letter p,
+#workskin .hgm-letter__body p,
+#workskin .hgm-letter__recipient,
+#workskin .hgm-letter__salutation,
+#workskin .hgm-letter__closing,
+#workskin .hgm-letter__ps,
+#workskin .hgm-diary:not(.hgm-diary--dark) p,
+#workskin .hgm-diary:not(.hgm-diary--dark) .hgm-diary__body p,
+#workskin .hgm-diary:not(.hgm-diary--dark) li {
+  color: #7A172B !important;
+  text-shadow: none !important;
+}
+
+/* Deep red metadata and rules remain readable without pale lettering. */
+#workskin .hgm-letter__sender,
+#workskin .hgm-letter__place,
+#workskin .hgm-letter__date,
+#workskin .hgm-letter__ref,
+#workskin .hgm-diary__no,
+#workskin .hgm-diary__meta {
+  color: #8C233A !important;
+  text-shadow: none !important;
+}
+
+/* Dark diary variants intentionally keep light lettering. */
+#workskin .hgm-diary--dark,
+#workskin .hgm-diary--dark * {
+  color: #F1E6D9 !important;
+  text-shadow: none !important;
+}
+#workskin .hgm-diary--dark .hgm-diary__no {
+  color: #D7A18E !important;
+}
+
+
+
+/* =========================================================
+   GLOBAL PAPER-CARD CONTRAST PASS
+   All pale/ivory cards use dark burgundy ink.
+   Dark inset headers and dark variants keep light lettering.
+   ========================================================= */
+
+/* Main pale paper cards and every nested text element. */
+#workskin .hgm-letter,
+#workskin .hgm-letter *,
+#workskin .hgm-diary:not(.hgm-diary--dark),
+#workskin .hgm-diary:not(.hgm-diary--dark) *,
+#workskin .hgm-mail:not(.hgm-mail--chapter),
+#workskin .hgm-mail:not(.hgm-mail--chapter) *,
+#workskin .hgm-mail--chapter .hgm-mail__body,
+#workskin .hgm-mail--chapter .hgm-mail__body *,
+#workskin .hgm-doc:not(.hgm-doc--fraternity),
+#workskin .hgm-doc:not(.hgm-doc--fraternity) *,
+#workskin .hgm-news,
+#workskin .hgm-news *,
+#workskin .hgm-an,
+#workskin .hgm-an *,
+#workskin .hgm-tx:not(.hgm-tx--dark),
+#workskin .hgm-tx:not(.hgm-tx--dark) *,
+#workskin .hgm-sms:not(.hgm-sms--dark),
+#workskin .hgm-sms:not(.hgm-sms--dark) *,
+#workskin .hgm-skel:not(.hgm-skel--dark),
+#workskin .hgm-skel:not(.hgm-skel--dark) * {
+  color: #74172D !important;
+  text-shadow: none !important;
+}
+
+/* Stronger wine ink for titles, section headings and signatures. */
+#workskin .hgm-letter h1,
+#workskin .hgm-letter h2,
+#workskin .hgm-letter h3,
+#workskin .hgm-letter__signature,
+#workskin .hgm-diary:not(.hgm-diary--dark) h1,
+#workskin .hgm-diary:not(.hgm-diary--dark) h2,
+#workskin .hgm-diary:not(.hgm-diary--dark) h3,
+#workskin .hgm-doc:not(.hgm-doc--fraternity) h1,
+#workskin .hgm-doc:not(.hgm-doc--fraternity) h2,
+#workskin .hgm-doc:not(.hgm-doc--fraternity) h3,
+#workskin .hgm-doc:not(.hgm-doc--fraternity) .hgm-doc__title,
+#workskin .hgm-news h1,
+#workskin .hgm-news h2,
+#workskin .hgm-news h3,
+#workskin .hgm-news__hed,
+#workskin .hgm-an h1,
+#workskin .hgm-an h2,
+#workskin .hgm-an h3,
+#workskin .hgm-an__title {
+  color: #4D1021 !important;
+  text-shadow: none !important;
+}
+
+/* Small labels and document metadata. */
+#workskin .hgm-letter__place,
+#workskin .hgm-letter__date,
+#workskin .hgm-letter__ref,
+#workskin .hgm-doc__stamp,
+#workskin .hgm-doc__meta,
+#workskin .hgm-doc__orgsub,
+#workskin .hgm-doc__ref,
+#workskin .hgm-doc__h,
+#workskin .hgm-news__kicker,
+#workskin .hgm-news__dateline,
+#workskin .hgm-news__by,
+#workskin .hgm-an__label,
+#workskin .hgm-an__refs,
+#workskin .hgm-field__k,
+#workskin .hgm-mail .hgm-field__k {
+  color: #8A2943 !important;
+  text-shadow: none !important;
+}
+
+/* Dark header strip inside the chapter email is intentionally light. */
+#workskin .hgm-mail--chapter .hgm-mail__head,
+#workskin .hgm-mail--chapter .hgm-mail__head *,
+#workskin .hgm-mail--chapter .hgm-mail__subject {
+  color: #F4E9DD !important;
+  text-shadow: none !important;
+}
+
+/* Preserve white text on genuinely dark component variants. */
+#workskin .hgm-diary--dark,
+#workskin .hgm-diary--dark *,
+#workskin .hgm-doc--fraternity,
+#workskin .hgm-doc--fraternity *,
+#workskin .hgm-tx--dark,
+#workskin .hgm-tx--dark *,
+#workskin .hgm-sms--dark,
+#workskin .hgm-sms--dark *,
+#workskin .hgm-skel--dark,
+#workskin .hgm-skel--dark * {
+  color: #F2E7DC !important;
+  text-shadow: none !important;
+}
+
+/* Light-paper labels on dark variants retain a muted metallic accent. */
+#workskin .hgm-diary--dark .hgm-diary__no,
+#workskin .hgm-doc--fraternity .hgm-doc__meta,
+#workskin .hgm-doc--fraternity .hgm-doc__orgsub,
+#workskin .hgm-tx--dark .hgm-tx__meta,
+#workskin .hgm-sms--dark .hgm-sms__date,
+#workskin .hgm-skel--dark .hgm-skel__kicker {
+  color: #D9B99A !important;
+}
+
+/* The outgoing SMS bubble is a burgundy surface, so its text is ivory. */
+#workskin .hgm-sms:not(.hgm-sms--dark) .hgm-sms__row--out .hgm-sms__bubble,
+#workskin .hgm-sms:not(.hgm-sms--dark) .hgm-sms__row--out .hgm-sms__bubble * {
+  color: #FFF1E8 !important;
+}
+
+/* All text in pale author notes and document footers remains legible. */
+#workskin .hgm-an__body,
+#workskin .hgm-an__body *,
+#workskin .hgm-an__sign,
+#workskin .hgm-doc__footer,
+#workskin .hgm-doc__footer *,
+#workskin .hgm-news__cap,
+#workskin .hgm-news__cap * {
+  color: #74172D !important;
+  text-shadow: none !important;
+}
