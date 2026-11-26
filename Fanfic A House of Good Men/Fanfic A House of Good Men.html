@@ -1,27 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A House of Good Men — AO3 Work Skin Preview</title>
 <style>
-/* Browser-only page surroundings. The Work Skin below is embedded unchanged. */
-* { box-sizing: border-box; }
-html { background: #e8e8e8; }
-body {
-  margin: 0;
-  padding: 2.5rem 1rem;
-  background: #e8e8e8;
-  color: #241912;
-  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
-}
-.preview-note {
-  max-width: 52rem;
-  margin: 0 auto 1rem;
-  color: #555;
-  font: 12px/1.5 Arial, sans-serif;
-  text-align: center;
-}
 #workskin .hgm-open,
 #workskin .hgm-chap,
 #workskin .hgm-sep,
@@ -2395,191 +2378,419 @@ body {
   }
 }
 
-/* Small browser-preview reset to resemble AO3's work text area. */
-#workskin .userstuff h1,
-#workskin .userstuff h2,
-#workskin .userstuff h3 { color: inherit; }
-#workskin .userstuff > :first-child { margin-top: 0; }
-#workskin .userstuff > :last-child { margin-bottom: 0; }
+
+
+/* =========================================================
+   CONTRAST FIX + INNER NARRATIVE / INNER THOUGHT STYLES
+   These rules must remain after the general AO3 paragraph
+   overrides so dark document variants retain readable text.
+   ========================================================= */
+
+/* Restore readable foreground colours inside dark fraternity documents.
+   The broad #workskin .userstuff p rule uses !important, so these
+   more specific selectors also use !important. */
+#workskin .hgm-doc--fraternity,
+#workskin .hgm-doc--fraternity p,
+#workskin .hgm-doc--fraternity li,
+#workskin .hgm-doc--fraternity span,
+#workskin .hgm-doc--fraternity strong,
+#workskin .hgm-doc--fraternity em {
+  color: #E9DFCE !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__org,
+#workskin .hgm-doc--fraternity .hgm-doc__orgsub,
+#workskin .hgm-doc--fraternity .hgm-doc__title,
+#workskin .hgm-doc--fraternity .hgm-doc__ref,
+#workskin .hgm-doc--fraternity .hgm-doc__h,
+#workskin .hgm-doc--fraternity .hgm-field__k {
+  color: #B99A72 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__title {
+  color: #F4EFE6 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__stamp,
+#workskin .hgm-doc--fraternity .hgm-doc__stamp--confidential {
+  color: #C47755 !important;
+  border-color: #C47755 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__meta,
+#workskin .hgm-doc--fraternity .hgm-doc__sig {
+  border-color: #B99A72 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__table th {
+  color: #F4EFE6 !important;
+  background: #1B2425 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__table td {
+  color: #E9DFCE !important;
+  border-color: #B99A72 !important;
+}
+
+/* Inner narrative: close third-person interior narration, distinct
+   from the surrounding scene without looking like a message box. */
+#workskin .hgm-n-inner {
+  margin: 1.8em 0;
+  padding: .15em 0 .15em 1.2em;
+  border-left: 2px solid #344F6B;
+  color: #344F6B;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 1.02em;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+#workskin .hgm-n-inner p {
+  margin: 0 0 .75em;
+  color: inherit !important;
+  text-indent: 0;
+}
+
+#workskin .hgm-n-inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inner thoughts: more intimate, quieter visual treatment.
+   Use for direct thoughts, not spoken dialogue. */
+#workskin .hgm-n-thought {
+  max-width: 34em;
+  margin: 1.6em auto;
+  padding: .9em 1.2em;
+  border-top: 1px dotted #C47755;
+  border-bottom: 1px dotted #C47755;
+  color: #A63D2D;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.08em;
+  font-style: italic;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#workskin .hgm-n-thought p {
+  margin: 0 0 .65em;
+  color: inherit !important;
+  text-indent: 0;
+}
+
+#workskin .hgm-n-thought p:last-child {
+  margin-bottom: 0;
+}
+
+/* Optional first-person thought treatment, for a more immediate voice. */
+#workskin .hgm-n-thought--direct {
+  border: 0;
+  padding: .2em 0 .2em 1em;
+  border-left: 3px solid #A63D2D;
+  text-align: left;
+  color: #344F6B;
+}
+
+#workskin .hgm-n-thought--dark {
+  color: #E9DFCE;
+  border-color: #B99A72;
+}
+
+#workskin .hgm-n-inner--memory {
+  border-left-color: #65734B;
+  color: #65734B;
+}
+
+#workskin .hgm-n-inner--dark {
+  border-left-color: #C47755;
+  color: #E9DFCE;
+}
+
+/* Ensure the new narrative treatments remain legible on narrow screens. */
+@media (max-width: 700px) {
+  #workskin .hgm-n-inner {
+    margin: 1.4em 0;
+    padding-left: .9em;
+  }
+  #workskin .hgm-n-thought {
+    margin: 1.4em .2em;
+    padding: .8em .5em;
+  }
+}
+
+
+
+/* =========================================================
+   OPTIONAL MANUAL DROP CAP
+   Usage: <p><span class="do-dropcap">T</span>he rest of the paragraph...</p>
+   The span must contain the first letter; an empty span has
+   nothing to display as a drop cap.
+   ========================================================= */
+#workskin .do-dropcap {
+  float: left;
+  display: block;
+  margin: .04em .12em 0 0;
+  padding: 0;
+  color: #A63D2D;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  font-size: 3.55em;
+  font-weight: normal;
+  line-height: .78;
+  text-indent: 0;
+}
+
+#workskin .hgm-n-std--dropcap .do-dropcap,
+#workskin .hgm-news__body .do-dropcap {
+  color: #A63D2D;
+}
+
+@media (max-width: 700px) {
+  #workskin .do-dropcap {
+    font-size: 3.1em;
+    margin-right: .1em;
+  }
+}
+
+
+
+/* =========================================================
+   INLINE INNER THOUGHTS
+   Use inside an ordinary narrative paragraph:
+   <p>He looked away. <span class="do-thought">I should leave.</span>
+   But he stayed.</p>
+   ========================================================= */
+#workskin .do-thought {
+  color: #A63D2D !important;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: .01em;
+  quotes: none;
+}
+
+#workskin .do-thought:before {
+  content: "“";
+}
+
+#workskin .do-thought:after {
+  content: "”";
+}
+
+/* A quieter variant for subtle interior reflection. */
+#workskin .do-thought--quiet {
+  color: #344F6B !important;
+  font-style: italic;
+}
+
+/* A direct, unquoted thought variant. */
+#workskin .do-thought--direct:before,
+#workskin .do-thought--direct:after {
+  content: none;
+}
+
+/* Thoughts inside dark story components remain readable. */
+#workskin .hgm-doc--fraternity .do-thought,
+#workskin .hgm-tx--dark .do-thought,
+#workskin .hgm-skel--dark .do-thought,
+#workskin .hgm-diary--dark .do-thought,
+#workskin .hgm-sms--dark .do-thought {
+  color: #C47755 !important;
+}
+
+
+/* Standalone preview frame */
+html { background: #e5dfd4; }
+body { margin: 0; padding: 1.5rem 0; background: #e5dfd4; }
+#workskin { display: block; }
+.preview-label { max-width: 52rem; width: 92%; margin: 0 auto 1rem; color: #344F6B; font: 11px/1.5 Arial, sans-serif; letter-spacing: .18em; text-transform: uppercase; }
+@media (max-width:700px) { body { padding: .5rem 0; } .preview-label { width: 96%; } }
+
 </style>
 </head>
 <body>
-<p class="preview-note">Standalone preview · CSS embedded from the uploaded “Fanfic A House of Good Men(2).css”</p>
+<p class="preview-label">Standalone AO3 Work Skin Preview · A House of Good Men</p>
 
 <div id="workskin">
-  <div class="userstuff module">
-    <div class="hgm-open">
-      <p class="hgm-open__kicker">A story of power, loyalty, and belonging</p>
-      <h1 class="hgm-open__title">A House of Good Men</h1>
-      <p class="hgm-open__subtitle">An original work</p>
+  <div class="userstuff">
+    <section class="hgm-open">
+      <p class="hgm-open__kicker">A Sumpter College Story</p>
+      <h1 class="hgm-open__title">A House of<br>Good Men</h1>
+      <p class="hgm-open__subtitle">A story of ambition, brotherhood, and the things we inherit.</p>
       <hr class="hgm-open__rule">
-      <p class="hgm-open__epigraph">“Some places belonged to everyone. Others only pretended to.”</p>
-      <p class="hgm-open__meta">Sumpter College · Fiction</p>
-    </div>
+      <blockquote class="hgm-open__epigraph">“The measure of a man is not what he claims to be, but what he chooses when no one is watching.”<span class="hgm-open__attrib">An old campus saying</span></blockquote>
+      <p class="hgm-open__dedication">For the ones who learn too late what goodness asks of them.</p>
+      <p class="hgm-open__meta">Fiction · Sumpter College · Kappa Nu Alpha</p>
+    </section>
 
-    <div class="hgm-chap">
+    <header class="hgm-chap hgm-chap--ornament">
       <p class="hgm-chap__num">Chapter One</p>
-      <h2 class="hgm-chap__title">The Presidency</h2>
+      <h2 class="hgm-chap__title">The Shape of a Promise</h2>
+      <p class="hgm-chap__subtitle">A beginning, and the trouble that follows</p>
+      <p class="hgm-chap__date">September · Sumpter College</p>
+      <div class="hgm-chap__epigraph">There are houses built to shelter men, and houses built to teach them what they are.<span class="hgm-chap__source">From the college archives</span></div>
+    </header>
+
+    <div class="hgm-mark"><span class="hgm-mark__tag">Present</span><span class="hgm-mark__text">The Kappa Nu Alpha house</span></div>
+
+    <div class="hgm-n-std hgm-n-std--dropcap">
+      <p>The first thing Todd Stevens noticed about the fraternity house was how carefully it kept its secrets. From the street, it looked much like every other old building on campus: handsome brickwork, white columns, windows polished to a shine. Inside, however, every room seemed to hold a different version of the truth.</p>
+      <p>He had been there often enough to know where the floorboards complained, which doors stuck in damp weather, and how quickly a pleasant conversation could turn into a negotiation.</p>
+      <p>Ben Taylor stood by the staircase, sleeves rolled to his elbows. He looked entirely at home. Todd found that irritating.</p>
     </div>
 
-    <p>At Sumpter College, some places belonged to everyone. Others only pretended to</p>
-    <p>The Kappa Nu Alpha house was the second kind.</p>
-    <p>It sat on top of College Hill, above the brick lecture halls and the bike racks. Six white columns held up the porch roof. The front steps were wide enough for a dozen brothers to lounge on at once.</p>
-    <p>The lawn was cut every Thursday. The brass Greek letters over the door were polished until they caught the afternoon sun and threw it back at anyone walking past.</p>
-    <p>Students walked past all day. Some stared up at it with hunger. Some muttered under their breath. A few kept their eyes on their phones and pretended it was just a building.</p>
-    <p>Inside, the air smelled of lemon polish and old beer. Hardwood floors sagged a little in the common room, worn down by decades of parties.</p>
+    <div class="hgm-n-std">
+      <p><span class="do-dropcap">T</span>he first letter can now be styled manually. Use this pattern when you want a drop cap on a paragraph that is not the first paragraph in a narrative block.</p>
+    </div>
+
+    <div class="hgm-n-std">
+      <p>Todd watched Ben cross the room. <span class="do-thought">Why does he always have to make this difficult?</span> He looked down at the glass in his hand, pretending the question had never occurred to him.</p>
+      <p>Ben said his name, and Todd looked up. <span class="do-thought do-thought--quiet">Not now. Please, not now.</span> There was no point in pretending he had not heard.</p>
+    </div>
+
+    <div class="hgm-n-inner">
+      <p>Todd knew the house well enough to recognise the performance. The polished banister, the framed photographs, the careful arrangement of trophies. Everything had been put in its proper place. Everyone, it seemed, was expected to do the same.</p>
+      <p>Ben never appeared to be performing. That was what made him so difficult to dismiss.</p>
+    </div>
+
+    <div class="hgm-n-thought">
+      <p>He thinks he can make this simple. He thinks being decent is enough.</p>
+    </div>
+
+    <div class="hgm-n-thought hgm-n-thought--direct"> 
+      <p><em>I should have left before he got here.</em></p>
+    </div>
+
+    <div class="hgm-n-pov">
+      <span class="hgm-n-pov__name">Todd Stevens</span>
+      <span class="hgm-n-pov__loc">Kappa Nu Alpha House · 8:42 p.m.</span>
+    </div>
+    <div class="hgm-n-mono">
+      <p>He could make a room believe in him. That was the trick, wasn't it? Not being good. Looking as though goodness came naturally.</p>
+    </div>
 
     <div class="hgm-sep hgm-sep--ornament">❦</div>
 
-    <div class="hgm-mark hgm-mark--pov">
-      <span class="hgm-mark__tag">POV</span>
-      <span class="hgm-mark__text">Ben</span>
-    </div>
-    <div class="hgm-n-pov">
-      <span class="hgm-n-pov__name">Ben Taylor</span>
-      <span class="hgm-n-pov__loc">Kappa Nu Alpha House · Late afternoon</span>
-    </div>
-    <div class="hgm-n-std hgm-n-std--dropcap">
-      <p>Ben had learned that a room could make a person feel unwelcome without anyone saying a word. It was in the furniture, the framed photographs, the way conversations paused when he entered.</p>
-      <p>He kept his hands in his pockets and tried not to look as though he was counting the exits.</p>
+    <div class="hgm-n-flash hgm-n-flash--memory">
+      <p>For a moment, the house was younger. The staircase was crowded with boys in borrowed ties, and somebody was laughing in the kitchen. The memory arrived without warning, bright and incomplete.</p>
+      <p>Then the present returned, with all its debts.</p>
     </div>
 
-    <div class="hgm-mark hgm-mark--flashback">
-      <span class="hgm-mark__tag">Flashback</span>
-      <span class="hgm-mark__text">Freshman year</span>
-    </div>
-    <div class="hgm-n-flash">
-      <p>He remembered the first time Todd had spoken to him. It had been a small kindness, almost forgettable to anyone else.</p>
-      <p>Ben had remembered it anyway.</p>
-    </div>
-
-    <div class="hgm-n-quote">
-      “A house can be beautiful and still teach people to be afraid.”
-      <span class="hgm-n-quote__cite">An observation</span>
-    </div>
+    <div class="hgm-n-quote">“A good man does not need an audience.”<span class="hgm-n-quote__cite">A line from the fraternity handbook</span></div>
 
     <div class="hgm-letter">
-      <div class="hgm-letter__head">
-        <span class="hgm-letter__sender">Ben Taylor</span>
-        <span class="hgm-letter__place">Sumpter College</span>
-        <span class="hgm-letter__date">October 14</span>
-      </div>
-      <p class="hgm-letter__salutation">Dear Todd,</p>
+      <div class="hgm-letter__head"><span class="hgm-letter__sender">Benjamin Taylor</span><span class="hgm-letter__place">Sumpter College</span><span class="hgm-letter__date">October 14</span></div>
+      <p class="hgm-letter__salutation">Todd,</p>
       <div class="hgm-letter__body">
-        <p>I have started this letter several times. Each version sounds either too formal or too honest, and I cannot decide which would be worse.</p>
+        <p>I have been trying to decide whether to write this for three days. It seemed easier to say nothing, but silence has never made a difficult thing less true.</p>
+        <p>Whatever happens with the presidency, I hope you remember that there are people here who know you beyond the version you present to the room.</p>
       </div>
-      <p class="hgm-letter__closing">Sincerely, <span class="hgm-letter__signature">Ben</span></p>
+      <p class="hgm-letter__closing">Yours,<span class="hgm-letter__signature">Ben</span></p>
     </div>
 
     <div class="hgm-diary">
-      <div class="hgm-diary__head">
-        <span class="hgm-diary__no">Private entry</span>
-        <span class="hgm-diary__date">Sunday, October 19</span>
-        <span class="hgm-diary__meta">11:42 p.m.</span>
-      </div>
+      <div class="hgm-diary__head"><span class="hgm-diary__no">Personal journal · Entry 07</span><span class="hgm-diary__date">Thursday, 17 October</span><span class="hgm-diary__meta">Private · Do not circulate</span></div>
       <div class="hgm-diary__body">
-        <p>I keep telling myself that tomorrow will be easier. I am beginning to suspect that I say it because I do not know what else to write.</p>
+        <p>I keep thinking that if I can get through this semester, things will settle. That is probably what everyone says when they are standing in the middle of a mess.</p>
+        <p>Ben looked at me today as if he could see the whole thing. I wish he would stop doing that.</p>
       </div>
-      <p class="hgm-diary__sign">B.</p>
+      <p class="hgm-diary__sign">T.</p>
     </div>
 
     <div class="hgm-mail">
       <div class="hgm-mail__head">
-        <p class="hgm-field"><span class="hgm-field__k">From</span><span class="hgm-field__v">Todd Stevens</span></p>
-        <p class="hgm-field"><span class="hgm-field__k">To</span><span class="hgm-field__v">Ben Taylor</span></p>
-        <p class="hgm-mail__subject">Re: Sunday <span class="hgm-mail__flag">Important</span></p>
+        <p class="hgm-mail__subject">Notice of Kappa Nu Alpha Presidential Debate <span class="hgm-mail__flag">Important</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">From</span><span class="hgm-field__v">Chapter Secretary</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">To</span><span class="hgm-field__v">Active Members</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Date</span><span class="hgm-field__v">Monday, 21 October</span></p>
       </div>
       <div class="hgm-mail__body">
-        <p>Are you coming by the house tomorrow? We should talk before the meeting.</p>
+        <p>Members are reminded that the presidential debate will take place in the chapter room at 7:00 p.m. Attendance is expected.</p>
+        <p>Please submit questions to the secretary before noon on Friday.</p>
       </div>
-      <div class="hgm-mail__foot"><p class="hgm-mail__sig">Todd</p></div>
+      <div class="hgm-mail__foot"><p class="hgm-mail__sig">Kappa Nu Alpha<br>Office of the Chapter Secretary</p></div>
     </div>
 
     <div class="hgm-sms">
-      <div class="hgm-sms__bar">
-        <span class="hgm-sms__contact">Todd</span>
-        <span class="hgm-sms__status">iMessage</span>
-      </div>
-      <p class="hgm-sms__date">Tuesday · 8:14 p.m.</p>
-      <div class="hgm-sms__row hgm-sms__row--in">
-        <span class="hgm-sms__name">Todd</span>
-        <span class="hgm-sms__bubble">You still on campus?</span>
-        <span class="hgm-sms__time">8:14 p.m.</span>
-      </div>
-      <div class="hgm-sms__row hgm-sms__row--out">
-        <span class="hgm-sms__bubble">Yeah. Why?</span>
-        <span class="hgm-sms__time">8:15 p.m.</span>
-      </div>
+      <div class="hgm-sms__bar"><span class="hgm-sms__contact">Ben Taylor</span><span class="hgm-sms__status">Messages · Today</span></div>
+      <p class="hgm-sms__date">8:16 p.m.</p>
+      <div class="hgm-sms__row hgm-sms__row--in"><span class="hgm-sms__name">Ben</span><span class="hgm-sms__bubble">Are you coming back to the house?</span></div>
+      <div class="hgm-sms__row hgm-sms__row--out"><span class="hgm-sms__bubble">I haven't decided.</span><span class="hgm-sms__time">8:18 p.m.</span></div>
+      <div class="hgm-sms__row hgm-sms__row--in"><span class="hgm-sms__name">Ben</span><span class="hgm-sms__bubble">You always say that when you've already decided.</span></div>
+      <div class="hgm-sms__row hgm-sms__row--out"><span class="hgm-sms__bubble">Goodnight, Taylor.</span><span class="hgm-sms__time">8:19 p.m.</span></div>
     </div>
 
-    <div class="hgm-doc">
-      <p class="hgm-doc__stamp hgm-doc__stamp--confidential">Confidential</p>
+    <div class="hgm-doc hgm-doc--fraternity">
+      <span class="hgm-doc__stamp hgm-doc__stamp--confidential">Confidential</span>
       <p class="hgm-doc__org">Kappa Nu Alpha</p>
-      <p class="hgm-doc__orgsub">Sumpter College Chapter</p>
-      <h3 class="hgm-doc__title">Executive Meeting Minutes</h3>
-      <p class="hgm-doc__ref">Record No. KNA-014 · October 20</p>
+      <p class="hgm-doc__orgsub">Sumpter College · Established 1894</p>
+      <h3 class="hgm-doc__title">Chapter Conduct Memorandum</h3>
+      <p class="hgm-doc__ref">Document No. KNA-24-017 · Internal circulation</p>
       <div class="hgm-doc__meta">
-        <p class="hgm-field"><span class="hgm-field__k">Location</span><span class="hgm-field__v">Chapter House</span></p>
-        <p class="hgm-field"><span class="hgm-field__k">Attendees</span><span class="hgm-field__v">Executive Board</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Subject</span><span class="hgm-field__v">Conduct and member responsibilities</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Issued</span><span class="hgm-field__v">Office of the President</span></p>
       </div>
       <div class="hgm-doc__body">
-        <p class="hgm-doc__h">Agenda</p>
-        <ol><li>Presidential succession</li><li>Upcoming chapter events</li><li>Member conduct</li></ol>
+        <p class="hgm-doc__h">I. Purpose</p>
+        <p>This memorandum outlines the expectations applicable to all active members during the current academic term.</p>
+        <p class="hgm-doc__h">II. Responsibilities</p>
+        <ul><li>Maintain the standards of the chapter.</li><li>Respect the privacy and dignity of fellow members.</li><li>Report serious concerns through the appropriate channels.</li></ul>
       </div>
-      <p class="hgm-doc__footer">Internal chapter record</p>
+      <p class="hgm-doc__footer">Kappa Nu Alpha · Internal document</p>
     </div>
 
     <div class="hgm-news hgm-news--campus">
-      <p class="hgm-news__masthead">The Sumpter Sentinel</p>
-      <p class="hgm-news__dateline">Campus edition · October 22</p>
-      <p class="hgm-news__kicker">Campus life</p>
-      <h3 class="hgm-news__hed">Fraternity Election Draws Student Attention</h3>
-      <p class="hgm-news__sub">The Kappa Nu Alpha presidency is becoming a campus-wide conversation.</p>
-      <p class="hgm-news__by">By the Campus Desk</p>
+      <p class="hgm-news__masthead">The Sumpter Gazette</p>
+      <p class="hgm-news__dateline">Campus Edition · Friday, October 25</p>
+      <p class="hgm-news__kicker">Campus & Community</p>
+      <h3 class="hgm-news__hed">Fraternity Election Draws Unusual Attention</h3>
+      <p class="hgm-news__sub">A contest for leadership becomes a question of character</p>
+      <p class="hgm-news__by">By The Campus Desk</p>
       <div class="hgm-news__body">
-        <p class="hgm-news__lead">Students have begun watching the fraternity's internal election with unusual interest, as questions about leadership and accountability circulate around campus.</p>
-        <p>The chapter has not issued a public statement. Its members are expected to meet later this week.</p>
+        <p class="hgm-news__lead">The upcoming Kappa Nu Alpha presidential election has become one of the most closely watched campus events of the semester.</p>
+        <p>Students have pointed to the candidates' sharply different approaches to chapter life, service, and the responsibilities that come with leadership.</p>
       </div>
+      <div class="hgm-news__pull">“This is about more than a title.”</div>
+      <div class="hgm-news__box"><p class="hgm-news__box-title">At a glance</p><p>Election forum: Monday, 7 p.m.<br>Location: Kappa Nu Alpha Chapter Room</p></div>
     </div>
 
     <div class="hgm-tx">
-      <h3 class="hgm-tx__title">Recorded Interview</h3>
-      <p class="hgm-tx__sub">Excerpt · Student Affairs Office</p>
+      <h3 class="hgm-tx__title">Recorded Interview · Extract</h3>
+      <p class="hgm-tx__sub">Student conduct review · Transcript excerpt</p>
       <div class="hgm-tx__meta">
-        <p class="hgm-field"><span class="hgm-field__k">Date</span><span class="hgm-field__v">October 23</span></p>
-        <p class="hgm-field"><span class="hgm-field__k">Participants</span><span class="hgm-field__v">Interviewer, Student</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Recorded</span><span class="hgm-field__v">October 28 · 14:05</span></p>
+        <p class="hgm-field"><span class="hgm-field__k">Participants</span><span class="hgm-field__v">Interviewer / Witness</span></p>
       </div>
-      <p class="hgm-tx__line"><span class="hgm-tx__time">00:01:12</span><span class="hgm-tx__who hgm-tx__who--1">Interviewer</span><span class="hgm-tx__say">Can you tell me what happened at the house?</span></p>
-      <p class="hgm-tx__line"><span class="hgm-tx__time">00:01:19</span><span class="hgm-tx__who hgm-tx__who--2">Student</span><span class="hgm-tx__say">I can tell you what I saw.</span></p>
+      <p class="hgm-tx__line"><span class="hgm-tx__time">14:06</span><span class="hgm-tx__who hgm-tx__who--1">Interviewer</span><span class="hgm-tx__say">Can you tell me what happened after the meeting?</span></p>
+      <p class="hgm-tx__line"><span class="hgm-tx__time">14:07</span><span class="hgm-tx__who hgm-tx__who--2">Witness</span><span class="hgm-tx__say">I can tell you what I saw. I can't tell you what he intended.</span></p>
+      <p class="hgm-tx__note">Recording paused · 00:14:32</p>
+      <p class="hgm-tx__line"><span class="hgm-tx__time">14:09</span><span class="hgm-tx__who hgm-tx__who--1">Interviewer</span><span class="hgm-tx__say">Understood. Start wherever you feel comfortable.</span></p>
     </div>
 
     <div class="hgm-skel">
-      <div class="hgm-skel__head">
-        <p class="hgm-skel__kicker">Case file · Internal</p>
-        <h3 class="hgm-skel__title">Incident Record</h3>
-        <p class="hgm-skel__sub">Student Conduct Office</p>
+      <div class="hgm-skel__head"><p class="hgm-skel__kicker">Reference file · Campus archive</p><h3 class="hgm-skel__title">The Kappa Nu Alpha Record</h3><p class="hgm-skel__sub">A timeline of relevant events</p></div>
+      <h4 class="hgm-skel__h">Timeline</h4>
+      <div class="hgm-skel__tl">
+        <p class="hgm-skel__ev"><span class="hgm-skel__when">September 03</span><span class="hgm-skel__what">The semester begins. Members return to the chapter house.</span></p>
+        <p class="hgm-skel__ev"><span class="hgm-skel__when">October 11</span><span class="hgm-skel__what">Presidential nominations are formally announced.</span></p>
+        <p class="hgm-skel__ev"><span class="hgm-skel__when">October 21</span><span class="hgm-skel__what">Candidates participate in the chapter debate.</span></p>
       </div>
-      <div class="hgm-skel__case">
-        <div class="hgm-skel__case-head">
-          <span class="hgm-skel__case">File KNA-22</span>
-          <span class="hgm-skel__status hgm-skel__status--open">Open</span>
-        </div>
-        <div class="hgm-skel__case-body">
-          <p class="hgm-skel__item"><span class="hgm-skel__label">Subject</span> Chapter House Incident</p>
-          <p class="hgm-skel__item"><span class="hgm-skel__label">Status</span> Under review</p>
-        </div>
-      </div>
+      <h4 class="hgm-skel__h">Member profile</h4>
+      <div class="hgm-skel__profile"><p class="hgm-skel__name">Benjamin Taylor</p><p class="hgm-skel__role">Active member · Candidate</p><p class="hgm-field"><span class="hgm-field__k">Standing</span><span class="hgm-field__v">Good</span></p><p class="hgm-field"><span class="hgm-field__k">Committee</span><span class="hgm-field__v">Community Outreach</span></p></div>
+      <div class="hgm-skel__case"><div class="hgm-skel__case-head">Case file 014 <span class="hgm-skel__status hgm-skel__status--open">Open</span></div><div class="hgm-skel__case-body"><p>Related correspondence and witness statements are held in the restricted archive.</p><ul class="hgm-skel__list"><li>Meeting minutes</li><li>Written statements</li><li>Correspondence log</li></ul></div></div>
     </div>
 
-    <div class="hgm-an hgm-an--close">
-      <p class="hgm-an__label">Author's note</p>
-      <h3 class="hgm-an__title">A note before you go</h3>
-      <div class="hgm-an__body">
-        <p>Thank you for reading. This story explores difficult themes. Please take care while reading, and consult the work's tags and content notes.</p>
-      </div>
+    <div class="hgm-an hgm-an--content">
+      <span class="hgm-an__label">Content note</span>
+      <h3 class="hgm-an__title">A note on this chapter</h3>
+      <div class="hgm-an__body"><p>This chapter contains discussions of coercion, power, and difficult interpersonal dynamics. These subjects are treated as serious narrative material.</p></div>
+    </div>
+
+    <div class="hgm-an hgm-an--thanks">
+      <span class="hgm-an__label">Author's note</span>
+      <div class="hgm-an__body"><p>Thank you for reading. I hope you enjoy your time at Sumpter, even when the people in it make questionable decisions.</p></div>
       <p class="hgm-an__sign">— The Author</p>
     </div>
   </div>
 </div>
+
 </body>
 </html>
