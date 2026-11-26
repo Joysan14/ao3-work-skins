@@ -2370,3 +2370,221 @@
     font-size: 15px !important;
   }
 }
+
+
+
+/* =========================================================
+   CONTRAST FIX + INNER NARRATIVE / INNER THOUGHT STYLES
+   These rules must remain after the general AO3 paragraph
+   overrides so dark document variants retain readable text.
+   ========================================================= */
+
+/* Restore readable foreground colours inside dark fraternity documents.
+   The broad #workskin .userstuff p rule uses !important, so these
+   more specific selectors also use !important. */
+#workskin .hgm-doc--fraternity,
+#workskin .hgm-doc--fraternity p,
+#workskin .hgm-doc--fraternity li,
+#workskin .hgm-doc--fraternity span,
+#workskin .hgm-doc--fraternity strong,
+#workskin .hgm-doc--fraternity em {
+  color: #E9DFCE !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__org,
+#workskin .hgm-doc--fraternity .hgm-doc__orgsub,
+#workskin .hgm-doc--fraternity .hgm-doc__title,
+#workskin .hgm-doc--fraternity .hgm-doc__ref,
+#workskin .hgm-doc--fraternity .hgm-doc__h,
+#workskin .hgm-doc--fraternity .hgm-field__k {
+  color: #B99A72 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__title {
+  color: #F4EFE6 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__stamp,
+#workskin .hgm-doc--fraternity .hgm-doc__stamp--confidential {
+  color: #C47755 !important;
+  border-color: #C47755 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__meta,
+#workskin .hgm-doc--fraternity .hgm-doc__sig {
+  border-color: #B99A72 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__table th {
+  color: #F4EFE6 !important;
+  background: #1B2425 !important;
+}
+
+#workskin .hgm-doc--fraternity .hgm-doc__table td {
+  color: #E9DFCE !important;
+  border-color: #B99A72 !important;
+}
+
+/* Inner narrative: close third-person interior narration, distinct
+   from the surrounding scene without looking like a message box. */
+#workskin .hgm-n-inner {
+  margin: 1.8em 0;
+  padding: .15em 0 .15em 1.2em;
+  border-left: 2px solid #344F6B;
+  color: #344F6B;
+  font-family: Georgia, "Palatino Linotype", Palatino, serif;
+  font-size: 1.02em;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+#workskin .hgm-n-inner p {
+  margin: 0 0 .75em;
+  color: inherit !important;
+  text-indent: 0;
+}
+
+#workskin .hgm-n-inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* Inner thoughts: more intimate, quieter visual treatment.
+   Use for direct thoughts, not spoken dialogue. */
+#workskin .hgm-n-thought {
+  max-width: 34em;
+  margin: 1.6em auto;
+  padding: .9em 1.2em;
+  border-top: 1px dotted #C47755;
+  border-bottom: 1px dotted #C47755;
+  color: #A63D2D;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.08em;
+  font-style: italic;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#workskin .hgm-n-thought p {
+  margin: 0 0 .65em;
+  color: inherit !important;
+  text-indent: 0;
+}
+
+#workskin .hgm-n-thought p:last-child {
+  margin-bottom: 0;
+}
+
+/* Optional first-person thought treatment, for a more immediate voice. */
+#workskin .hgm-n-thought--direct {
+  border: 0;
+  padding: .2em 0 .2em 1em;
+  border-left: 3px solid #A63D2D;
+  text-align: left;
+  color: #344F6B;
+}
+
+#workskin .hgm-n-thought--dark {
+  color: #E9DFCE;
+  border-color: #B99A72;
+}
+
+#workskin .hgm-n-inner--memory {
+  border-left-color: #65734B;
+  color: #65734B;
+}
+
+#workskin .hgm-n-inner--dark {
+  border-left-color: #C47755;
+  color: #E9DFCE;
+}
+
+/* Ensure the new narrative treatments remain legible on narrow screens. */
+@media (max-width: 700px) {
+  #workskin .hgm-n-inner {
+    margin: 1.4em 0;
+    padding-left: .9em;
+  }
+  #workskin .hgm-n-thought {
+    margin: 1.4em .2em;
+    padding: .8em .5em;
+  }
+}
+
+
+
+/* =========================================================
+   OPTIONAL MANUAL DROP CAP
+   Usage: <p><span class="do-dropcap">T</span>he rest of the paragraph...</p>
+   The span must contain the first letter; an empty span has
+   nothing to display as a drop cap.
+   ========================================================= */
+#workskin .do-dropcap {
+  float: left;
+  display: block;
+  margin: .04em .12em 0 0;
+  padding: 0;
+  color: #A63D2D;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  font-size: 3.55em;
+  font-weight: normal;
+  line-height: .78;
+  text-indent: 0;
+}
+
+#workskin .hgm-n-std--dropcap .do-dropcap,
+#workskin .hgm-news__body .do-dropcap {
+  color: #A63D2D;
+}
+
+@media (max-width: 700px) {
+  #workskin .do-dropcap {
+    font-size: 3.1em;
+    margin-right: .1em;
+  }
+}
+
+
+
+/* =========================================================
+   INLINE INNER THOUGHTS
+   Use inside an ordinary narrative paragraph:
+   <p>He looked away. <span class="do-thought">I should leave.</span>
+   But he stayed.</p>
+   ========================================================= */
+#workskin .do-thought {
+  color: #A63D2D !important;
+  font-family: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: .01em;
+  quotes: none;
+}
+
+#workskin .do-thought:before {
+  content: "“";
+}
+
+#workskin .do-thought:after {
+  content: "”";
+}
+
+/* A quieter variant for subtle interior reflection. */
+#workskin .do-thought--quiet {
+  color: #344F6B !important;
+  font-style: italic;
+}
+
+/* A direct, unquoted thought variant. */
+#workskin .do-thought--direct:before,
+#workskin .do-thought--direct:after {
+  content: none;
+}
+
+/* Thoughts inside dark story components remain readable. */
+#workskin .hgm-doc--fraternity .do-thought,
+#workskin .hgm-tx--dark .do-thought,
+#workskin .hgm-skel--dark .do-thought,
+#workskin .hgm-diary--dark .do-thought,
+#workskin .hgm-sms--dark .do-thought {
+  color: #C47755 !important;
+}
